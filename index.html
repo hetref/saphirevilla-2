@@ -62,6 +62,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hero-section h2 {
           font-size: 1.3rem !important;
         }
+        
+        /* Hero section adjustments for small devices */
+        .hero-section {
+          min-height: 80vh !important;
+        }
+        
+        .ak-hero-bg {
+          height: 100% !important;
+        }
+        
+        /* Adjust column spacing */
+        .hero-section .col-lg-6 {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
         .ak-section-title {
           font-size: 1.6rem !important; /* Further reduced for smaller screens */
         }
@@ -97,10 +112,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       @media (max-width: 575px) {
         /* Extra small devices (portrait phones, less than 576px) */
         .hero-main-title {
-          font-size: 1.8rem !important;
+          font-size: 1.6rem !important;
         }
         .hero-section h2 {
-          font-size: 1.1rem !important;
+          font-size: 1rem !important;
+        }
+        
+        /* Hero image and section adjustments for mobile */
+        .hero-section {
+          min-height: auto !important;
+          height: auto !important;
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+        
+        .ak-hero-featured {
+          height: 100% !important;
+        }
+        
+        .ak-hero-bg {
+          object-fit: cover !important;
+          object-position: center !important;
+          height: 100% !important;
+        }
+        
+        /* Smaller text for feature points */
+        .hero-section .text-white {
+          font-size: 0.8rem !important;
+        }
+        
+        /* Adjust spacing for feature points */
+        .hero-section img[src*="check.svg"] {
+          width: 18px !important;
+          height: 18px !important;
+          margin-right: 8px !important;
         }
         .ak-section-title {
           font-size: 1.4rem !important;
@@ -143,7 +188,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       .report-card {
         background-color: transparent; /* Changed from #fff to transparent */
-        border: 1px solid #b08d57; /* Golden border */
+        border: 1px solid #24574e; /* Golden border */
         border-radius: 8px; /* Rounded corners for the card */
         padding: 20px;
         text-align: center;
@@ -155,7 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Added smooth shadow */
       }
       .report-card-title-area {
-        background-color: #b08d57; /* Golden background for title area */
+        background-color: #24574e; /* Golden background for title area */
         color: #fff; /* White text */
         padding: 15px;
         border-radius: 6px; /* Slightly rounded corners for title area */
@@ -167,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         justify-content: center;
       }
       .report-card-button {
-        background-color: #b08d57 !important; /* Golden background for button */
+        background-color: #24574e !important; /* Golden background for button */
         color: #fff !important; /* White text */
         border: none;
         padding: 10px 20px;
@@ -182,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color: #fff !important;
       }
       .download-brochure-btn-reports {
-        background-color: #b08d57 !important;
+        background-color: #24574e !important;
         color: #fff !important;
         padding: 12px 30px !important;
         border-radius: 6px !important;
@@ -465,6 +510,295 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       /* End Specification Section New Styles */
+
+      /* Responsive Header and Hamburger Menu Styles */
+      .hamburger-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1001;
+        position: relative;
+      }
+
+      .hamburger-menu span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--primary-color);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      /* Default styles for mobile-cta-button - hidden on desktop */
+      .mobile-cta-button {
+        display: none;
+      }
+
+      /* Hero Section Responsive Styles */
+      .desktop-content-overlay {
+        display: flex;
+      }
+      
+      .mobile-content-section {
+        display: none;
+      }
+
+      /* Floor Plans Section Styles */
+      .floor-plan-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+
+      .floor-plan-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .plan-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .plan-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(36, 87, 78, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none; /* Allow clicks to pass through */
+      }
+
+      .floor-plan-card:hover .plan-overlay {
+        opacity: 1;
+      }
+
+      .plan-hover-text {
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .plan-details {
+        background: white;
+      }
+
+      .master-plan-container img {
+        transition: transform 0.3s ease;
+      }
+
+      .master-plan-container img:hover {
+        transform: scale(1.02);
+      }
+
+      /* Floor Plan Blur and Popup Styles */
+      .floor-plan-image-blurred {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+        cursor: pointer;
+      }
+
+      .floor-plan-image-unblurred {
+        filter: blur(0);
+        transition: filter 0.3s ease;
+      }
+
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .popup-form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 400px;
+        width: 90%;
+        position: relative;
+      }
+
+      .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+      }
+
+      .popup-close:hover {
+        color: #333;
+      }
+
+      /* Mobile Menu Styles */
+      @media (max-width: 991px) {
+        .hamburger-menu {
+          display: flex;
+          margin-left: auto;
+          margin-right: 15px;
+        }
+
+        .ak-main-header-center {
+          justify-content: flex-end;
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+
+        .ak-nav {
+          position: static;
+        }
+
+        .ak-nav .ak-nav_list {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: white;
+          padding: 80px 20px 30px;
+          transition: transform 0.4s ease;
+          transform: translateX(100%);
+          z-index: 999;
+          overflow-y: auto;
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .ak-nav .ak-nav_list.active {
+          transform: translateX(0);
+        }
+
+        .ak-nav .ak-nav_list_item {
+          margin: 0;
+          padding: 15px 0;
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .ak-nav .ak-nav_list_item:last-child {
+          border-bottom: none;
+        }
+
+        .ak-nav .ak-nav_list a {
+          display: block;
+          padding: 10px 0;
+          font-size: 24px;
+          color: var(--heading-color);
+          font-weight: 500;
+        }
+
+        .ak-nav .ak-nav_list a:hover {
+          color: var(--primary-color);
+        }
+
+        /* Hamburger Animation */
+        .hamburger-menu.active span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Overlay when menu is active */
+        .menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 998;
+          display: none;
+        }
+
+        .menu-overlay.active {
+          display: block;
+        }
+
+        /* Adjust header layout for mobile */
+        .ak-main_header_in {
+          justify-content: space-between;
+          padding: 10px 0;
+        }
+
+        .ak-main-header-left {
+          flex: 0 0 auto;
+        }
+
+        .ak-main-header-right {
+          display: none; /* Hide the right section on mobile */
+        }
+
+        /* Add mobile CTA button inside the menu */
+        .mobile-cta-button {
+          display: block;
+          margin-top: 40px;
+          text-align: center;
+          width: 80%;
+          max-width: 300px;
+        }
+
+        .mobile-cta-button .common-btn {
+          width: 100%;
+          justify-content: center;
+          padding: 15px 20px;
+          font-size: 18px;
+        }
+
+        /* Mobile Hero Content Styles */
+        .desktop-content-overlay {
+          display: none;
+        }
+        
+        .mobile-content-section {
+          display: block;
+        }
+        
+        .hero-image-container {
+          height: 50vh !important;
+        }
+      }
+
+      /* Small mobile devices */
+      @media (max-width: 576px) {
+        .ak-site_branding img {
+          max-height: 50px !important;
+        }
+
+        .ak-main_header_in {
+          padding: 8px 0;
+        }
+      }
+      /* End Responsive Header Styles */
     </style>
   </head>
 
@@ -503,6 +837,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="#Enquire">Enquire</a>
                   </li>
                 </ul>
+              </div>
+              <!-- Hamburger Menu Button for Mobile -->
+              <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
             <div class="ak-main-header-right">
@@ -546,12 +886,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Header Section -->
 
     <!-- Start Hero -->
-    <section id="home" class="hero-section" style="position: relative">
-      <div class="ak-hero-featured">
+    <section id="home" class="hero-section">
+      <!-- Hero Image Section -->
+      <div class="hero-image-container" style="width: 100%; height: 100vh; position: relative; overflow: hidden;">
         <img
           src="assets/img/LP Images/BTG_View 1 Entrance Final.webp"
-          class="ak-hero-bg"
-          alt="Hero"
+          alt="Between The Greens Villa"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
         />
         <div
           class="hero-overlay"
@@ -561,34 +907,306 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            background: rgba(0, 0, 0, 0.3);
           "
         ></div>
+        
+        <!-- Desktop Content Overlay -->
+        <div class="desktop-content-overlay" style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          z-index: 2;
+        ">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Left Column - Hero Text -->
+              <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <h1
+                  class="hero-main-title"
+                  style="font-size: 2.8rem; font-weight: bold; color: white; margin-bottom: 20px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                >
+                  Between The Greens
+                </h1>
+                <h2
+                  style="font-size: 1.8rem; margin-bottom: 20px; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                >
+                  Living in Synchrony with Nature
+                </h2>
+
+                <div style="margin-bottom: 25px">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: flex-start;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    <img
+                      src="assets/img/check.svg"
+                      alt="Location"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                    <div>
+                      <p
+                        style="margin-bottom: 5px; font-size: 1rem; color: white; font-weight: 500; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                      9.5 Acres of Nature-Inspired Luxury Living
+                      </p>
+                      <p
+                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                      Spacious 4 BHK Villas (3,700 – 4,800 sq. ft.)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
+                  >
+                    <img
+                      src="assets/img/check.svg"
+                      alt="Tick"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                    <div>
+                      <p
+                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                        <strong style="font-size: 1rem; color: white;"> Total Units</strong>
+                        147 Premium Independent Villas
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
+                  >
+                    <img
+                      src="assets/img/check.svg"
+                      alt="Tick"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                    <div>
+                      <p
+                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                        <strong style="font-size: 1rem; color: white;">  Landscape Design</strong>
+                        Terraced Gardens, Fragrance Garden, Bonfire Courts, Floating Bridge
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
+                  >
+                    <img
+                      src="assets/img/check.svg"
+                      alt="Tick"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                    <div>
+                      <p
+                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                        <strong style="font-size: 1rem; color: white;"> Connectivity</strong>
+                        &nbsp;&nbsp;Easy Access to Whitefield, Sarjapur, ORR & Major Tech Hubs
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
+                  >
+                    <img
+                      src="assets/img/check.svg"
+                      alt="Tick"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                    <div>
+                      <p
+                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
+                      >
+                        <strong style="font-size: 1rem; color: white;">Sales Partner</strong>
+                        &nbsp;&nbsp; Green Shoots – Authorized Channel Partner (RERA Registered)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="#contact-form-redirect"
+                  class="common-btn d-lg-inline-block anim-pulse mt-3"
+                  style="
+                    background-color: #24574e;
+                    border-color: #24574e;
+                    color: #fff !important;
+                    padding: 12px 30px;
+                    font-size: 1.1rem;
+                  "
+                >
+                  <span>Book a Site Visit</span>
+                </a>
+              </div>
+
+              <!-- Right Column - Form -->
+              <div class="col-lg-6 col-md-12">
+                <div class="rounded shadow" style="background-color: rgba(248, 249, 250, 0.95); backdrop-filter: blur(10px);">
+                  <p
+                    class="text-center text-white py-3"
+                    style="
+                      background-color: #24574e;
+                      font-size: 1.2rem;
+                      font-weight: bold;
+                      margin-bottom: 0;
+                      border-top-left-radius: 0.25rem;
+                      border-top-right-radius: 0.25rem;
+                    "
+                  >
+                    Register Now for the Available Best Offers!
+                  </p>
+                  <div class="p-4">
+                    <form
+                      data-fraudclicks-key
+                      name="shalimar-leads-form"
+                      class="shalimar-leads-form"
+                      action="javascript:void(0);"
+                    >
+                      <div class="mb-3">
+                        <input
+                          type="text"
+                          name="fullname"
+                          class="form-control"
+                          placeholder="Full Name"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          type="tel"
+                          name="phone"
+                          class="form-control"
+                          placeholder="Phone"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                      <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
+                      <div class="mb-3">
+                        <select name="preference" class="form-control" required>
+                          <option value="" disabled selected>Select Preference</option>
+                          <option value="2BHK">2BHK</option>
+                          <option value="2BHK + Study">2BHK + Study</option>
+                          <option value="3BHK">3BHK</option>
+                          <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <textarea
+                          name="message"
+                          class="form-control"
+                          placeholder="Message"
+                          rows="4"
+                        ></textarea>
+                      </div>
+                      <div class="text-center mb-3">
+                        <button
+                          type="submit"
+                          class="common-btn anim-pulse shalimar-leads-form-submit-btn"
+                          style="
+                            background-color: #24574e;
+                            border-color: #24574e;
+                            color: white;
+                            font-size: 1rem;
+                          "
+                        >
+                          <span>Book a Site Visit</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="text-center text-white py-3 mt-3"
+                  style="
+                    background-color: #24574e;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    border-radius: 0.25rem;
+                  "
+                >
+                  <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container" style="position: relative; z-index: 2">
-        <div class="row align-items-center">
+
+      <!-- Mobile Content Section -->
+      <div class="mobile-content-section" style="padding: 40px 20px;">
+        <div class="row">
           <!-- Left Column - Hero Text -->
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
             <h1
-              class="hero-main-title text-white"
-              style="font-size: 2.8rem; font-weight: bold"
+              class="hero-main-title"
+              style="font-size: 2.8rem; font-weight: bold; color: #333; margin-bottom: 20px;"
             >
               Between The Greens
             </h1>
             <h2
-              class="text-white"
-              style="font-size: 1.8rem; margin-bottom: 20px"
+              style="font-size: 1.8rem; margin-bottom: 20px; color: #666;"
             >
               Living in Synchrony with Nature
             </h2>
 
-            <div style="margin-bottom: 15px">
+            <div style="margin-bottom: 25px">
               <div
                 style="
                   display: flex;
                   align-items: flex-start;
-                  margin-bottom: 10px;
+                  margin-bottom: 15px;
                 "
               >
                 <img
@@ -597,20 +1215,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   style="
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
-                    filter: brightness(0) invert(1);
+                    margin-right: 15px;
+                    margin-top: 2px;
                   "
                 />
                 <div>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 5px; font-size: 1rem; color: #333; font-weight: 500;"
                   >
                   9.5 Acres of Nature-Inspired Luxury Living
                   </p>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
                   >
                   Spacious 4 BHK Villas (3,700 – 4,800 sq. ft.)
                   </p>
@@ -618,7 +1234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
 
               <div
-                style="display: flex; align-items: center; margin-bottom: 10px"
+                style="display: flex; align-items: flex-start; margin-bottom: 15px"
               >
                 <img
                   src="assets/img/check.svg"
@@ -626,23 +1242,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   style="
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
-                    filter: brightness(0) invert(1);
+                    margin-right: 15px;
+                    margin-top: 2px;
                   "
                 />
                 <div>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
                   >
-                    <strong style="font-size: 1rem"> Total Units</strong>
+                    <strong style="font-size: 1rem; color: #333;"> Total Units</strong>
                     147 Premium Independent Villas
                   </p>
                 </div>
               </div>
 
               <div
-                style="display: flex; align-items: center; margin-bottom: 10px"
+                style="display: flex; align-items: flex-start; margin-bottom: 15px"
               >
                 <img
                   src="assets/img/check.svg"
@@ -650,23 +1265,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   style="
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
-                    filter: brightness(0) invert(1);
+                    margin-right: 15px;
+                    margin-top: 2px;
                   "
                 />
                 <div>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
                   >
-                    <strong style="font-size: 1rem">  Landscape Design</strong>
+                    <strong style="font-size: 1rem; color: #333;">  Landscape Design</strong>
                     Terraced Gardens, Fragrance Garden, Bonfire Courts, Floating Bridge
                   </p>
                 </div>
               </div>
 
               <div
-                style="display: flex; align-items: center; margin-bottom: 10px"
+                style="display: flex; align-items: flex-start; margin-bottom: 15px"
               >
                 <img
                   src="assets/img/check.svg"
@@ -674,23 +1288,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   style="
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
-                    filter: brightness(0) invert(1);
+                    margin-right: 15px;
+                    margin-top: 2px;
                   "
                 />
                 <div>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
                   >
-                    <strong style="font-size: 1rem"> Connectivity</strong>
+                    <strong style="font-size: 1rem; color: #333;"> Connectivity</strong>
                     &nbsp;&nbsp;Easy Access to Whitefield, Sarjapur, ORR & Major Tech Hubs
                   </p>
                 </div>
               </div>
 
               <div
-                style="display: flex; align-items: center; margin-bottom: 10px"
+                style="display: flex; align-items: flex-start; margin-bottom: 15px"
               >
                 <img
                   src="assets/img/check.svg"
@@ -698,16 +1311,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   style="
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
-                    filter: brightness(0) invert(1);
+                    margin-right: 15px;
+                    margin-top: 2px;
                   "
                 />
                 <div>
                   <p
-                    class="text-white"
-                    style="margin-bottom: 0; font-size: 0.9rem"
+                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
                   >
-                    <strong style="font-size: 1rem">Sales Partner</strong>
+                    <strong style="font-size: 1rem; color: #333;">Sales Partner</strong>
                     &nbsp;&nbsp; Green Shoots – Authorized Channel Partner (RERA Registered)
                   </p>
                 </div>
@@ -718,8 +1330,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               href="#contact-form-redirect"
               class="common-btn d-lg-inline-block anim-pulse mt-3"
               style="
-                background-color: #b08d57;
-                border-color: #b08d57;
+                background-color: #24574e;
+                border-color: #24574e;
                 color: #fff !important;
                 padding: 12px 30px;
                 font-size: 1.1rem;
@@ -735,7 +1347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <p
                 class="text-center text-white py-3"
                 style="
-                  background-color: #b08d57;
+                  background-color: #24574e;
                   font-size: 1.2rem;
                   font-weight: bold;
                   margin-bottom: 0;
@@ -802,8 +1414,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       type="submit"
                       class="common-btn anim-pulse shalimar-leads-form-submit-btn"
                       style="
-                        background-color: #b08d57;
-                        border-color: #b08d57;
+                        background-color: #24574e;
+                        border-color: #24574e;
                         color: white;
                         font-size: 1rem;
                       "
@@ -817,7 +1429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div
               class="text-center text-white py-3 mt-3"
               style="
-                background-color: #b08d57;
+                background-color: #24574e;
                 font-size: 1.2rem;
                 font-weight: bold;
                 border-radius: 0.25rem;
@@ -838,7 +1450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="doctor-image">
             <img
               src="assets/img/gallery/g1.webp"
-              alt="Shalimar Marbella Towers"
+              alt="Between the Greens"
             />
           </div>
           <div class="doctor-text">
@@ -1128,8 +1740,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             href="#contact-form-redirect"
             class="common-btn anim-pulse px-4 py-2"
             style="
-              background-color: #b08d57;
-              border-color: #b08d57;
+              background-color: #24574e;
+              border-color: #24574e;
               color: #fff !important;
             "
           >
@@ -1455,140 +2067,198 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     >
       <div class="container">
         <div class="text-center mb-5">
-          <p class="ak-section-subtitle">Project Floor Plans</p>
+          <p class="ak-section-subtitle">Master Plan</p>
           <h2 class="ak-section-title">
-            Dive Deep Into Indesign's Intricacies
+            Explore Our Master Plan
           </h2>
         </div>
 
-        <ul
-          class="nav nav-tabs floor-plan-tabs justify-content-center mb-4"
-          id="floorPlanTabs"
-          role="tablist"
-        >
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="site-map-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#site-map-content"
-              type="button"
-              role="tab"
-              aria-controls="site-map-content"
-              aria-selected="true"
-            >
-              Master Plan
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="more-plan-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#more-plan-content"
-              type="button"
-              role="tab"
-              aria-controls="more-plan-content"
-              aria-selected="false"
-            >
-              Floor Plans
-            </button>
-          </li>
-        </ul>
+        <!-- Master Plan Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="master-plan-container text-center">
+              <img
+                src="assets/img/floorplan/Master-plan.webp"
+                alt="Master Plan - Between The Greens"
+                class="img-fluid rounded shadow-lg clickable-image"
+                style="max-width: 100%; height: auto; cursor: pointer;"
+                data-image-src="assets/img/floorplan/Master-plan.webp"
+                data-image-alt="Master Plan"
+              />
+            </div>
+          </div>
+        </div>
 
-        <div class="tab-content" id="floorPlanTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="site-map-content"
-            role="tabpanel"
-            aria-labelledby="site-map-tab"
-          >
-            <div class="swiper-container floor-plan-carousel mb-4">
-              <div class="swiper-wrapper">
-                <!-- Replace with your 7 site map images -->
-                <div>
-                  <img
-                    src="assets/img/floorplan/Master-plan.webp"
-                    alt="Site Map 1"
-                    class="img-fluid rounded clickable-image"
-                    data-image-src="assets/img/floorplan/Master-plan.webp"
-                    data-image-alt="Master Plan"
-                    style="cursor: pointer;"
-                  />
+        <!-- Floor Plans Section -->
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center mb-4">
+              <h3 class="h4 mb-3" style="color: #24574e; font-weight: 600;">Villa Floor Plans</h3>
+              <p class="text-muted">Detailed layouts for each floor of our premium villas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 floor-plan-gallery mb-5">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="floor-plan-card">
+              <div class="plan-image-container">
+                                 <img
+                   src="assets/img/floorplan/plan1.webp"
+                   alt="Ground Floor Plan"
+                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
+                   style="width: 100%; height: 600px; object-fit: cover;"
+                   data-plan="ground-floor"
+                 />
+                <div class="plan-overlay">
+                  <div class="plan-hover-text">
+                    <h5 class="mb-2">Ground Floor</h5>
+                    <p class="mb-0">Main living areas and entrance</p>
+                  </div>
                 </div>
               </div>
-              <!-- Add Pagination -->
-              <!-- <div class="swiper-pagination"></div> -->
-              <!-- Add Navigation -->
-              <!-- <div class="swiper-button-next"></div> -->
-              <!-- <div class="swiper-button-prev"></div> -->
+              <div class="plan-details p-3">
+                <h5 class="mb-2">Ground Floor</h5>
+                <p class="text-muted mb-0">Spacious living room, dining area, kitchen, and utility spaces</p>
+              </div>
             </div>
-            <div class="text-center">
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="floor-plan-card">
+              <div class="plan-image-container">
+                <img
+                   src="assets/img/floorplan/plan2.webp"
+                   alt="First Floor Plan"
+                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
+                   style="width: 100%; height: 600px; object-fit: cover;"
+                   data-plan="first-floor"
+                 />
+                <div class="plan-overlay">
+                  <div class="plan-hover-text">
+                    <h5 class="mb-2">First Floor</h5>
+                    <p class="mb-0">Bedrooms and family areas</p>
+                  </div>
+                </div>
+              </div>
+              <div class="plan-details p-3">
+                <h5 class="mb-2">First Floor</h5>
+                <p class="text-muted mb-0">Master bedroom, additional bedrooms, and family lounge</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="floor-plan-card">
+              <div class="plan-image-container">
+                                 <img
+                   src="assets/img/floorplan/plan3.webp"
+                   alt="Second Floor Plan"
+                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
+                   style="width: 100%; height: 600px; object-fit: cover;"
+                   data-plan="second-floor"
+                 />
+                <div class="plan-overlay">
+                  <div class="plan-hover-text">
+                    <h5 class="mb-2">Second Floor</h5>
+                    <p class="mb-0">Additional bedrooms and terrace</p>
+                  </div>
+                </div>
+              </div>
+              <div class="plan-details p-3">
+                <h5 class="mb-2">Second Floor</h5>
+                <p class="text-muted mb-0">Additional bedrooms, study area, and terrace access</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
               <a
                 href="#contact-form-redirect"
                 class="common-btn anim-pulse px-4 py-2"
-              >
-                <span>Book a Site Visit</span>
-              </a>
-            </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="more-plan-content"
-            role="tabpanel"
-            aria-labelledby="more-plan-tab"
-          >
-            <div class="row g-4 floor-plan-gallery mb-4">
-              <!-- Replace with your 5 more plan images -->
-              <div class="col-md-4 col-sm-6">
-                <div class="plan-image-container">
-                  <img
-                    src="assets/img/floorplan/plan1.webp"
-                    alt="More Plan 1"
-                    class="img-fluid rounded shadow plan-image"
-                  />
-                  <div class="plan-hover-text">Ground Floor</div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="plan-image-container">
-                  <img
-                    src="assets/img/floorplan/plan2.webp"
-                    alt="More Plan 2"
-                    class="img-fluid rounded shadow plan-image"
-                  />
-                  <div class="plan-hover-text">First Floor</div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="plan-image-container">
-                  <img
-                    src="assets/img/floorplan/plan3.webp"
-                    alt="More Plan 3"
-                    class="img-fluid rounded shadow plan-image"
-                  />
-                  <div class="plan-hover-text">2nd Floor</div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <a
-                href="assets/brochure.pdf"
-                target="_blank"
-                class="common-btn anim-pulse px-4 py-2"
                 style="
-                  background-color: #b08d57;
-                  border-color: #b08d57;
+                  background-color: #24574e;
+                  border-color: #24574e;
                   color: #fff !important;
                 "
-                >Download Brochure</a
               >
+                <span>Download Brochure</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End Project Floor Plans Section -->
+
+    <!-- Floor Plan Popup Form -->
+    <div class="popup-overlay" id="floorPlanPopup">
+      <div class="popup-form">
+        <span class="popup-close" onclick="closeFloorPlanPopup()">&times;</span>
+        <h4 class="text-center mb-4" style="color: #24574e;">Register Now</h4>
+        <p class="text-center text-muted mb-4">Please provide your details to view the floor plans</p>
+        
+        <form id="floorPlanForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              name="fullname"
+              class="form-control"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="tel"
+              name="phone"
+              class="form-control"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <select name="preference" class="form-control" required>
+              <option value="" disabled selected>Select Preference</option>
+              <option value="2BHK">2BHK</option>
+              <option value="2BHK + Study">2BHK + Study</option>
+              <option value="3BHK">3BHK</option>
+              <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="common-btn anim-pulse"
+              style="
+                background-color: #24574e;
+                border-color: #24574e;
+                color: white;
+                padding: 12px 30px;
+              "
+            >
+              <span>Register Now</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Walkthrough - Shalimar Marbella Section -->
     <!-- <section class="ak-whiteLite-bg py-5" id="walkthrough">
@@ -1617,8 +2287,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               href="#contact-form-redirect"
               class="common-btn anim-pulse px-4 py-2"
               style="
-                background-color: #b08d57;
-                border-color: #b08d57;
+                background-color: #24574e;
+                border-color: #24574e;
                 color: #fff !important;
               "
             >
@@ -1688,8 +2358,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             target="_blank"
             class="common-btn anim-pulse px-4 py-2"
             style="
-              background-color: #b08d57;
-              border-color: #b08d57;
+              background-color: #24574e;
+              border-color: #24574e;
               color: #fff !important;
             "
             >Download Brochure</a
@@ -1759,8 +2429,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             href="#contact-form-redirect"
             class="common-btn anim-pulse px-4 py-2"
             style="
-              background-color: #b08d57;
-              border-color: #b08d57;
+              background-color: #24574e;
+              border-color: #24574e;
               color: #fff !important;
             "
           >
@@ -1865,8 +2535,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 type="submit"
                 class="common-btn anim-pulse shalimar-leads-form-submit-btn"
                 style="
-                  background-color: #b08d57;
-                  border-color: #b08d57;
+                  background-color: #24574e;
+                  border-color: #24574e;
                   color: white;
                   font-size: 1rem;
                 "
@@ -2199,6 +2869,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const modalImg = document.getElementById('modalImage');
       const closeBtn = document.querySelector('.image-modal-close');
 
+      // Floor Plan Popup Functionality
+      let floorPlanFormData = {};
+
+      function showFloorPlanPopup() {
+        console.log('showFloorPlanPopup function called');
+        const popup = document.getElementById('floorPlanPopup');
+        if (popup) {
+          popup.style.display = 'flex';
+          console.log('Popup should be visible now');
+        } else {
+          console.error('Popup element not found');
+        }
+      }
+
+      function closeFloorPlanPopup() {
+        const popup = document.getElementById('floorPlanPopup');
+        popup.style.display = 'none';
+      }
+
+      // Handle floor plan form submission
+      document.addEventListener('DOMContentLoaded', function() {
+        const floorPlanForm = document.getElementById('floorPlanForm');
+        
+        // Add click handlers to floor plan images
+        const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
+        floorPlanImages.forEach(function(img) {
+          img.addEventListener('click', function() {
+            console.log('Floor plan image clicked');
+            showFloorPlanPopup();
+          });
+        });
+        
+        floorPlanForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Collect form data
+          const formData = new FormData(this);
+          floorPlanFormData = {};
+          
+          formData.forEach((value, key) => {
+            floorPlanFormData[key] = value;
+          });
+          
+          // Log the form data
+          console.log('Floor Plan Form Data:', floorPlanFormData);
+          
+          // Remove blur from all floor plan images
+          const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
+          floorPlanImages.forEach(function(img) {
+            img.classList.remove('floor-plan-image-blurred');
+            img.classList.add('floor-plan-image-unblurred');
+            img.style.cursor = 'default';
+            img.onclick = null; // Remove click handler
+          });
+          
+          // Close popup
+          closeFloorPlanPopup();
+          
+          // Reset form
+          floorPlanForm.reset();
+          
+          // Show success message
+          alert('Thank you! Floor plans are now unlocked.');
+        });
+        
+        // Close popup when clicking outside
+        const popupOverlay = document.getElementById('floorPlanPopup');
+        popupOverlay.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeFloorPlanPopup();
+          }
+        });
+      });
+
       // Add click event to all clickable images
       document.addEventListener('DOMContentLoaded', function() {
         const clickableImages = document.querySelectorAll('.clickable-image');
@@ -2236,6 +2980,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           modal.style.display = 'none';
           document.body.style.overflow = 'auto';
         }
+      });
+    </script>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Create menu overlay element
+        const menuOverlay = document.createElement('div');
+        menuOverlay.className = 'menu-overlay';
+        document.body.appendChild(menuOverlay);
+
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navList = document.querySelector('.ak-nav_list');
+        const navItems = document.querySelectorAll('.ak-nav_list_item a');
+        
+        // Add mobile CTA button to the menu
+        const ctaButton = document.querySelector('.ak-main-header-right .common-btn');
+        if (ctaButton) {
+          // Create a container for the mobile CTA button
+          const mobileCta = document.createElement('div');
+          mobileCta.className = 'mobile-cta-button';
+          
+          // Clone the CTA button and add it to the mobile menu
+          const ctaClone = ctaButton.cloneNode(true);
+          mobileCta.appendChild(ctaClone);
+          
+          // Append the mobile CTA to the nav list
+          navList.appendChild(mobileCta);
+          
+          // Add click event to the mobile CTA button
+          ctaClone.addEventListener('click', function() {
+            hamburgerMenu.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+          });
+        }
+
+        // Toggle menu when hamburger is clicked
+        hamburgerMenu.addEventListener('click', function() {
+          hamburgerMenu.classList.toggle('active');
+          navList.classList.toggle('active');
+          menuOverlay.classList.toggle('active');
+          
+          // Prevent body scrolling when menu is open
+          if (navList.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = 'auto';
+          }
+        });
+
+        // Close menu when overlay is clicked
+        menuOverlay.addEventListener('click', function() {
+          hamburgerMenu.classList.remove('active');
+          navList.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        });
+
+        // Close menu when nav item is clicked
+        navItems.forEach(function(item) {
+          item.addEventListener('click', function() {
+            hamburgerMenu.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+          });
+        });
+
+        // Close menu when Escape key is pressed
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && navList.classList.contains('active')) {
+            hamburgerMenu.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+          }
+        });
+        
+        // Handle window resize to reset menu state on desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 991 && navList.classList.contains('active')) {
+            hamburgerMenu.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+          }
+        });
       });
     </script>
   </body>

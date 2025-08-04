@@ -51,7 +51,7 @@
   --border-color: #e4e3e1;
   --white-color: #ffffff;
   --black-color: #000000;
-  --primary-color: #B08D57;
+  --primary-color: #24574e;
 }
 
 /*--------------------------------------------------------------
@@ -6600,21 +6600,21 @@ body {
 /* --------------------------- */
 .hero-section {
   position: relative;
-  height: auto;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+  background-color: #f8f9fa;
 }
 
-.ak-hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-image-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  object-position: center;
 }
 
 .hero-overlay {
@@ -6623,22 +6623,51 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .hero-section .container {
-  position: relative;
-  z-index: 3;
-  color: white;
+  padding: 40px 20px;
 }
 
 .hero-section .mini-title,
 .hero-section .hero-main-title,
 .hero-section .main-desp,
 .hero-section .text-warning {
-  color: white !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  color: #333 !important;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+  .hero-image-container {
+    height: 60vh;
+  }
+  
+  .hero-section .container {
+    padding: 30px 15px;
+  }
+  
+  .hero-main-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-image-container {
+    height: 50vh;
+  }
+  
+  .hero-main-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.3rem !important;
+  }
 }
 
 /* --------------------------- */
@@ -6728,7 +6757,7 @@ body {
 }
 
 .shalimar-leads-form .form-control:focus {
-  border-color: #b08d57;
+  border-color: #24574e;
   box-shadow: 0 0 0 0.2rem rgba(176, 141, 87, 0.25);
   outline: none;
 }
@@ -6928,12 +6957,12 @@ body {
 
 .doctor-text .rera-website .rera-no {
   font-size: 1rem;
-  color: #B08D57;
+  color: #24574e;
   margin-bottom: 5px;
 }
 
 .doctor-text .rera-website .website-link strong a {
-  color: #B08D57;
+  color: #24574e;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -6972,14 +7001,14 @@ body {
 
 .doctor-text .contact-info .icon-phone-call2 {
   font-size: 24px; /* Adjust as needed */
-  color: #B08D57; /* Icon color */
+  color: #24574e; /* Icon color */
   margin-right: 10px;
 }
 
 
 .doctor-text .contact-info .phone-number {
   font-size: 1.3rem;
-  color: #B08D57;
+  color: #24574e;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -7045,10 +7074,10 @@ body {
 
 .floor-plan-tabs .nav-link.active,
 .floor-plan-tabs .nav-link:hover {
-  color: #B08D57; /* Darker Gold */
-  border-color: #B08D57;
+  color: #24574e; /* Darker Gold */
+  border-color: #24574e;
   background-color: #fff;
-  border-bottom: 3px solid #B08D57;
+  border-bottom: 3px solid #24574e;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -7063,11 +7092,11 @@ body {
 
 .floor-plan-carousel .swiper-button-next,
 .floor-plan-carousel .swiper-button-prev {
-  color: #B08D57;
+  color: #24574e;
 }
 
 .floor-plan-carousel .swiper-pagination-bullet-active {
-  background-color: #B08D57;
+  background-color: #24574e;
 }
 
 .floor-plan-gallery img {
@@ -7080,8 +7109,8 @@ body {
 }
 
 .project-floor-plans-section .common-btn {
-    background-color: #B08D57; /* Gold color for buttons */
-    border-color: #B08D57;
+    background-color: #24574e; /* Gold color for buttons */
+    border-color: #24574e;
     color: #fff !important; /* Make text white and important */
 }
 
@@ -7224,7 +7253,7 @@ body {
 
 .image-modal-close:hover,
 .image-modal-close:focus {
-  color: #b08d57;
+  color: #24574e;
   text-decoration: none;
 }
 
@@ -7355,7 +7384,7 @@ body {
 }
 
 .carousel__slide figcaption h4 {
-  color: #B08D57;
+  color: #24574e;
   margin-bottom: 15px;
   font-size: 1.5rem;
   font-weight: 600;
