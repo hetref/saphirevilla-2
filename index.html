@@ -1,918 +1,1002 @@
 <!DOCTYPE html>
+
 <html class="no-js" lang="en">
-  <head>
-      <!-- Google Tag Manager -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+<head>
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-542TZ8NV');</script>
 <!-- End Google Tag Manager -->
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Thememarch" />
-    <!-- Favicon Icon -->
-    <link rel="icon" href="assets/img/favicon.svg" />
-    <!-- Site Title -->
-    <title>Shalimar Marbella</title>
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- <script src="https://fraud-logger.vercel.app/tracker.js?key=AjbiV8uIGg_Se4HTVhUbyOwCwfJd4bsk"></script> -->
-    <style>
-      /* Responsive Title Font Sizes */
-      @media (max-width: 991px) {
-        /* Medium devices (tablets, less than 992px) */
-        .hero-main-title {
-          font-size: 2.2rem !important;
-        }
-        .hero-section h2 {
-          font-size: 1.5rem !important;
-        }
-        .ak-section-title {
-          font-size: 1.8rem !important;
-        }
-        .ak-section-subtitle {
-          font-size: 0.9rem !important;
-        }
-        .about-title {
-          font-size: 1.7rem !important;
-        }
-        .feature-title {
-          font-size: 1.1rem !important;
-        }
-        .contact-title b {
-          font-size: 1.2rem !important;
-        }
-        .modal-title {
-          font-size: 1.1rem !important;
-        }
-        .testmonial-info h3.testmonial-title {
-          font-size: 1rem !important;
-        }
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta content="ie=edge" http-equiv="x-ua-compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Thememarch" name="author" />
+  <!-- Favicon Icon -->
+  <link href="assets/img/favicon.svg" rel="icon" />
+  <!-- Site Title -->
+  <title>Sapphire Villa</title>
+  <link href="assets/css/plugins/swiper.min.css" rel="stylesheet" />
+  <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- <script src="https://fraud-logger.vercel.app/tracker.js?key=AjbiV8uIGg_Se4HTVhUbyOwCwfJd4bsk"></script> -->
+  <style>
+    /* Responsive Title Font Sizes */
+    @media (max-width: 991px) {
+
+      /* Medium devices (tablets, less than 992px) */
+      .hero-main-title {
+        font-size: 2.2rem !important;
       }
 
-      @media (max-width: 767px) {
-        /* Small devices (landscape phones, less than 768px) */
-        .hero-main-title {
-          font-size: 2rem !important;
-        }
-        .hero-section h2 {
-          font-size: 1.3rem !important;
-        }
-        
-        /* Hero section adjustments for small devices */
-        .hero-section {
-          min-height: 80vh !important;
-        }
-        
-        .ak-hero-bg {
-          height: 100% !important;
-        }
-        
-        /* Adjust column spacing */
-        .hero-section .col-lg-6 {
-          padding-top: 30px;
-          padding-bottom: 30px;
-        }
-        .ak-section-title {
-          font-size: 1.6rem !important; /* Further reduced for smaller screens */
-        }
-        .ak-section-subtitle {
-          font-size: 0.85rem !important;
-        }
-        .about-title {
-          font-size: 1.5rem !important;
-        }
-        h2.ak-section-title.animation-title {
-          font-size: 1.5rem !important; /* Specific targeting for "Why Choose Us" etc. */
-        }
-        .feature-card-two h5.feature-title {
-          font-size: 1rem !important;
-        }
-        .feature-card h5.feature-title {
-          font-size: 1rem !important;
-        }
-        .contact-title b {
-          font-size: 1.1rem !important;
-        }
-        .modal-title {
-          font-size: 1rem !important;
-        }
-        .testmonial-info h3.testmonial-title {
-          font-size: 0.9rem !important;
-        }
-        .ak-accordion-title {
-          font-size: 0.95rem !important;
-        }
+      .hero-section h2 {
+        font-size: 1.5rem !important;
       }
 
-      @media (max-width: 575px) {
-        /* Extra small devices (portrait phones, less than 576px) */
-        .hero-main-title {
-          font-size: 1.6rem !important;
-        }
-        .hero-section h2 {
-          font-size: 1rem !important;
-        }
-        
-        /* Hero image and section adjustments for mobile */
-        .hero-section {
-          min-height: auto !important;
-          height: auto !important;
-          padding-top: 60px;
-          padding-bottom: 40px;
-        }
-        
-        .ak-hero-featured {
-          height: 100% !important;
-        }
-        
-        .ak-hero-bg {
-          object-fit: cover !important;
-          object-position: center !important;
-          height: 100% !important;
-        }
-        
-        /* Smaller text for feature points */
-        .hero-section .text-white {
-          font-size: 0.8rem !important;
-        }
-        
-        /* Adjust spacing for feature points */
-        .hero-section img[src*="check.svg"] {
-          width: 18px !important;
-          height: 18px !important;
-          margin-right: 8px !important;
-        }
-        .ak-section-title {
-          font-size: 1.4rem !important;
-        }
-        .ak-section-subtitle {
-          font-size: 0.8rem !important;
-        }
-        .about-title {
-          font-size: 1.3rem !important;
-        }
-        h2.ak-section-title.animation-title {
-          font-size: 1.3rem !important;
-        }
-        .feature-card-two h5.feature-title {
-          font-size: 0.9rem !important;
-        }
-        .feature-card h5.feature-title {
-          font-size: 0.9rem !important;
-        }
-        .contact-title b {
-          font-size: 1rem !important;
-        }
-        .modal-title {
-          font-size: 0.95rem !important;
-        }
-        .testmonial-info h3.testmonial-title {
-          font-size: 0.85rem !important;
-        }
-        .ak-accordion-title {
-          font-size: 0.9rem !important;
-        }
+      .ak-section-title {
+        font-size: 1.8rem !important;
       }
 
-      /* Report Section Styles */
-      .report-section-title {
-        text-align: center;
-        margin-bottom: 40px; /* Space below the main "Reports" title */
-        font-weight: bold;
-        color: #333;
-      }
-      .report-card {
-        background-color: transparent; /* Changed from #fff to transparent */
-        border: 1px solid #24574e; /* Golden border */
-        border-radius: 8px; /* Rounded corners for the card */
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px; /* Space between cards on smaller screens */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%; /* Make cards in a row equal height */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Added smooth shadow */
-      }
-      .report-card-title-area {
-        background-color: #24574e; /* Golden background for title area */
-        color: #fff; /* White text */
-        padding: 15px;
-        border-radius: 6px; /* Slightly rounded corners for title area */
-        margin-bottom: 15px; /* Space between title area and button */
-        font-weight: 600;
-        min-height: 70px; /* Ensure title areas have a consistent minimum height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .report-card-button {
-        background-color: #24574e !important; /* Golden background for button */
-        color: #fff !important; /* White text */
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px; /* Rounded corners for button */
-        text-decoration: none;
-        display: inline-block;
-        width: auto; /* Adjust width as needed, or make it 100% */
-        transition: background-color 0.3s ease;
-      }
-      .report-card-button:hover {
-        background-color: #9c7b4d !important; /* Darker golden on hover */
-        color: #fff !important;
-      }
-      .download-brochure-btn-reports {
-        background-color: #24574e !important;
-        color: #fff !important;
-        padding: 12px 30px !important;
-        border-radius: 6px !important;
-        text-decoration: none;
-        font-weight: 600;
-        border: none;
-        display: inline-block; /* Center the button if it's a block element */
-      }
-      .download-brochure-btn-reports:hover {
-        background-color: #9c7b4d !important;
-        color: #fff !important;
-      }
-      /* End Report Section Styles */
-
-      /* Specific background for Reports section */
-      #reports {
-        background-color: #fdf5e6 !important; /* Old Lace - beige like color */
+      .ak-section-subtitle {
+        font-size: 0.9rem !important;
       }
 
-      .gallery-title-container {
-        text-align: center;
-        margin-bottom: 40px;
+      .about-title {
+        font-size: 1.7rem !important;
       }
-      .gallery-subtitle {
-        font-size: 1rem; /* Adjust as needed */
-        color: #6c757d; /* Muted color for subtitle */
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
+
+      .feature-title {
+        font-size: 1.1rem !important;
       }
-      .gallery-main-title {
-        font-size: 2rem; /* Adjust based on .ak-section-title or make specific */
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 30px;
+
+      .contact-title b {
+        font-size: 1.2rem !important;
       }
+
+      .modal-title {
+        font-size: 1.1rem !important;
+      }
+
+      .testmonial-info h3.testmonial-title {
+        font-size: 1rem !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      /* Small devices (landscape phones, less than 768px) */
+      .hero-main-title {
+        font-size: 2rem !important;
+      }
+
+      .hero-section h2 {
+        font-size: 1.3rem !important;
+      }
+
+      /* Hero section adjustments for small devices */
+      .hero-section {
+        min-height: 80vh !important;
+      }
+
+      .ak-hero-bg {
+        height: 100% !important;
+      }
+
+      /* Adjust column spacing */
+      .hero-section .col-lg-6 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .ak-section-title {
+        font-size: 1.6rem !important;
+        /* Further reduced for smaller screens */
+      }
+
+      .ak-section-subtitle {
+        font-size: 0.85rem !important;
+      }
+
+      .about-title {
+        font-size: 1.5rem !important;
+      }
+
+      h2.ak-section-title.animation-title {
+        font-size: 1.5rem !important;
+        /* Specific targeting for "Why Choose Us" etc. */
+      }
+
+      .feature-card-two h5.feature-title {
+        font-size: 1rem !important;
+      }
+
+      .feature-card h5.feature-title {
+        font-size: 1rem !important;
+      }
+
+      .contact-title b {
+        font-size: 1.1rem !important;
+      }
+
+      .modal-title {
+        font-size: 1rem !important;
+      }
+
+      .testmonial-info h3.testmonial-title {
+        font-size: 0.9rem !important;
+      }
+
+      .ak-accordion-title {
+        font-size: 0.95rem !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+
+      /* Extra small devices (portrait phones, less than 576px) */
+      .hero-main-title {
+        font-size: 1.6rem !important;
+      }
+
+      .hero-section h2 {
+        font-size: 1rem !important;
+      }
+
+      /* Hero image and section adjustments for mobile */
+      .hero-section {
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      .ak-hero-featured {
+        height: 100% !important;
+      }
+
+      .ak-hero-bg {
+        object-fit: cover !important;
+        object-position: center !important;
+        height: 100% !important;
+      }
+
+      /* Smaller text for feature points */
+      .hero-section .text-white {
+        font-size: 0.8rem !important;
+      }
+
+      /* Adjust spacing for feature points */
+      .hero-section img[src*="check.svg"] {
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 8px !important;
+      }
+
+      .ak-section-title {
+        font-size: 1.4rem !important;
+      }
+
+      .ak-section-subtitle {
+        font-size: 0.8rem !important;
+      }
+
+      .about-title {
+        font-size: 1.3rem !important;
+      }
+
+      h2.ak-section-title.animation-title {
+        font-size: 1.3rem !important;
+      }
+
+      .feature-card-two h5.feature-title {
+        font-size: 0.9rem !important;
+      }
+
+      .feature-card h5.feature-title {
+        font-size: 0.9rem !important;
+      }
+
+      .contact-title b {
+        font-size: 1rem !important;
+      }
+
+      .modal-title {
+        font-size: 0.95rem !important;
+      }
+
+      .testmonial-info h3.testmonial-title {
+        font-size: 0.85rem !important;
+      }
+
+      .ak-accordion-title {
+        font-size: 0.9rem !important;
+      }
+    }
+
+    /* Report Section Styles */
+    .report-section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      /* Space below the main "Reports" title */
+      font-weight: bold;
+      color: #333;
+    }
+
+    .report-card {
+      background-color: transparent;
+      /* Changed from #fff to transparent */
+      border: 1px solid #354990;
+      /* Golden border */
+      border-radius: 8px;
+      /* Rounded corners for the card */
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      /* Space between cards on smaller screens */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      /* Make cards in a row equal height */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Added smooth shadow */
+    }
+
+    .report-card-title-area {
+      background-color: #354990;
+      /* Golden background for title area */
+      color: #fff;
+      /* White text */
+      padding: 15px;
+      border-radius: 6px;
+      /* Slightly rounded corners for title area */
+      margin-bottom: 15px;
+      /* Space between title area and button */
+      font-weight: 600;
+      min-height: 70px;
+      /* Ensure title areas have a consistent minimum height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .report-card-button {
+      background-color: #354990 !important;
+      /* Golden background for button */
+      color: #fff !important;
+      /* White text */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      /* Rounded corners for button */
+      text-decoration: none;
+      display: inline-block;
+      width: auto;
+      /* Adjust width as needed, or make it 100% */
+      transition: background-color 0.3s ease;
+    }
+
+    .report-card-button:hover {
+      background-color: #9c7b4d !important;
+      /* Darker golden on hover */
+      color: #fff !important;
+    }
+
+    .download-brochure-btn-reports {
+      background-color: #354990 !important;
+      color: #fff !important;
+      padding: 12px 30px !important;
+      border-radius: 6px !important;
+      text-decoration: none;
+      font-weight: 600;
+      border: none;
+      display: inline-block;
+      /* Center the button if it's a block element */
+    }
+
+    .download-brochure-btn-reports:hover {
+      background-color: #9c7b4d !important;
+      color: #fff !important;
+    }
+
+    /* End Report Section Styles */
+
+    /* Specific background for Reports section */
+    #reports {
+      background-color: #ffffff !important;
+      /* Old Lace - beige like color */
+    }
+
+    .gallery-title-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery-subtitle {
+      font-size: 1rem;
+      /* Adjust as needed */
+      color: #6c757d;
+      /* Muted color for subtitle */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .gallery-main-title {
+      font-size: 2rem;
+      /* Adjust based on .ak-section-title or make specific */
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .photo-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .gallery-item-wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Responsive adjustments for gallery grid */
+    @media (max-width: 991px) {
       .photo-gallery-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px; /* Space between images */
-        justify-content: center;
-        margin-bottom: 40px;
-      }
-      .gallery-item {
-        flex-basis: calc(33.333% - 15px); /* Default for 3 items per row */
-        /* max-width: calc(33.333% - 15px); remove this if causing issues with fewer items */
-        border-radius: 12px; /* Rounded corners for images */
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .gallery-item img {
-        width: 100%;
-        height: 100%; /* Make image fill the container */
-        object-fit: cover; /* Cover the area, might crop */
-        display: block;
-      }
-      .gallery-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      /* Responsive adjustments for gallery grid */
-      @media (max-width: 991px) {
-        /* Tablets */
-        .gallery-item {
-          flex-basis: calc(50% - 15px); /* 2 items per row */
-          /* max-width: calc(50% - 15px); */
-        }
-        /* Adjusting first row for 4 items, then 2 items per row */
-        .gallery-item.row-1-item {
-          flex-basis: calc(
-            25% - 15px
-          ); /* 4 items for the first row on larger screens */
-        }
-      }
-
-      @media (max-width: 767px) {
-        /* Mobile landscape */
-        .gallery-item,
-        .gallery-item.row-1-item {
-          flex-basis: calc(50% - 10px); /* 2 items per row */
-          /* max-width: calc(50% - 10px); */
-          gap: 10px;
-        }
-      }
-      @media (max-width: 575px) {
-        /* Mobile portrait */
-        .gallery-item,
-        .gallery-item.row-1-item {
-          flex-basis: calc(100% - 10px); /* 1 item per row */
-          /* max-width: calc(100% - 10px); */
-        }
-        .gallery-main-title {
-          font-size: 1.6rem;
-        }
-      }
-
-      /* Special styling for the first row to attempt 4 items if possible */
-      .gallery-row-1 {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-        margin-bottom: 15px;
-      }
-      .gallery-row-1 .gallery-item {
-        flex: 1 1 calc(25% - 15px); /* Attempt 4 items */
-        min-width: 200px; /* Minimum width before wrapping */
-      }
-
-      /* Subsequent rows */
-      .gallery-row-subsequent {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-      }
-      .gallery-row-subsequent .gallery-item {
-        flex: 1 1 calc(33.333% - 15px); /* Attempt 3 items */
-        min-width: 200px; /* Minimum width before wrapping */
-      }
-
-      /* Location Section Styles */
-      .location-section {
-        /* background-color: #fff; */ /* White background, adjust as needed */
-        /* padding: 60px 0; */ /* Already handled by py-5 */
-        text-align: center;
-      }
-      .location-title-container {
-        margin-bottom: 40px;
-      }
-      .location-subtitle {
-        font-size: 1rem;
-        color: #6c757d;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
-      }
-      .location-main-title {
-        font-size: 2rem;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 30px;
-      }
-      .map-container {
-        width: 100%;
-        /* max-width: 1140px; /* Adjust to match container width or remove for full bleed */
-        margin: 0 auto; /* Center the map if max-width is set */
-        overflow: hidden; /* In case the iframe tries to break out */
-        border-radius: 8px; /* Optional: if you want rounded corners on the map container */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-      }
-      .map-container iframe {
-        width: 100%;
-        height: 450px; /* Default height, adjust as needed */
-        border: 0; /* Remove default iframe border */
-      }
-
-      @media (max-width: 767px) {
-        .map-container iframe {
-          height: 350px; /* Smaller height for mobile */
-        }
-        .location-main-title {
-          font-size: 1.6rem;
-        }
-      }
-      @media (max-width: 575px) {
-        .map-container iframe {
-          height: 300px; /* Smaller height for mobile */
-        }
-      }
-
-      /* Style for Floor Plan Carousel container to ensure control containment */
-      .floor-plan-carousel {
-        position: relative; /* Ensure it's a positioning context for its controls */
-        overflow: hidden; /* Prevent controls from visually escaping */
-      }
-
-      /* Specification Section New Styles */
-      .specification-intro-text {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 40px auto; /* Center and provide space below */
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #555;
-      }
-
-      .spec-card {
-        position: relative;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 300px; /* Fixed height for uniform cards, adjust as needed */
-        background-color: #333; /* Fallback if image fails */
-      }
-
-      .spec-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .spec-card img.spec-card-bg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: transform 0.4s ease;
-      }
-
-      .spec-card:hover img.spec-card-bg {
-        transform: scale(1.05); /* Slight zoom on hover */
-      }
-
-      .spec-card-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.8) 0%,
-          rgba(0, 0, 0, 0.3) 60%,
-          rgba(0, 0, 0, 0.1) 100%
-        ); /* Darker at bottom */
-        z-index: 2;
-        opacity: 1; /* Default opacity, user wants it generally less obstructive */
-      }
-
-      /* Reduce general overlay opacity if needed, but gradient helps with text at bottom */
-      /* For a global reduction, adjust the alpha values in the linear-gradient */
-
-      .spec-card-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        color: #fff;
-        z-index: 3;
-        transition: all 0.4s ease-out;
-      }
-
-      .spec-card-heading {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-        line-height: 1.3;
-        color: #fff !important;
-      }
-
-      .spec-card-description {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: opacity 0.4s ease-out, max-height 0.4s ease-out 0.1s;
-      }
-
-      .spec-card:hover .spec-card-content {
-        /* Optionally, move content up a bit or change background of content area on hover */
-        /* background-color: rgba(0,0,0,0.5); /* Example: slightly darker content bg on hover */
-      }
-
-      .spec-card:hover .spec-card-description {
-        opacity: 1;
-        max-height: 150px; /* Adjust based on expected content length */
-      }
-
-      /* Adjust column padding if needed, g-4 already provides gutter */
-      #specification .col-lg-3.col-md-6 {
-        margin-bottom: 2rem; /* Ensure spacing between rows on mobile */
-      }
-
-      /* End Specification Section New Styles */
-
-      /* Responsive Header and Hamburger Menu Styles */
-      .hamburger-menu {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        z-index: 1001;
-        position: relative;
-      }
-
-      .hamburger-menu span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background-color: var(--primary-color);
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-
-      /* Default styles for mobile-cta-button - hidden on desktop */
-      .mobile-cta-button {
-        display: none;
-      }
-
-      /* Hero Section Responsive Styles */
-      .desktop-content-overlay {
-        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
       }
       
-      .mobile-content-section {
-        display: none;
+      .gallery-item {
+        height: 200px;
+      }
+      
+      .gallery-item-wide {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .photo-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      
+      .gallery-item {
+        height: 180px;
+      }
+      
+      .gallery-item-wide {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .photo-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      .gallery-item {
+        height: 250px;
+      }
+      
+      .gallery-item-wide {
+        grid-column: span 1;
       }
 
-      /* Floor Plans Section Styles */
-      .floor-plan-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        overflow: hidden;
+      .gallery-main-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* Subsequent rows */
+    .gallery-row-subsequent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery-row-subsequent .gallery-item {
+      flex: 1 1 calc(33.333% - 15px);
+      /* Attempt 3 items */
+      min-width: 200px;
+      /* Minimum width before wrapping */
+    }
+
+    /* Location Section Styles */
+    .location-section {
+      /* background-color: #fff; */
+      /* White background, adjust as needed */
+      /* padding: 60px 0; */
+      /* Already handled by py-5 */
+      text-align: center;
+    }
+
+    .location-title-container {
+      margin-bottom: 40px;
+    }
+
+    .location-subtitle {
+      font-size: 1rem;
+      color: #6c757d;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .location-main-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .map-container {
+      width: 100%;
+      /* max-width: 1140px; /* Adjust to match container width or remove for full bleed */
+      margin: 0 auto;
+      /* Center the map if max-width is set */
+      overflow: hidden;
+      /* In case the iframe tries to break out */
+      border-radius: 8px;
+      /* Optional: if you want rounded corners on the map container */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Optional: subtle shadow */
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      /* Default height, adjust as needed */
+      border: 0;
+      /* Remove default iframe border */
+    }
+
+    @media (max-width: 767px) {
+      .map-container iframe {
+        height: 350px;
+        /* Smaller height for mobile */
       }
 
-      .floor-plan-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      .location-main-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .map-container iframe {
+        height: 300px;
+        /* Smaller height for mobile */
+      }
+    }
+
+    /* Style for Floor Plan Carousel container to ensure control containment */
+    .floor-plan-carousel {
+      position: relative;
+      /* Ensure it's a positioning context for its controls */
+      overflow: hidden;
+      /* Prevent controls from visually escaping */
+    }
+
+    /* Specification Section New Styles */
+    .specification-intro-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      /* Center and provide space below */
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .spec-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 300px;
+      /* Fixed height for uniform cards, adjust as needed */
+      background-color: #333;
+      /* Fallback if image fails */
+    }
+
+    .spec-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .spec-card img.spec-card-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: transform 0.4s ease;
+    }
+
+    .spec-card:hover img.spec-card-bg {
+      transform: scale(1.05);
+      /* Slight zoom on hover */
+    }
+
+    .spec-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.3) 60%,
+          rgba(0, 0, 0, 0.1) 100%);
+      /* Darker at bottom */
+      z-index: 2;
+      opacity: 1;
+      /* Default opacity, user wants it generally less obstructive */
+    }
+
+    /* Reduce general overlay opacity if needed, but gradient helps with text at bottom */
+    /* For a global reduction, adjust the alpha values in the linear-gradient */
+
+    .spec-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      z-index: 3;
+      transition: all 0.4s ease-out;
+    }
+
+    .spec-card-heading {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.3;
+      color: #fff !important;
+    }
+
+    .spec-card-description {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.4s ease-out, max-height 0.4s ease-out 0.1s;
+    }
+
+    .spec-card:hover .spec-card-content {
+      /* Optionally, move content up a bit or change background of content area on hover */
+      /* background-color: rgba(0,0,0,0.5); /* Example: slightly darker content bg on hover */
+    }
+
+    .spec-card:hover .spec-card-description {
+      opacity: 1;
+      max-height: 150px;
+      /* Adjust based on expected content length */
+    }
+
+    /* Adjust column padding if needed, g-4 already provides gutter */
+    #specification .col-lg-3.col-md-6 {
+      margin-bottom: 2rem;
+      /* Ensure spacing between rows on mobile */
+    }
+
+    /* End Specification Section New Styles */
+
+    /* Responsive Header and Hamburger Menu Styles */
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 1001;
+      position: relative;
+    }
+
+    .hamburger-menu span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--primary-color);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Default styles for mobile-cta-button - hidden on desktop */
+    .mobile-cta-button {
+      display: none;
+    }
+
+    /* Hero Section Responsive Styles */
+    .desktop-content-overlay {
+      display: flex;
+    }
+
+    .mobile-content-section {
+      display: none;
+    }
+
+    /* Floor Plans Section Styles */
+    .floor-plan-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .floor-plan-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .plan-image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(36, 87, 78, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      /* Allow clicks to pass through */
+    }
+
+    .floor-plan-card:hover .plan-overlay {
+      opacity: 1;
+    }
+
+    .plan-hover-text {
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .plan-details {
+      background: white;
+    }
+
+    .master-plan-container img {
+      transition: transform 0.3s ease;
+    }
+
+    .master-plan-container img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Floor Plan Blur and Popup Styles */
+    .floor-plan-image-blurred {
+      filter: blur(8px);
+      transition: filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .floor-plan-image-unblurred {
+      filter: blur(0);
+      transition: filter 0.3s ease;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .popup-close:hover {
+      color: #333;
+    }
+
+    /* Mobile Menu Styles */
+    @media (max-width: 991px) {
+      .hamburger-menu {
+        display: flex;
+        margin-left: auto;
+        margin-right: 15px;
       }
 
-      .plan-image-container {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .plan-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(36, 87, 78, 0.9);
+      .ak-main-header-center {
+        justify-content: flex-end;
+        flex: 1;
         display: flex;
         align-items: center;
+      }
+
+      .ak-nav {
+        position: static;
+      }
+
+      .ak-nav .ak-nav_list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        padding: 80px 20px 30px;
+        transition: transform 0.4s ease;
+        transform: translateX(100%);
+        z-index: 999;
+        overflow-y: auto;
+        flex-direction: column;
+        display: flex;
         justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none; /* Allow clicks to pass through */
-      }
-
-      .floor-plan-card:hover .plan-overlay {
-        opacity: 1;
-      }
-
-      .plan-hover-text {
-        color: white;
+        align-items: center;
         text-align: center;
-        padding: 20px;
       }
 
-      .plan-details {
-        background: white;
+      .ak-nav .ak-nav_list.active {
+        transform: translateX(0);
       }
 
-      .master-plan-container img {
-        transition: transform 0.3s ease;
+      .ak-nav .ak-nav_list_item {
+        margin: 0;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
 
-      .master-plan-container img:hover {
-        transform: scale(1.02);
+      .ak-nav .ak-nav_list_item:last-child {
+        border-bottom: none;
       }
 
-      /* Floor Plan Blur and Popup Styles */
-      .floor-plan-image-blurred {
-        filter: blur(8px);
-        transition: filter 0.3s ease;
-        cursor: pointer;
+      .ak-nav .ak-nav_list a {
+        display: block;
+        padding: 10px 0;
+        font-size: 24px;
+        color: var(--heading-color);
+        font-weight: 500;
       }
 
-      .floor-plan-image-unblurred {
-        filter: blur(0);
-        transition: filter 0.3s ease;
+      .ak-nav .ak-nav_list a:hover {
+        color: var(--primary-color);
       }
 
-      .popup-overlay {
+      /* Hamburger Animation */
+      .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      /* Overlay when menu is active */
+      .menu-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 998;
         display: none;
+      }
+
+      .menu-overlay.active {
+        display: block;
+      }
+
+      /* Adjust header layout for mobile */
+      .ak-main_header_in {
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+
+      .ak-main-header-left {
+        flex: 0 0 auto;
+      }
+
+      .ak-main-header-right {
+        display: none;
+        /* Hide the right section on mobile */
+      }
+
+      /* Add mobile CTA button inside the menu */
+      .mobile-cta-button {
+        display: block;
+        margin-top: 40px;
+        text-align: center;
+        width: 80%;
+        max-width: 300px;
+      }
+
+      .mobile-cta-button .common-btn {
+        width: 100%;
         justify-content: center;
-        align-items: center;
-        z-index: 9999;
+        padding: 15px 20px;
+        font-size: 18px;
       }
 
-      .popup-form {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        max-width: 400px;
-        width: 90%;
-        position: relative;
+      /* Mobile Hero Content Styles */
+      .desktop-content-overlay {
+        display: none;
       }
 
-      .popup-close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 24px;
-        cursor: pointer;
-        color: #666;
+      .mobile-content-section {
+        display: block;
       }
 
-      .popup-close:hover {
-        color: #333;
+      .hero-image-container {
+        height: 50vh !important;
+      }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 576px) {
+      .ak-site_branding img {
+        max-height: 50px !important;
       }
 
-      /* Mobile Menu Styles */
-      @media (max-width: 991px) {
-        .hamburger-menu {
-          display: flex;
-          margin-left: auto;
-          margin-right: 15px;
-        }
-
-        .ak-main-header-center {
-          justify-content: flex-end;
-          flex: 1;
-          display: flex;
-          align-items: center;
-        }
-
-        .ak-nav {
-          position: static;
-        }
-
-        .ak-nav .ak-nav_list {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          background-color: white;
-          padding: 80px 20px 30px;
-          transition: transform 0.4s ease;
-          transform: translateX(100%);
-          z-index: 999;
-          overflow-y: auto;
-          flex-direction: column;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        }
-
-        .ak-nav .ak-nav_list.active {
-          transform: translateX(0);
-        }
-
-        .ak-nav .ak-nav_list_item {
-          margin: 0;
-          padding: 15px 0;
-          width: 100%;
-          text-align: center;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .ak-nav .ak-nav_list_item:last-child {
-          border-bottom: none;
-        }
-
-        .ak-nav .ak-nav_list a {
-          display: block;
-          padding: 10px 0;
-          font-size: 24px;
-          color: var(--heading-color);
-          font-weight: 500;
-        }
-
-        .ak-nav .ak-nav_list a:hover {
-          color: var(--primary-color);
-        }
-
-        /* Hamburger Animation */
-        .hamburger-menu.active span:nth-child(1) {
-          transform: translateY(8px) rotate(45deg);
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-          opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-          transform: translateY(-8px) rotate(-45deg);
-        }
-
-        /* Overlay when menu is active */
-        .menu-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7);
-          z-index: 998;
-          display: none;
-        }
-
-        .menu-overlay.active {
-          display: block;
-        }
-
-        /* Adjust header layout for mobile */
-        .ak-main_header_in {
-          justify-content: space-between;
-          padding: 10px 0;
-        }
-
-        .ak-main-header-left {
-          flex: 0 0 auto;
-        }
-
-        .ak-main-header-right {
-          display: none; /* Hide the right section on mobile */
-        }
-
-        /* Add mobile CTA button inside the menu */
-        .mobile-cta-button {
-          display: block;
-          margin-top: 40px;
-          text-align: center;
-          width: 80%;
-          max-width: 300px;
-        }
-
-        .mobile-cta-button .common-btn {
-          width: 100%;
-          justify-content: center;
-          padding: 15px 20px;
-          font-size: 18px;
-        }
-
-        /* Mobile Hero Content Styles */
-        .desktop-content-overlay {
-          display: none;
-        }
-        
-        .mobile-content-section {
-          display: block;
-        }
-        
-        .hero-image-container {
-          height: 50vh !important;
-        }
+      .ak-main_header_in {
+        padding: 8px 0;
       }
+    }
 
-      /* Small mobile devices */
-      @media (max-width: 576px) {
-        .ak-site_branding img {
-          max-height: 50px !important;
-        }
+    /* End Responsive Header Styles */
+  </style>
+</head>
 
-        .ak-main_header_in {
-          padding: 8px 0;
-        }
-      }
-      /* End Responsive Header Styles */
-    </style>
-  </head>
-
-  <body>
-      <!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-542TZ8NV"
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-542TZ8NV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
-    <!-- Start Header Section -->
-      <header class="ak-site_header ak-style1 ak-sticky_header">
-      <div class="ak-main_header">
-        <div class="container">
-          <div class="ak-main_header_in">
-            <div class="ak-main-header-left">
-              <a class="ak-site_branding nav" href="index.html">
-                <img
-                  src="assets/img/logo.webp"
-                  alt="..."
-                  style="max-height: 60px !important" 
-                />
-              </a>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Start Header Section -->
+  <header class="ak-site_header ak-style1 ak-sticky_header">
+    <div class="ak-main_header">
+      <div class="container">
+        <div class="ak-main_header_in">
+          <div class="ak-main-header-left">
+            <a class="ak-site_branding nav" href="index.html">
+              <img alt="..." src="assets/img/logo.webp" style="max-height: 60px !important" />
+            </a>
+          </div>
+          <div class="ak-main-header-center">
+            <div class="ak-nav ak-medium">
+              <ul class="ak-nav_list">
+                <li class="ak-nav_list_item">
+                  <a href="#home">Home</a>
+                </li>
+                <li class="ak-nav_list_item">
+                  <a href="#Project-details">Project details</a>
+                </li>
+                <li class="ak-nav_list_item">
+                  <a href="#Floor-Plans">Reviews</a>
+                </li>
+                <li class="ak-nav_list_item">
+                  <a href="#Enquire">Enquire</a>
+                </li>
+              </ul>
             </div>
-            <div class="ak-main-header-center">
-              <div class="ak-nav ak-medium">
-                <ul class="ak-nav_list">
-                  <li class="ak-nav_list_item">
-                    <a href="#home">Home</a>
-                  </li>
-                  <li class="ak-nav_list_item">
-                    <a href="#Amenities">Amenities</a>
-                  </li>
-                  <li class="ak-nav_list_item">
-                    <a href="#Floor-Plans">Floor Plans</a>
-                  </li>
-                  <li class="ak-nav_list_item">
-                    <a href="#Enquire">Enquire</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Hamburger Menu Button for Mobile -->
-              <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+            <!-- Hamburger Menu Button for Mobile -->
+            <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="ak-main-header-right">
-              <a href="#contact-form-redirect" class="common-btn anim-pulse">
-                <span>Book a Site Visit</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0_201_978435345)">
-                      <path
-                        d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
-                        stroke="#030917"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_201_978435345">
-                        <rect
-                          width="14"
-                          height="14"
-                          fill="white"
-                          transform="translate(0.00927734)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-              </a>
-            </div>
+          </div>
+          <div class="ak-main-header-right">
+            <a class="common-btn anim-pulse" href="#contact-form-redirect">
+              <span>Book a Site Visit</span>
+              <span>
+                <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_201_978435345)">
+                    <path d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
+                      stroke="#030917" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_201_978435345">
+                      <rect fill="white" height="14" transform="translate(0.00927734)" width="14"></rect>
+                    </clippath>
+                  </defs>
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
-      <div class="nav-bar-border"></div>
-    </header>
-    <!-- End Header Section -->
-
-    <!-- Start Hero -->
-    <section id="home" class="hero-section">
-      <!-- Hero Image Section -->
-      <div class="hero-image-container" style="width: 100%; height: 100vh; position: relative; overflow: hidden;">
-        <img
-          src="assets/img/LP Images/BTG_View 1 Entrance Final.webp"
-          alt="Between The Greens Villa"
-          style="
+    </div>
+    <div class="nav-bar-border"></div>
+  </header>
+  <!-- End Header Section -->
+  <!-- Start Hero -->
+  <section class="hero-section" id="home">
+    <!-- Hero Image Section -->
+    <div class="hero-image-container" style="width: 100%; height: 100vh; position: relative; overflow: hidden;">
+      <img alt="Between The Greens Villa" src="assets/img/LP Images/imgi_21_sapphire-villa-banner.webp" style="
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
-          "
-        />
-        <div
-          class="hero-overlay"
-          style="
+          " />
+      <div class="hero-overlay" style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.3);
-          "
-        ></div>
-        
-        <!-- Desktop Content Overlay -->
-        <div class="desktop-content-overlay" style="
+          "></div>
+      <!-- Desktop Content Overlay -->
+      <div class="desktop-content-overlay" style="
           position: absolute;
           top: 0;
           left: 0;
@@ -921,572 +1005,381 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           align-items: center;
           z-index: 2;
         ">
-          <div class="container">
-            <div class="row align-items-center">
-              <!-- Left Column - Hero Text -->
-              <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                <h1
-                  class="hero-main-title"
-                  style="font-size: 2.8rem; font-weight: bold; color: white; margin-bottom: 20px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                >
-                  Between The Greens
-                </h1>
-                <h2
-                  style="font-size: 1.8rem; margin-bottom: 20px; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                >
-                  Living in Synchrony with Nature
-                </h2>
-
-                <div style="margin-bottom: 25px">
-                  <div
-                    style="
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Column - Hero Text -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+              <h1 class="hero-main-title"
+                style="font-size: 2.8rem; font-weight: bold; color: white; margin-bottom: 20px;">
+                Sapphire Villa
+              </h1>
+              <h2
+                style="font-size: 1.8rem; margin-bottom: 20px; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                Living in Refined Luxury
+              </h2>
+              <div style="margin-bottom: 25px">
+                <div style="
                       display: flex;
                       align-items: flex-start;
                       margin-bottom: 15px;
-                    "
-                  >
-                    <img
-                      src="assets/img/check.svg"
-                      alt="Location"
-                      style="
+                    ">
+                  <img alt="Location" src="assets/img/check.svg" style="
                         width: 24px;
                         height: 24px;
                         margin-right: 15px;
                         margin-top: 2px;
                         filter: brightness(0) invert(1);
-                      "
-                    />
-                    <div>
-                      <p
-                        style="margin-bottom: 5px; font-size: 1rem; color: white; font-weight: 500; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                      9.5 Acres of Nature-Inspired Luxury Living
-                      </p>
-                      <p
-                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                      Spacious 4 BHK Villas (3,700 – 4,800 sq. ft.)
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
-                  >
-                    <img
-                      src="assets/img/check.svg"
-                      alt="Tick"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 15px;
-                        margin-top: 2px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                    <div>
-                      <p
-                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                        <strong style="font-size: 1rem; color: white;"> Total Units</strong>
-                        147 Premium Independent Villas
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
-                  >
-                    <img
-                      src="assets/img/check.svg"
-                      alt="Tick"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 15px;
-                        margin-top: 2px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                    <div>
-                      <p
-                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                        <strong style="font-size: 1rem; color: white;">  Landscape Design</strong>
-                        Terraced Gardens, Fragrance Garden, Bonfire Courts, Floating Bridge
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
-                  >
-                    <img
-                      src="assets/img/check.svg"
-                      alt="Tick"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 15px;
-                        margin-top: 2px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                    <div>
-                      <p
-                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                        <strong style="font-size: 1rem; color: white;"> Connectivity</strong>
-                        &nbsp;&nbsp;Easy Access to Whitefield, Sarjapur, ORR & Major Tech Hubs
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    style="display: flex; align-items: flex-start; margin-bottom: 15px"
-                  >
-                    <img
-                      src="assets/img/check.svg"
-                      alt="Tick"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 15px;
-                        margin-top: 2px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                    <div>
-                      <p
-                        style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);"
-                      >
-                        <strong style="font-size: 1rem; color: white;">Sales Partner</strong>
-                        &nbsp;&nbsp; Green Shoots – Authorized Channel Partner (RERA Registered)
-                      </p>
-                    </div>
+                      " />
+                  <div>
+                    <p
+                      style="margin-bottom: 5px; font-size: 1rem; color: white; font-weight: 500; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      Limited Collection
+                    </p>
+                    <p
+                      style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      Spacious 4 BHK Bespoke Villas (3,500 – 5,000 sq. ft.) – A Limited Collection Designed for Modern Living
+                    </p>
                   </div>
                 </div>
-
-                <a
-                  href="#contact-form-redirect"
-                  class="common-btn d-lg-inline-block anim-pulse mt-3"
-                  style="
-                    background-color: #24574e;
-                    border-color: #24574e;
+                <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+                  <img alt="Tick" src="assets/img/check.svg" style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      " />
+                  <div>
+                    <p
+                      style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      <strong style="font-size: 1rem; color: white;">Architectural Brilliance</strong>
+                      Contemporary Design with Timeless Elegance & High-End Finishes
+                    </p>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+                  <img alt="Tick" src="assets/img/check.svg" style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      " />
+                  <div>
+                    <p
+                      style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      <strong style="font-size: 1rem; color: white;">Natural Light & Serenity</strong>
+                      Expansive Windows Framing Breathtaking Views
+                    </p>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+                  <img alt="Tick" src="assets/img/check.svg" style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      " />
+                  <div>
+                    <p
+                      style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      <strong style="font-size: 1rem; color: white;"> Connectivity</strong>
+                      Seamless Access to Whitefield, ITPL, ORR & Key City Hubs
+                    </p>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+                  <img alt="Tick" src="assets/img/check.svg" style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        filter: brightness(0) invert(1);
+                      " />
+                  <div>
+                    <p
+                      style="margin-bottom: 0; font-size: 0.95rem; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
+                      <strong style="font-size: 1rem; color: white;">Developer Assurance</strong>
+                      Crafted for Sophistication, Built for Comfort
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a class="common-btn d-lg-inline-block anim-pulse mt-3" href="#contact-form-redirect" style="
+                    background-color: #354990;
+                    border-color: #354990;
                     color: #fff !important;
                     padding: 12px 30px;
                     font-size: 1.1rem;
-                  "
-                >
-                  <span>Book a Site Visit</span>
-                </a>
-              </div>
-
-              <!-- Right Column - Form -->
-              <div class="col-lg-6 col-md-12">
-                <div class="rounded shadow" style="background-color: rgba(248, 249, 250, 0.95); backdrop-filter: blur(10px);">
-                  <p
-                    class="text-center text-white py-3"
-                    style="
-                      background-color: #24574e;
+                  ">
+                <span>Book a Site Visit</span>
+              </a>
+            </div>
+            <!-- Right Column - Form -->
+            <div class="col-lg-6 col-md-12">
+              <div class="rounded shadow"
+                style="background-color: rgba(248, 249, 250, 0.95); backdrop-filter: blur(10px);">
+                <p class="text-center text-white py-3" style="
+                      background-color: #354990;
                       font-size: 1.2rem;
                       font-weight: bold;
                       margin-bottom: 0;
                       border-top-left-radius: 0.25rem;
                       border-top-right-radius: 0.25rem;
-                    "
-                  >
-                    Register Now for the Available Best Offers!
-                  </p>
-                  <div class="p-4">
-                    <form
-                      data-fraudclicks-key
-                      name="shalimar-leads-form"
-                      class="shalimar-leads-form"
-                      action="javascript:void(0);"
-                    >
-                      <div class="mb-3">
-                        <input
-                          type="text"
-                          name="fullname"
-                          class="form-control"
-                          placeholder="Full Name"
-                          required
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <input
-                          type="tel"
-                          name="phone"
-                          class="form-control"
-                          placeholder="Phone"
-                          required
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <input
-                          type="email"
-                          name="email"
-                          class="form-control"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-                      <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
-                      <div class="mb-3">
-                        <select name="preference" class="form-control" required>
-                          <option value="" disabled selected>Select Preference</option>
-                          <option value="2BHK">2BHK</option>
-                          <option value="2BHK + Study">2BHK + Study</option>
-                          <option value="3BHK">3BHK</option>
-                          <option value="3BHK + Servant Room">3BHK + Servant Room</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <textarea
-                          name="message"
-                          class="form-control"
-                          placeholder="Message"
-                          rows="4"
-                        ></textarea>
-                      </div>
-                      <div class="text-center mb-3">
-                        <button
-                          type="submit"
-                          class="common-btn anim-pulse shalimar-leads-form-submit-btn"
-                          style="
-                            background-color: #24574e;
-                            border-color: #24574e;
+                    ">
+                  Register Now for the Available Best Offers!
+                </p>
+                <div class="p-4">
+                  <form action="javascript:void(0);" class="shalimar-leads-form" data-fraudclicks-key=""
+                    name="shalimar-leads-form">
+                    <div class="mb-3">
+                      <input class="form-control" name="fullname" placeholder="Full Name" required="" type="text" />
+                    </div>
+                    <div class="mb-3">
+                      <input class="form-control" name="phone" placeholder="Phone" required="" type="tel" />
+                    </div>
+                    <div class="mb-3">
+                      <input class="form-control" name="email" placeholder="Email" required="" type="email" />
+                    </div>
+                    <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
+                    <div class="mb-3">
+                      <select class="form-control" name="preference" required="">
+                        <option disabled="" selected="" value="">Select Preference</option>
+                        <option value="2BHK">2BHK</option>
+                        <option value="2BHK + Study">2BHK + Study</option>
+                        <option value="3BHK">3BHK</option>
+                        <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" name="message" placeholder="Message" rows="4"></textarea>
+                    </div>
+                    <div class="text-center mb-3">
+                      <button class="common-btn anim-pulse shalimar-leads-form-submit-btn" style="
+                            background-color: #354990;
+                            border-color: #354990;
                             color: white;
                             font-size: 1rem;
-                          "
-                        >
-                          <span>Book a Site Visit</span>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                          " type="submit">
+                        <span>Book a Site Visit</span>
+                      </button>
+                    </div>
+                  </form>
                 </div>
-                <div
-                  class="text-center text-white py-3 mt-3"
-                  style="
-                    background-color: #24574e;
+              </div>
+              <div class="text-center text-white py-3 mt-3" style="
+                    background-color: #354990;
                     font-size: 1.2rem;
                     font-weight: bold;
                     border-radius: 0.25rem;
-                  "
-                >
-                  <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
-                </div>
+                  ">
+                <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Mobile Content Section -->
-      <div class="mobile-content-section" style="padding: 40px 20px;">
-        <div class="row">
-          <!-- Left Column - Hero Text -->
-          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-            <h1
-              class="hero-main-title"
-              style="font-size: 2.8rem; font-weight: bold; color: #333; margin-bottom: 20px;"
-            >
-              Between The Greens
-            </h1>
-            <h2
-              style="font-size: 1.8rem; margin-bottom: 20px; color: #666;"
-            >
-              Living in Synchrony with Nature
-            </h2>
-
-            <div style="margin-bottom: 25px">
-              <div
-                style="
+    </div>
+    <!-- Mobile Content Section -->
+    <div class="mobile-content-section" style="padding: 40px 20px;">
+      <div class="row">
+        <!-- Left Column - Hero Text -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+          <h1 class="hero-main-title" style="font-size: 2.8rem; font-weight: bold; color: #333; margin-bottom: 20px;">
+            Between The Greens
+          </h1>
+          <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: #666;">
+            Living in Synchrony with Nature
+          </h2>
+          <div style="margin-bottom: 25px">
+            <div style="
                   display: flex;
                   align-items: flex-start;
                   margin-bottom: 15px;
-                "
-              >
-                <img
-                  src="assets/img/check.svg"
-                  alt="Location"
-                  style="
+                ">
+              <img alt="Location" src="assets/img/check.svg" style="
                     width: 24px;
                     height: 24px;
                     margin-right: 15px;
                     margin-top: 2px;
-                  "
-                />
-                <div>
-                  <p
-                    style="margin-bottom: 5px; font-size: 1rem; color: #333; font-weight: 500;"
-                  >
+                  " />
+              <div>
+                <p style="margin-bottom: 5px; font-size: 1rem; color: #333; font-weight: 500;">
                   9.5 Acres of Nature-Inspired Luxury Living
-                  </p>
-                  <p
-                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
-                  >
+                </p>
+                <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">
                   Spacious 4 BHK Villas (3,700 – 4,800 sq. ft.)
-                  </p>
-                </div>
-              </div>
-
-              <div
-                style="display: flex; align-items: flex-start; margin-bottom: 15px"
-              >
-                <img
-                  src="assets/img/check.svg"
-                  alt="Tick"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 15px;
-                    margin-top: 2px;
-                  "
-                />
-                <div>
-                  <p
-                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
-                  >
-                    <strong style="font-size: 1rem; color: #333;"> Total Units</strong>
-                    147 Premium Independent Villas
-                  </p>
-                </div>
-              </div>
-
-              <div
-                style="display: flex; align-items: flex-start; margin-bottom: 15px"
-              >
-                <img
-                  src="assets/img/check.svg"
-                  alt="Tick"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 15px;
-                    margin-top: 2px;
-                  "
-                />
-                <div>
-                  <p
-                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
-                  >
-                    <strong style="font-size: 1rem; color: #333;">  Landscape Design</strong>
-                    Terraced Gardens, Fragrance Garden, Bonfire Courts, Floating Bridge
-                  </p>
-                </div>
-              </div>
-
-              <div
-                style="display: flex; align-items: flex-start; margin-bottom: 15px"
-              >
-                <img
-                  src="assets/img/check.svg"
-                  alt="Tick"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 15px;
-                    margin-top: 2px;
-                  "
-                />
-                <div>
-                  <p
-                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
-                  >
-                    <strong style="font-size: 1rem; color: #333;"> Connectivity</strong>
-                    &nbsp;&nbsp;Easy Access to Whitefield, Sarjapur, ORR & Major Tech Hubs
-                  </p>
-                </div>
-              </div>
-
-              <div
-                style="display: flex; align-items: flex-start; margin-bottom: 15px"
-              >
-                <img
-                  src="assets/img/check.svg"
-                  alt="Tick"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 15px;
-                    margin-top: 2px;
-                  "
-                />
-                <div>
-                  <p
-                    style="margin-bottom: 0; font-size: 0.95rem; color: #666;"
-                  >
-                    <strong style="font-size: 1rem; color: #333;">Sales Partner</strong>
-                    &nbsp;&nbsp; Green Shoots – Authorized Channel Partner (RERA Registered)
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
-
-            <a
-              href="#contact-form-redirect"
-              class="common-btn d-lg-inline-block anim-pulse mt-3"
-              style="
-                background-color: #24574e;
-                border-color: #24574e;
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+              <img alt="Tick" src="assets/img/check.svg" style="
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                    margin-top: 2px;
+                  " />
+              <div>
+                <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">
+                  <strong style="font-size: 1rem; color: #333;"> Total Units</strong>
+                  147 Premium Independent Villas
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+              <img alt="Tick" src="assets/img/check.svg" style="
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                    margin-top: 2px;
+                  " />
+              <div>
+                <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">
+                  <strong style="font-size: 1rem; color: #333;"> Landscape Design</strong>
+                  Terraced Gardens, Fragrance Garden, Bonfire Courts, Floating Bridge
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+              <img alt="Tick" src="assets/img/check.svg" style="
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                    margin-top: 2px;
+                  " />
+              <div>
+                <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">
+                  <strong style="font-size: 1rem; color: #333;"> Connectivity</strong>
+                    Easy Access to Whitefield, Sarjapur, ORR &amp; Major Tech Hubs
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px">
+              <img alt="Tick" src="assets/img/check.svg" style="
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                    margin-top: 2px;
+                  " />
+              <div>
+                <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">
+                  <strong style="font-size: 1rem; color: #333;">Sales Partner</strong>
+                     Green Shoots – Authorized Channel Partner (RERA Registered)
+                </p>
+              </div>
+            </div>
+          </div>
+          <a class="common-btn d-lg-inline-block anim-pulse mt-3" href="#contact-form-redirect" style="
+                background-color: #354990;
+                border-color: #354990;
                 color: #fff !important;
                 padding: 12px 30px;
                 font-size: 1.1rem;
-              "
-            >
-              <span>Book a Site Visit</span>
-            </a>
-          </div>
-
-          <!-- Right Column - Form -->
-          <div class="col-lg-6 col-md-12">
-            <div class="rounded shadow" style="background-color: #f8f9fa;">
-              <p
-                class="text-center text-white py-3"
-                style="
-                  background-color: #24574e;
+              ">
+            <span>Book a Site Visit</span>
+          </a>
+        </div>
+        <!-- Right Column - Form -->
+        <div class="col-lg-6 col-md-12">
+          <div class="rounded shadow" style="background-color: #f8f9fa;">
+            <p class="text-center text-white py-3" style="
+                  background-color: #354990;
                   font-size: 1.2rem;
                   font-weight: bold;
                   margin-bottom: 0;
                   border-top-left-radius: 0.25rem;
                   border-top-right-radius: 0.25rem;
-                "
-              >
-                Register Now for the Available Best Offers!
-              </p>
-              <div class="p-4">
-                <form
-                  data-fraudclicks-key
-                  name="shalimar-leads-form"
-                  class="shalimar-leads-form"
-                  action="javascript:void(0);"
-                >
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      name="fullname"
-                      class="form-control"
-                      placeholder="Full Name"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="tel"
-                      name="phone"
-                      class="form-control"
-                      placeholder="Phone"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
-                  <div class="mb-3">
-                    <select name="preference" class="form-control" required>
-                      <option value="" disabled selected>Select Preference</option>
-                      <option value="2BHK">2BHK</option>
-                      <option value="2BHK + Study">2BHK + Study</option>
-                      <option value="3BHK">3BHK</option>
-                      <option value="3BHK + Servant Room">3BHK + Servant Room</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <textarea
-                      name="message"
-                      class="form-control"
-                      placeholder="Message"
-                      rows="4"
-                    ></textarea>
-                  </div>
-                  <div class="text-center mb-3">
-                    <button
-                      type="submit"
-                      class="common-btn anim-pulse shalimar-leads-form-submit-btn"
-                      style="
-                        background-color: #24574e;
-                        border-color: #24574e;
+                ">
+              Register Now for the Available Best Offers!
+            </p>
+            <div class="p-4">
+              <form action="javascript:void(0);" class="shalimar-leads-form" data-fraudclicks-key=""
+                name="shalimar-leads-form">
+                <div class="mb-3">
+                  <input class="form-control" name="fullname" placeholder="Full Name" required="" type="text" />
+                </div>
+                <div class="mb-3">
+                  <input class="form-control" name="phone" placeholder="Phone" required="" type="tel" />
+                </div>
+                <div class="mb-3">
+                  <input class="form-control" name="email" placeholder="Email" required="" type="email" />
+                </div>
+                <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
+                <div class="mb-3">
+                  <select class="form-control" name="preference" required="">
+                    <option disabled="" selected="" value="">Select Preference</option>
+                    <option value="2BHK">2BHK</option>
+                    <option value="2BHK + Study">2BHK + Study</option>
+                    <option value="3BHK">3BHK</option>
+                    <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" name="message" placeholder="Message" rows="4"></textarea>
+                </div>
+                <div class="text-center mb-3">
+                  <button class="common-btn anim-pulse shalimar-leads-form-submit-btn" style="
+                        background-color: #354990;
+                        border-color: #354990;
                         color: white;
                         font-size: 1rem;
-                      "
-                    >
-                      <span>Book a Site Visit</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
+                      " type="submit">
+                    <span>Book a Site Visit</span>
+                  </button>
+                </div>
+              </form>
             </div>
-            <div
-              class="text-center text-white py-3 mt-3"
-              style="
-                background-color: #24574e;
+          </div>
+          <div class="text-center text-white py-3 mt-3" style="
+                background-color: #354990;
                 font-size: 1.2rem;
                 font-weight: bold;
                 border-radius: 0.25rem;
-              "
-            >
-              <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
+              ">
+            <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+  <!-- Start About -->
+  <section class="meet-doctor-section">
+    <div class="container">
+      <div class="doctor-content">
+        <div class="doctor-image">
+          <img alt="Between the Greens" src="assets/img/gallery/g1.webp" />
+        </div>
+        <div class="doctor-text">
+          <h2 class="about-title">About Sapphire Villa</h2>
+          <div class="rera-website">
+            <p class="rera-no">
+              BBMP Approved - PRM/KA/RERA/1251/446/PR/130924/007016</p>
+          </div>
+          <div class="description">
+            <p>
+              Sapphire Villas is a premium residential enclave located in the serene neighborhood of Sadarmangala, Whitefield, Bangalore. 
+              This exclusive development features a limited collection of luxurious 4 BHK bespoke villas (3,500–5,000 sq. ft.), designed to reflect timeless elegance and modern sophistication.
+            </p>
+            <p>
+              Each villa is a masterpiece of architectural brilliance, offering spacious living, abundant natural light, and high-end finishes—all in a tranquil setting just minutes from Whitefield, ITPL, ORR, and other key tech and lifestyle hubs.
+            </p>
+          </div>
+          <div class="contact-info">
+            <h5 class="contact-us-title">Contact Us</h5>
+            <div class="phone-contact">
+              <!-- <i aria-hidden="true" class="icon icon-phone-call2"></i> -->
+              <p class="phone-number">Tel: +91 91642 76555 / +91 93537 58383</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Hero -->
-
-    <!-- Start About -->
-    <section class="meet-doctor-section">
-      <div class="container">
-        <div class="doctor-content">
-          <div class="doctor-image">
-            <img
-              src="assets/img/gallery/g1.webp"
-              alt="Between the Greens"
-            />
-          </div>
-          <div class="doctor-text">
-            <h2 class="about-title">About Between The Greens</h2>
-            <div class="rera-website">
-              <p class="rera-no">
-                BDA Approved. Project RERA - PRM/KA/RERA/1251/308/PR/120225/007494</p>
-            </div>
-            <div class="description">
-              <p>
-                Between The Greens is a premium villa project by 42 Estates, located in the peaceful enclave of <br> 
-                Chikkanekkundi, off Whitefield–Varthur Road. Spread across 9.5 acres, it features 147 luxurious 4 BHK villas
-                (3,700–4,800 sq ft) designed to blend nature and elegance. <br>
-              </p>
-              <p>
-                Enjoy world-class amenities like a clubhouse, pool, gym, sports courts, gardens, and more—all just minutes from Whitefield, Sarjapur, and ORR.
-              </p>
-              <p>
-                Possession begins December 2029, with prices from ₹4.2 Cr.<br>
-                Presented by Green Shoots, authorized channel partner of 42 Estates.
-            </div>
-            <div class="contact-info">
-              <h5 class="contact-us-title">Contact Us</h5>
-              <div class="phone-contact">
-                <!-- <i aria-hidden="true" class="icon icon-phone-call2"></i> -->
-                <p class="phone-number">Tel: +91 91642 76555 / +91 93537 58383</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End About -->
-
-    <!-- Specification Section -->
-    <!-- <div class="ak-whiteLite-bg py-5" id="specification">
+    </div>
+  </section>
+  <!-- End About -->
+  <!-- Specification Section -->
+  <!-- <div class="ak-whiteLite-bg py-5" id="specification">
       <div class="container">
         <div class="text-center mb-4">
           <p class="ak-section-subtitle">Specification</p>
@@ -1502,7 +1395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="row g-4 justify-content-center">
           <!-- Card 1: Structure -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/structure.webp"
@@ -1519,9 +1412,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 2: Foundation -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 2: Foundation -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/foundation.webp"
@@ -1537,9 +1429,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 3: All Bedrooms -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 3: All Bedrooms -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/all-bedroom-flooring.webp"
@@ -1556,9 +1447,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 4: Living/Dining Room -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 4: Living/Dining Room -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/living-dining-room.webp"
@@ -1575,9 +1465,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 5: Toilet -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 5: Toilet -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/toilet.webp"
@@ -1594,9 +1483,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 6: Utility Room/Toilet -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 6: Utility Room/Toilet -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/utility-room-toilet.webp"
@@ -1613,9 +1501,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 7: Kitchen -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 7: Kitchen -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/kitchen.webp"
@@ -1631,9 +1518,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 8: CP Fittings And Accessories -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 8: CP Fittings And Accessories -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/cp-fittings-and-accessories.webp"
@@ -1652,9 +1538,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 9: Lift Lobby : Typical Floor -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 9: Lift Lobby : Typical Floor -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/lift-lobby-typical-floor.webp"
@@ -1672,9 +1557,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 10: Staircase Main -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 10: Staircase Main -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/staircase-main.webp"
@@ -1692,9 +1576,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div> 
           </div>-->
-
-          <!-- Card 11: Balcony -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 11: Balcony -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/balcony.webp"
@@ -1712,9 +1595,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div> -->
-
-          <!-- Card 12: Staircase Fire -->
-          <!-- <div class="col-lg-3 col-md-6">
+  <!-- Card 12: Staircase Fire -->
+  <!-- <div class="col-lg-3 col-md-6">
             <div class="spec-card">
               <img
                 src="assets/img/specs/staircase-fire.webp"
@@ -1733,542 +1615,425 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div> -->
-
-        <!-- Section CTA -->
-        <!-- <div class="text-center mt-5">
+  <!-- Section CTA -->
+  <!-- <div class="text-center mt-5">
           <a
             href="#contact-form-redirect"
             class="common-btn anim-pulse px-4 py-2"
             style="
-              background-color: #24574e;
-              border-color: #24574e;
+              background-color: #354990;
+              border-color: #354990;
               color: #fff !important;
             "
           >
             <span>Download Brochure</span>
           </a>
         </div> -->
+
+
+  <!-- Amenities At Marbella Section -->
+  <!-- <div class="ak-whiteLite-bg py-5" id="Amenities">
+    <div class="container">
+      <h2 class="ak-section-title text-center">Amenities At Between The Greens</h2>
+      <p class="text-center mb-5">
+        Discover a lifestyle where luxury meets nature. Enjoy a social clubhouse, party lawn, fragrance garden, and lush
+        green spaces. <br />
+        Stay active with an outdoor gym, cricket pitch, and sports court.
+        Relax at the pool, jacuzzi, floating bridge, or stroll through the therapeutic path.<br />
+        Kids, seniors, and pets have dedicated zones—making it a perfect home for all ages.<br />
+        This is more than a home—it’s a lifestyle built for every generation.
+      </p>
+      <div class="row g-4 justify-content-center text-center"> -->
+        <!-- New Amenities -->
+        <!-- <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Sports Club" class="feature-icon mb-3" src="assets/img/amenities/basketball-court.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Sports Club</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Social Club" class="feature-icon mb-3" src="assets/img/amenities/shop.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Social Club</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Bonfire Court" class="feature-icon mb-3" src="assets/img/amenities/bonfire-court.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Bonfire Court</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Golf Mini-Putting" class="feature-icon mb-3" src="assets/img/amenities/golf-mini.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Golf Mini-Putting</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Pet's Park" class="feature-icon mb-3" src="assets/img/amenities/pets-park.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Pet's Park</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Outdoor Gym" class="feature-icon mb-3" src="assets/img/amenities/dumbbell.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Outdoor Gym</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Multi-purpose Play Court" class="feature-icon mb-3" src="assets/img/amenities/multipurpose.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Multi-purpose Play Court</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Co-working Space" class="feature-icon mb-3" src="assets/img/amenities/co-working.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Co-working Space</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Indoor Badminton Court" class="feature-icon mb-3" src="assets/img/amenities/badminton- court.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Indoor Badminton Court</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Squash Court" class="feature-icon mb-3" src="assets/img/amenities/basketball-court.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Squash Court</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Amphitheater &amp; Gym" class="feature-icon mb-3" src="assets/img/amenities/amphitheatre.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Amphitheater &amp; Gym</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Yoga &amp; Aerobics Room" class="feature-icon mb-3" src="assets/img/amenties/chakra.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Yoga &amp; Aerobics Room</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Indoor Games" class="feature-icon mb-3" src="assets/img/amenities/indoor.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Indoor Games</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 d-flex">
+          <div class="feature-card-two text-center p-4 w-100 h-100">
+            <img alt="Multi-function Area" class="feature-icon mb-3" src="assets/img/amenities/multifuntion-area.webp"
+              style="width: 50px; height: 50px" />
+            <h5 class="feature-title mb-2">Multi-function Area</h5>
+            <p class="feature-subtitle"></p>
+          </div>
+        </div>
+      </div> -->
+      <!-- Section CTA -->
+      <!-- <div class="text-center mt-5">
+        <a class="common-btn anim-pulse px-4 py-2" href="#contact-form-redirect">
+          <span>Download Brochure</span>
+        </a>
       </div>
     </div>
-
-    <!-- Amenities At Marbella Section -->
-    <div class="ak-whiteLite-bg py-5" id="Amenities">
-      <div class="container">
-        <h2 class="ak-section-title text-center">Amenities At Between The Greens</h2>
-        <p class="text-center mb-5">
-          Discover a lifestyle where luxury meets nature. Enjoy a social clubhouse, party lawn, fragrance garden, and lush green spaces. <br>
-          Stay active with an outdoor gym, cricket pitch, and sports court.
-          Relax at the pool, jacuzzi, floating bridge, or stroll through the therapeutic path.<br>
-          Kids, seniors, and pets have dedicated zones—making it a perfect home for all ages.<br>
-          This is more than a home—it’s a lifestyle built for every generation.
-        </p>
-        <div class="row g-4 justify-content-center text-center">
-          <!-- New Amenities -->
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/basketball-court.webp"
-                alt="Sports Club"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Sports Club</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/shop.webp"
-                alt="Social Club"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Social Club</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/bonfire-court.webp"
-                alt="Bonfire Court"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Bonfire Court</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/golf-mini.webp"
-                alt="Golf Mini-Putting"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Golf Mini-Putting</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/pets-park.webp"
-                alt="Pet's Park"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Pet's Park</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/dumbbell.webp"
-                alt="Outdoor Gym"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Outdoor Gym</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/multipurpose.webp"
-                alt="Multi-purpose Play Court"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Multi-purpose Play Court</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/co-working.webp"
-                alt="Co-working Space"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Co-working Space</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/badminton- court.webp"
-                alt="Indoor Badminton Court"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Indoor Badminton Court</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/basketball-court.webp"
-                alt="Squash Court"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Squash Court</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/amphitheatre.webp"
-                alt="Amphitheater & Gym"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Amphitheater & Gym</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenties/chakra.webp"
-                alt="Yoga & Aerobics Room"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Yoga & Aerobics Room</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/indoor.webp"
-                alt="Indoor Games"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Indoor Games</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 d-flex">
-            <div class="feature-card-two text-center p-4 w-100 h-100">
-              <img
-                class="feature-icon mb-3"
-                src="assets/img/amenities/multifuntion-area.webp"
-                alt="Multi-function Area"
-                style="width: 50px; height: 50px"
-              />
-              <h5 class="feature-title mb-2">Multi-function Area</h5>
-              <p class="feature-subtitle"></p>
-            </div>
-          </div>
-        </div>
-        <!-- Section CTA -->
-        <div class="text-center mt-5">
-          <a
-            href="#contact-form-redirect"
-            class="common-btn anim-pulse px-4 py-2"
-          >
-            <span>Download Brochure</span>
-          </a>
-        </div>
+  </div> -->
+  <!-- Project Details Section -->
+  <section class="ak-whiteLite-bg py-5" id="Project-details">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="ak-section-subtitle">Project Details</p>
+        <h2 class="ak-section-title">
+          Explore Sapphire Villas in Detail
+        </h2>
+      </div>
+      <div class="carousel">
+        <input checked="checked" id="slide-1" name="slides" type="radio" />
+        <input id="slide-2" name="slides" type="radio" />
+        <input id="slide-3" name="slides" type="radio" />
+        <input id="slide-4" name="slides" type="radio" />
+        <input id="slide-5" name="slides" type="radio" />
+        <input id="slide-6" name="slides" type="radio" />
+        <ul class="carousel__slides">
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Villa Exterior" src="assets/img/gallery/g1.webp" />
+              </div>
+              <figcaption>
+                <h4>Villa Exterior</h4>
+                <p>A harmonious blend of contemporary design and timeless elegance. Each villa is crafted to capture abundant natural light and fresh air while ensuring complete privacy and comfort.</p>
+                <span class="credit">Premium 4 BHK Villas</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Living Area" src="assets/img/gallery/g2.webp" />
+              </div>
+              <figcaption>
+                <h4>Spacious Living Areas</h4>
+                <p>Expansive 4 BHK residences ranging from 3,500 to 5,000 sq. ft., featuring open layouts, premium finishes, and thoughtfully designed interiors for modern family living.</p>
+                <span class="credit">3,500 - 5,000 sq ft</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Landscape" src="assets/img/gallery/g3.webp" />
+              </div>
+              <figcaption>
+                <h4>Landscape Design</h4>
+                <p>A lush, green oasis with meticulously designed landscapes, offering serene outdoor spaces for relaxation and entertainment.</p>
+                <span class="credit">Nature-Inspired Living</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Amenities" src="assets/img/gallery/g4.webp" />
+              </div>
+              <figcaption>
+                <h4>Luxury Amenities</h4>
+                <p>From elegant lounges and landscaped sit-outs to recreational spaces and fitness areas, every detail is designed to elevate your lifestyle and encourage relaxation.</p>
+                <span class="credit">Premium Lifestyle Amenities</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Location" src="assets/img/gallery/g5.webp" />
+              </div>
+              <figcaption>
+                <h4>Prime Location</h4>
+                <p>Perfectly positioned in Sadarmangala, Whitefield, offering seamless access to ITPL, ORR, shopping districts, and renowned schools—balancing connectivity and tranquility.</p>
+                <span class="credit">Excellent Connectivity</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img alt="Community" src="assets/img/gallery/g6.webp" />
+              </div>
+              <figcaption>
+                <h4>Exclusive Community</h4>
+                <p>A limited collection of bespoke villas, fostering a refined, close-knit neighborhood where families can grow and thrive together.</p>
+                <span class="credit">147 Premium Villas</span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <ul class="carousel__thumbnails">
+          <li>
+            <label for="slide-1"><img alt="Villa Exterior" src="assets/img/gallery/g1.webp" /></label>
+          </li>
+          <li>
+            <label for="slide-2"><img alt="Living Area" src="assets/img/gallery/g2.webp" /></label>
+          </li>
+          <li>
+            <label for="slide-3"><img alt="Landscape" src="assets/img/gallery/g3.webp" /></label>
+          </li>
+          <li>
+            <label for="slide-4"><img alt="Amenities" src="assets/img/gallery/g4.webp" /></label>
+          </li>
+          <li>
+            <label for="slide-5"><img alt="Location" src="assets/img/gallery/g5.webp" /></label>
+          </li>
+          <li>
+            <label for="slide-6"><img alt="Community" src="assets/img/gallery/g6.webp" /></label>
+          </li>
+        </ul>
       </div>
     </div>
+  </section>
+  <!-- Project Floor Plans Section -->
+  <section class="ak-whiteLite-bg py-5 project-floor-plans-section" id="Floor-Plans">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="ak-section-subtitle">What Our Customers Say</p>
+        <h2 class="ak-section-title">
+          Real experiences from our satisfied villa owners
+        </h2>
+      </div>
+      <!-- Testimonials Section -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="testimonial-carousel-container">
+            <div class="testimonial-carousel">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card active">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    I bought a villa at 42 Marquis in 2023. Construction is ongoing, and the quality of work is commendable. The staff is very professional and supportive - the sales team, architect, engineers, etc, and helped us with our modification requirements. The location is also very nice and easily accessible. Special thanks to Veena, Dilip, Kishan, Harish, and Fardeen for their continuous support.
+                  </p>
+                  <div class="testimonial-author">
+                    <h5 class="author-name">Sanup V</h5>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    Villas are perfectly designed, and lots of thoughts are given to the floor plan. This is one of the best villas available close to the Sarjapur Police Station. We really appreciate Mr. Dhilip for his effort and time to show and explain the property, and for being so accommodating.
+                  </p>
+                  <div class="testimonial-author">
+                    <h5 class="author-name">Ramesh Poomalai</h5>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    One of the best villa properties in Sarjapur for many reasons. Bang on the main road and very close to the town. Elegant looks, compact, but good floor plans are available with particular villa types. Good set of amenities as well. Have been watching the construction progress since July 2021, and must say the quality and speed of completion are very satisfactory.
+                  </p>
+                  <div class="testimonial-author">
+                    <h5 class="author-name">Jayasankar S</h5>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
 
-    <!-- Project Details Section -->
-    <section class="ak-whiteLite-bg py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <p class="ak-section-subtitle">Project Details</p>
-          <h2 class="ak-section-title">
-            Explore Between The Greens in Detail
-          </h2>
-        </div>
-        
-        <div class="carousel">
-          <input type="radio" name="slides" checked="checked" id="slide-1">
-          <input type="radio" name="slides" id="slide-2">
-          <input type="radio" name="slides" id="slide-3">
-          <input type="radio" name="slides" id="slide-4">
-          <input type="radio" name="slides" id="slide-5">
-          <input type="radio" name="slides" id="slide-6">
-          <ul class="carousel__slides">
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g1.webp" alt="Villa Exterior">
-                </div>
-                <figcaption>
-                  <h4>Villa Exterior</h4>
-                  <p>Experience the perfect blend of modern architecture and natural surroundings. Each villa is designed to maximize natural light and ventilation while providing privacy and comfort.</p>
-                  <span class="credit">Premium 4 BHK Villas</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g2.webp" alt="Living Area">
-                </div>
-                <figcaption>
-                  <h4>Spacious Living Areas</h4>
-                  <p>Generous living spaces ranging from 3,700 to 4,800 sq ft, designed for modern family living with open floor plans and premium finishes.</p>
-                  <span class="credit">3,700 - 4,800 sq ft</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g3.webp" alt="Landscape">
-                </div>
-                <figcaption>
-                  <h4>Landscape Design</h4>
-                  <p>9.5 acres of thoughtfully designed landscape featuring terraced gardens, fragrance gardens, and therapeutic walking paths that connect you with nature.</p>
-                  <span class="credit">Nature-Inspired Living</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g4.webp" alt="Amenities">
-                </div>
-                <figcaption>
-                  <h4>World-Class Amenities</h4>
-                  <p>From the clubhouse and swimming pool to sports courts and outdoor gym, every amenity is designed to enhance your lifestyle and promote community living.</p>
-                  <span class="credit">Premium Lifestyle Amenities</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g5.webp" alt="Location">
-                </div>
-                <figcaption>
-                  <h4>Prime Location</h4>
-                  <p>Strategically located in Chikkanekkundi, off Whitefield-Varthur Road, providing easy access to major tech hubs, shopping centers, and educational institutions.</p>
-                  <span class="credit">Excellent Connectivity</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="carousel__slide">
-              <figure>
-                <div>
-                  <img src="assets/img/gallery/g6.webp" alt="Community">
-                </div>
-                <figcaption>
-                  <h4>Community Living</h4>
-                  <p>147 premium independent villas creating a close-knit community where families can grow together, with dedicated spaces for children, seniors, and pets.</p>
-                  <span class="credit">147 Premium Villas</span>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>    
-          <ul class="carousel__thumbnails">
-            <li>
-              <label for="slide-1"><img src="assets/img/gallery/g1.webp" alt="Villa Exterior"></label>
-            </li>
-            <li>
-              <label for="slide-2"><img src="assets/img/gallery/g2.webp" alt="Living Area"></label>
-            </li>
-            <li>
-              <label for="slide-3"><img src="assets/img/gallery/g3.webp" alt="Landscape"></label>
-            </li>
-            <li>
-              <label for="slide-4"><img src="assets/img/gallery/g4.webp" alt="Amenities"></label>
-            </li>
-            <li>
-              <label for="slide-5"><img src="assets/img/gallery/g5.webp" alt="Location"></label>
-            </li>
-            <li>
-              <label for="slide-6"><img src="assets/img/gallery/g6.webp" alt="Community"></label>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Project Floor Plans Section -->
-    <section
-      id="Floor-Plans"
-      class="ak-whiteLite-bg py-5 project-floor-plans-section"
-    >
-      <div class="container">
-        <div class="text-center mb-5">
-          <p class="ak-section-subtitle">Master Plan</p>
-          <h2 class="ak-section-title">
-            Explore Our Master Plan
-          </h2>
-        </div>
-
-        <!-- Master Plan Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="master-plan-container text-center">
-              <img
-                src="assets/img/floorplan/Master-plan.webp"
-                alt="Master Plan - Between The Greens"
-                class="img-fluid rounded shadow-lg clickable-image"
-                style="max-width: 100%; height: auto; cursor: pointer;"
-                data-image-src="assets/img/floorplan/Master-plan.webp"
-                data-image-alt="Master Plan"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Floor Plans Section -->
-        <div class="row">
-          <div class="col-12">
-            <div class="text-center mb-4">
-              <h3 class="h4 mb-3" style="color: #24574e; font-weight: 600;">Villa Floor Plans</h3>
-              <p class="text-muted">Detailed layouts for each floor of our premium villas</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 floor-plan-gallery mb-5">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="floor-plan-card">
-              <div class="plan-image-container">
-                                 <img
-                   src="assets/img/floorplan/plan1.webp"
-                   alt="Ground Floor Plan"
-                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
-                   style="width: 100%; height: 600px; object-fit: cover;"
-                   data-plan="ground-floor"
-                 />
-                <div class="plan-overlay">
-                  <div class="plan-hover-text">
-                    <h5 class="mb-2">Ground Floor</h5>
-                    <p class="mb-0">Main living areas and entrance</p>
-                  </div>
-                </div>
-              </div>
-              <div class="plan-details p-3">
-                <h5 class="mb-2">Ground Floor</h5>
-                <p class="text-muted mb-0">Spacious living room, dining area, kitchen, and utility spaces</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="floor-plan-card">
-              <div class="plan-image-container">
-                <img
-                   src="assets/img/floorplan/plan2.webp"
-                   alt="First Floor Plan"
-                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
-                   style="width: 100%; height: 600px; object-fit: cover;"
-                   data-plan="first-floor"
-                 />
-                <div class="plan-overlay">
-                  <div class="plan-hover-text">
-                    <h5 class="mb-2">First Floor</h5>
-                    <p class="mb-0">Bedrooms and family areas</p>
-                  </div>
-                </div>
-              </div>
-              <div class="plan-details p-3">
-                <h5 class="mb-2">First Floor</h5>
-                <p class="text-muted mb-0">Master bedroom, additional bedrooms, and family lounge</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="floor-plan-card">
-              <div class="plan-image-container">
-                                 <img
-                   src="assets/img/floorplan/plan3.webp"
-                   alt="Second Floor Plan"
-                   class="img-fluid rounded shadow plan-image floor-plan-image-blurred"
-                   style="width: 100%; height: 600px; object-fit: cover;"
-                   data-plan="second-floor"
-                 />
-                <div class="plan-overlay">
-                  <div class="plan-hover-text">
-                    <h5 class="mb-2">Second Floor</h5>
-                    <p class="mb-0">Additional bedrooms and terrace</p>
-                  </div>
-                </div>
-              </div>
-              <div class="plan-details p-3">
-                <h5 class="mb-2">Second Floor</h5>
-                <p class="text-muted mb-0">Additional bedrooms, study area, and terrace access</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="row">
-          <div class="col-12 text-center">
-            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-              <a
-                href="#contact-form-redirect"
-                class="common-btn anim-pulse px-4 py-2"
-                style="
-                  background-color: #24574e;
-                  border-color: #24574e;
+      <!-- Call to Action -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+            <a class="common-btn anim-pulse px-4 py-2" href="#contact-form-redirect" style="
+                  background-color: #354990;
+                  border-color: #354990;
                   color: #fff !important;
-                "
-              >
-                <span>Download Brochure</span>
-              </a>
-            </div>
+                ">
+              <span>Download Brochure</span>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Project Floor Plans Section -->
-
-    <!-- Floor Plan Popup Form -->
-    <div class="popup-overlay" id="floorPlanPopup">
-      <div class="popup-form">
-        <span class="popup-close" onclick="closeFloorPlanPopup()">&times;</span>
-        <h4 class="text-center mb-4" style="color: #24574e;">Register Now</h4>
-        <p class="text-center text-muted mb-4">Please provide your details to view the floor plans</p>
-        
-        <form id="floorPlanForm">
-          <div class="mb-3">
-            <input
-              type="text"
-              name="fullname"
-              class="form-control"
-              placeholder="Full Name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="tel"
-              name="phone"
-              class="form-control"
-              placeholder="Phone Number"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="Email Address"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <select name="preference" class="form-control" required>
-              <option value="" disabled selected>Select Preference</option>
-              <option value="2BHK">2BHK</option>
-              <option value="2BHK + Study">2BHK + Study</option>
-              <option value="3BHK">3BHK</option>
-              <option value="3BHK + Servant Room">3BHK + Servant Room</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
-          </div>
-          <div class="text-center">
-            <button
-              type="submit"
-              class="common-btn anim-pulse"
-              style="
-                background-color: #24574e;
-                border-color: #24574e;
+    </div>
+  </section>
+  <!-- End Project Floor Plans Section -->
+  <!-- Floor Plan Popup Form -->
+  <div class="popup-overlay" id="floorPlanPopup">
+    <div class="popup-form">
+      <span class="popup-close" onclick="closeFloorPlanPopup()">×</span>
+      <h4 class="text-center mb-4" style="color: #354990;">Register Now</h4>
+      <p class="text-center text-muted mb-4">Please provide your details to view the floor plans</p>
+      <form id="floorPlanForm">
+        <div class="mb-3">
+          <input class="form-control" name="fullname" placeholder="Full Name" required="" type="text">
+          </input>
+        </div>
+        <div class="mb-3">
+          <input class="form-control" name="phone" placeholder="Phone Number" required="" type="tel">
+          </input>
+        </div>
+        <div class="mb-3">
+          <input class="form-control" name="email" placeholder="Email Address" required="" type="email">
+          </input>
+        </div>
+        <div class="mb-3">
+          <select class="form-control" name="preference" required="">
+            <option disabled="" selected="" value="">Select Preference</option>
+            <option value="2BHK">2BHK</option>
+            <option value="2BHK + Study">2BHK + Study</option>
+            <option value="3BHK">3BHK</option>
+            <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
+        </div>
+        <div class="text-center">
+          <button class="common-btn anim-pulse" style="
+                background-color: #354990;
+                border-color: #354990;
                 color: white;
                 padding: 12px 30px;
-              "
-            >
-              <span>Register Now</span>
-            </button>
-          </div>
-        </form>
-      </div>
+              " type="submit">
+            <span>Register Now</span>
+          </button>
+        </div>
+      </form>
     </div>
-
-    <!-- Walkthrough - Shalimar Marbella Section -->
-    <!-- <section class="ak-whiteLite-bg py-5" id="walkthrough">
+  </div>
+  <!-- Walkthrough - Shalimar Marbella Section -->
+  <!-- <section class="ak-whiteLite-bg py-5" id="walkthrough">
       <div class="container text-center">
         <p class="ak-section-subtitle">Walkthrough</p>
         <h2 class="ak-section-title mb-4">Shalimar Marbella</h2>
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <!-- Embed YouTube Video Here -->
-            <!-- <div class="ratio ratio-16x9 mb-4 shadow-lg rounded">
+  <!-- <div class="ratio ratio-16x9 mb-4 shadow-lg rounded">
               <iframe
                 src="https://www.youtube.com/embed/JXdzLCAclgg?si=LRBcPccD4SiBV-8U"
                 title="YouTube video player"
@@ -2287,8 +2052,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               href="#contact-form-redirect"
               class="common-btn anim-pulse px-4 py-2"
               style="
-                background-color: #24574e;
-                border-color: #24574e;
+                background-color: #354990;
+                border-color: #354990;
                 color: #fff !important;
               "
             >
@@ -2298,15 +2063,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>  -->
-    <!-- End Walkthrough - Shalimar Marbella Section  -->
-
-    <!-- Reports Section -->
-    <!-- <section class="ak-whiteLite-bg py-5" id="reports">
+  <!-- End Walkthrough - Shalimar Marbella Section  -->
+  <!-- Reports Section -->
+  <!-- <section class="ak-whiteLite-bg py-5" id="reports">
       <div class="container">
         <h2 class="report-section-title ak-section-title">Reports</h2>
         <div class="row justify-content-center"> -->
-          <!-- Report Card 1: Construction Updates -->
-          <!-- <div class="col-lg-4 col-md-6 d-flex">
+  <!-- Report Card 1: Construction Updates -->
+  <!-- <div class="col-lg-4 col-md-6 d-flex">
             <div class="report-card w-100">
               <div class="report-card-title-area">
                 <span>Construction Updates</span>
@@ -2319,9 +2083,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               >
             </div>
           </div> -->
-
-          <!-- Report Card 2: RERA Registration Certificate -->
-          <!-- <div class="col-lg-4 col-md-6 d-flex">
+  <!-- Report Card 2: RERA Registration Certificate -->
+  <!-- <div class="col-lg-4 col-md-6 d-flex">
             <div class="report-card w-100">
               <div class="report-card-title-area">
                 <span>RERA Registration Certificate</span>
@@ -2334,9 +2097,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               >
             </div>
           </div> -->
-
-          <!-- Report Card 3: Environment Clearance Compliance -->
-          <!-- <div class="col-lg-4 col-md-6 d-flex">
+  <!-- Report Card 3: Environment Clearance Compliance -->
+  <!-- <div class="col-lg-4 col-md-6 d-flex">
             <div class="report-card w-100">
               <div class="report-card-title-area">
                 <span>Environment Clearance Compliance</span>
@@ -2350,16 +2112,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div> -->
-
-        <!-- Download Brochure Button -->
-        <!-- <div class="text-center mt-5">
+  <!-- Download Brochure Button -->
+  <!-- <div class="text-center mt-5">
           <a
             href="#contact-form-redirect"
             target="_blank"
             class="common-btn anim-pulse px-4 py-2"
             style="
-              background-color: #24574e;
-              border-color: #24574e;
+              background-color: #354990;
+              border-color: #354990;
               color: #fff !important;
             "
             >Download Brochure</a
@@ -2367,201 +2128,142 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section> -->
-    <!-- End Reports Section -->
-
-    <!-- Photo Gallery Section -->
-    <section class="photo-gallery-section ak-whiteLite-bg py-5" id="gallery">
-      <div class="container">
-        <div class="gallery-title-container">
-          <p class="gallery-subtitle ak-section-subtitle">Photo Gallery</p>
-          <h2 class="gallery-main-title ak-section-title">
-            Embrace And Enjoy The Richness Of Life To The Fullest
-          </h2>
+  <!-- End Reports Section -->
+  <!-- Photo Gallery Section -->
+  <section class="photo-gallery-section ak-whiteLite-bg py-5" id="gallery">
+    <div class="container">
+      <div class="gallery-title-container">
+        <p class="gallery-subtitle ak-section-subtitle">Photo Gallery</p>
+        <h2 class="gallery-main-title ak-section-title">
+          Embrace And Enjoy The Richness Of Life To The Fullest
+        </h2>
+      </div>
+      <!-- Gallery Grid -->
+      <div class="photo-gallery-grid">
+        <div class="gallery-item gallery-item-wide">
+          <img alt="Gallery Image 1" src="assets/img/gallery/g1.webp">
+          </img>
         </div>
-
-        <!-- First row of 4 images -->
-        <div class="photo-gallery-grid gallery-row-1">
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g1.webp" alt="Gallery Image 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g2.webp" alt="Gallery Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g3.webp" alt="Gallery Image 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g4.webp" alt="Gallery Image 4" />
-          </div>
+        <div class="gallery-item">
+          <img alt="Gallery Image 2" src="assets/img/gallery/g2.webp">
+          </img>
         </div>
-
-        <!-- Second row of 3 images -->
-        <div class="photo-gallery-grid gallery-row-1">
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g5.webp" alt="Gallery Image 5" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g6.webp" alt="Gallery Image 6" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g7.webp" alt="Gallery Image 7" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g8.webp" alt="Gallery Image 8" />
-          </div>
+        <div class="gallery-item">
+          <img alt="Gallery Image 3" src="assets/img/gallery/g3.webp">
+          </img>
         </div>
-
-        <!-- Third row of 2 images (to make 9 total) -->
-        <div class="photo-gallery-grid gallery-row-subsequent">
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g9.webp" alt="Gallery Image 9" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g10.webp" alt="Gallery Image 10" />
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/gallery/g11.webp" alt="Gallery Image 11" />
-          </div>
+        <div class="gallery-item">
+          <img alt="Gallery Image 4" src="assets/img/gallery/g4.webp">
+          </img>
         </div>
-
-        <div class="text-center mt-5">
-          <a
-            href="#contact-form-redirect"
-            class="common-btn anim-pulse px-4 py-2"
-            style="
-              background-color: #24574e;
-              border-color: #24574e;
+        <div class="gallery-item">
+          <img alt="Gallery Image 5" src="assets/img/gallery/g5.webp">
+          </img>
+        </div>
+        <div class="gallery-item gallery-item-wide">
+          <img alt="Gallery Image 6" src="assets/img/gallery/g6.webp">
+          </img>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a class="common-btn anim-pulse px-4 py-2" href="#contact-form-redirect" style="
+              background-color: #354990;
+              border-color: #354990;
               color: #fff !important;
-            "
-          >
-            <span>Book a Site Visit</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Photo Gallery Section -->
-
-    <!-- Location Section -->
-    <section class="location-section ak-whiteLite-bg py-5" id="location">
-      <div class="container">
-        <div class="location-title-container">
-          <p class="location-subtitle ak-section-subtitle">Location</p>
-          <h2 class="location-main-title ak-section-title">
-            Everything You Need Is Near You
-          </h2>
-        </div>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10096.088943237197!2d77.76352024547933!3d12.935730356089467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0da1f9af9507%3A0xe7012a7b6b385ea5!2sChikkanekkundi%2C%20Karnataka%20560087!5e1!3m2!1sen!2sin!4v1754253558586!5m2!1sen!2sin"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-    <!-- End Location Section -->
-
-    <!-- Strat Contact -->
-    <!-- <div class="ak-height-125 ak-height-lg-80"></div> -->
-    <div class="container-fluid px-md-0" id="Enquire">
-      <div class="contact-form-content">
-        <div class="contact-form-img image-hov-one">
-          <img src="assets/img/contact/contact.webp" alt="..." />
-        </div>
-        <div class="contact-form" id="contact-form-redirect">
-          <div>
-            <h5 class="contact-title">
-              <b>Register Now</b> - <br>
-              Our exclusive residences are filling up fast. <br>
-              Don't miss your chance to be a part of this exceptional living experience.
-              Act now before the list closes and your opportunity slips away.
-            </h5>
-            <div class="ak-height-40 ak-height-lg-30"></div>
-          </div>
-          <form
-            data-fraudclicks-key
-            name="shalimar-leads-form"
-            class="shalimar-leads-form"
-            action="javascript:void(0);"
-          >
-            <div class="mb-3">
-              <input
-                type="text"
-                name="fullname"
-                class="form-control"
-                placeholder="Full Name"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="tel"
-                name="phone"
-                class="form-control"
-                placeholder="Phone"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                name="email"
-                class="form-control"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
-            <div class="mb-3">
-              <select name="preference" class="form-control" required>
-                <option value="" disabled selected>Select Preference</option>
-                <option value="2BHK">2BHK</option>
-                <option value="2BHK + Study">2BHK + Study</option>
-                <option value="3BHK">3BHK</option>
-                <option value="3BHK + Servant Room">3BHK + Servant Room</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <textarea
-                name="message"
-                class="form-control"
-                placeholder="Message"
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="text-center mb-3">
-              <button
-                type="submit"
-                class="common-btn anim-pulse shalimar-leads-form-submit-btn"
-                style="
-                  background-color: #24574e;
-                  border-color: #24574e;
-                  color: white;
-                  font-size: 1rem;
-                "
-              >
-                <span>Book a Site Visit</span>
-              </button>
-            </div>
-          </form>
-        </div>
+            ">
+          <span>Book a Site Visit</span>
+        </a>
       </div>
     </div>
-    <!-- End Contact -->
-
-    <!-- Start Footer -->
-    <footer class="ak-footer style-1 fixed-footer footer-bg">
-      <div class="ak-height-125 ak-height-lg-50"></div>
-      <div class="ak-footer-container">
-        <!-- <img
+  </section>
+  <!-- End Photo Gallery Section -->
+  <!-- Location Section -->
+  <section class="location-section ak-whiteLite-bg py-5" id="location">
+    <div class="container">
+      <div class="location-title-container">
+        <p class="location-subtitle ak-section-subtitle">Location</p>
+        <h2 class="location-main-title ak-section-title">
+          Everything You Need Is Near You
+        </h2>
+      </div>
+      <div class="map-container">
+        <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10096.088943237197!2d77.76352024547933!3d12.935730356089467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0da1f9af9507%3A0xe7012a7b6b385ea5!2sChikkanekkundi%2C%20Karnataka%20560087!5e1!3m2!1sen!2sin!4v1754253558586!5m2!1sen!2sin"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- End Location Section -->
+  <!-- Strat Contact -->
+  <!-- <div class="ak-height-125 ak-height-lg-80"></div> -->
+  <div class="container-fluid px-md-0" id="Enquire">
+    <div class="contact-form-content">
+      <div class="contact-form-img image-hov-one">
+        <img alt="..." src="assets/img/contact/contact.webp" />
+      </div>
+      <div class="contact-form" id="contact-form-redirect">
+        <div>
+          <h5 class="contact-title">
+            <b>Register Now</b> - <br />
+            Our exclusive residences are filling up fast. <br />
+            Don't miss your chance to be a part of this exceptional living experience.
+            Act now before the list closes and your opportunity slips away.
+          </h5>
+          <div class="ak-height-40 ak-height-lg-30"></div>
+        </div>
+        <form action="javascript:void(0);" class="shalimar-leads-form" data-fraudclicks-key=""
+          name="shalimar-leads-form">
+          <div class="mb-3">
+            <input class="form-control" name="fullname" placeholder="Full Name" required="" type="text">
+            </input>
+          </div>
+          <div class="mb-3">
+            <input class="form-control" name="phone" placeholder="Phone" required="" type="tel">
+            </input>
+          </div>
+          <div class="mb-3">
+            <input class="form-control" name="email" placeholder="Email" required="" type="email">
+            </input>
+          </div>
+          <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
+          <div class="mb-3">
+            <select class="form-control" name="preference" required="">
+              <option disabled="" selected="" value="">Select Preference</option>
+              <option value="2BHK">2BHK</option>
+              <option value="2BHK + Study">2BHK + Study</option>
+              <option value="3BHK">3BHK</option>
+              <option value="3BHK + Servant Room">3BHK + Servant Room</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="message" placeholder="Message" rows="4"></textarea>
+          </div>
+          <div class="text-center mb-3">
+            <button class="common-btn anim-pulse shalimar-leads-form-submit-btn" style="
+                  background-color: #354990;
+                  border-color: #354990;
+                  color: white;
+                  font-size: 1rem;
+                " type="submit">
+              <span>Book a Site Visit</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact -->
+  <!-- Start Footer -->
+  <footer class="ak-footer style-1 fixed-footer footer-bg">
+    <div class="ak-height-125 ak-height-lg-50"></div>
+    <div class="ak-footer-container">
+      <!-- <img
           src="assets/img/bg/footer-bg.png"
           class="footer-bg-img"
           alt="...."
         /> -->
-        <div class="container">
-          <div class="footer-content">
-            <!-- <div class="company-info">
+      <div class="container">
+        <div class="footer-content">
+          <!-- <div class="company-info">
               <a class="ak-site_branding" href="index.html">
                 <img src="assets/img/shalimar-logo.webp" alt="..." />
               </a>
@@ -2573,40 +2275,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 effects.
               </p>
             </div> -->
-            <div class="footer-nav">
-              <div class="footer-link">
-                <div class="link-content">
-                  <h5 class="short-title">RERA No.</h5>
-                  <p>BDA Approved <br>
-                    Project RERA -<br>
-                    PRM/KA/RERA/1251/308/PR/120225/007494</p>
-                  <!-- <h5 class="short-title mt-2">Privacy Policy</h5> -->
-                  <a
-                    href="privacy-policy.html"
-                    style="text-decoration: underline"
-                    >Privacy Policy</a
-                  >
-                </div>
-                <div class="link-content">
-                  <h5 class="short-title">Get In Touch</h5>
-                  <ul class="linek-all">
-                    <li>
-                      <a href="tel:+919164276555" class="mb-3"
-                        ><span class="ak-font-20">Phone: </span><br />
-                        +91 91642 76555 / +91 93537 58383</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+          <div class="footer-nav">
+            <div class="footer-link">
+              <div class="link-content">
+                <h5 class="short-title">RERA No.</h5>
+                <p>BDA Approved <br />
+                  Project RERA -<br />
+                  PRM/KA/RERA/1251/308/PR/120225/007494</p>
+                <!-- <h5 class="short-title mt-2">Privacy Policy</h5> -->
+                <a href="privacy-policy.html" style="text-decoration: underline">Privacy Policy</a>
+              </div>
+              <div class="link-content">
+                <h5 class="short-title">Get In Touch</h5>
+                <ul class="linek-all">
+                  <li>
+                    <a class="mb-3" href="tel:+919164276555"><span class="ak-font-20">Phone: </span><br>
+                      +91 91642 76555 / +91 93537 58383</br></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="ak-height-100 ak-height-lg-50"></div>
       </div>
-      <div class="copy-right" style="padding-bottom: 10px">
-        <!-- <p class="copyright-text">Copyright 2025, All Rights Reserved.</p> -->
-        <!-- <h5 class="copyright-heading">Disclaimer</h5>
+      <div class="ak-height-100 ak-height-lg-50"></div>
+    </div>
+    <div class="copy-right" style="padding-bottom: 10px">
+      <!-- <p class="copyright-text">Copyright 2025, All Rights Reserved.</p> -->
+      <!-- <h5 class="copyright-heading">Disclaimer</h5>
         <p
           class="copyright-text"
           style="margin-top: 10px; width: 80% !important"
@@ -2623,7 +2319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Agreement for Sale. By registering your details with us, you consent
           to receive calls, SMS, or emails from our team regarding the project.
         </p> -->
-        <!-- <span
+      <!-- <span
           type="button"
           class="copyright-text"
           data-bs-toggle="modal"
@@ -2631,77 +2327,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         >
           Read More...
         </span> -->
-        <div class="footer-spacing"></div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <span class="ak-scrollup">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-
-    <!-- Mobile Sticky Bottom Navigation -->
-    <div class="mobile-sticky-nav">
-      <a
-        href="https://wa.me/918099046000"
-        class="sticky-nav-item"
-        target="_blank"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.287.129.332.202.045.073.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"
-          />
-        </svg>
-      </a>
-      <a href="tel:+918099046000" class="sticky-nav-item">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-          />
-        </svg>
-      </a>
-      <a href="#contact-form-redirect" class="sticky-nav-item">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-          />
-        </svg>
-      </a>
+      <div class="footer-spacing"></div>
     </div>
-
-    <!-- Script -->
-    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
-
-    <!-- <script>
+  </footer>
+  <!-- End Footer -->
+  <span class="ak-scrollup">
+    <svg fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor">
+      </path>
+    </svg>
+  </span>
+  <!-- Mobile Sticky Bottom Navigation -->
+  <div class="mobile-sticky-nav">
+    <a class="sticky-nav-item" href="https://wa.me/918099046000" target="_blank">
+      <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.287.129.332.202.045.073.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z">
+        </path>
+      </svg>
+    </a>
+    <a class="sticky-nav-item" href="tel:+918099046000">
+      <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z">
+        </path>
+      </svg>
+    </a>
+    <a class="sticky-nav-item" href="#contact-form-redirect">
+      <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+        </path>
+      </svg>
+    </a>
+  </div>
+  <!-- Script -->
+  <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+  <!-- <script>
       $(document).ready(function () {
         $("form.shalimar-leads-form").each(function () {
           const $currentForm = $(this);
@@ -2817,259 +2479,253 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
       });
     </script> -->
-    
-    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-
-    <script src="assets/js/plugins/gsap.js"></script>
-    <script src="assets/js/plugins/splittext.js"></script>
-    <script src="assets/js/plugins/scrolltigger.js"></script>
-    <script src="assets/js/plugins/scrolltoplugins.js"></script>
-
-    <script src="assets/js/main.js"></script>
-
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script>
-      new Swiper(".floor-plan-carousel", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-          waitForTransition: false,
+  <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/plugins/swiper.min.js"></script>
+  <script src="assets/js/plugins/gsap.js"></script>
+  <script src="assets/js/plugins/splittext.js"></script>
+  <script src="assets/js/plugins/scrolltigger.js"></script>
+  <script src="assets/js/plugins/scrolltoplugins.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/plugins/swiper.min.js"></script>
+  <script>
+    new Swiper(".floor-plan-carousel", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        waitForTransition: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
         },
-        breakpoints: {
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-          992: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
+        992: {
+          slidesPerView: 1,
+          spaceBetween: 30,
         },
-      });
-    </script>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="image-modal">
-      <div class="image-modal-content">
-        <span class="image-modal-close">&times;</span>
-        <img id="modalImage" src="" alt="" class="modal-image">
-      </div>
+      },
+    });
+  </script>
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <span class="image-modal-close">×</span>
+      <img alt="" class="modal-image" id="modalImage" src="" />
     </div>
+  </div>
+  <!-- Image Modal JavaScript -->
+  <script>
+    // Get modal elements
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.image-modal-close');
 
-    <!-- Image Modal JavaScript -->
-    <script>
-      // Get modal elements
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      const closeBtn = document.querySelector('.image-modal-close');
+    // Floor Plan Popup Functionality
+    let floorPlanFormData = {};
 
-      // Floor Plan Popup Functionality
-      let floorPlanFormData = {};
-
-      function showFloorPlanPopup() {
-        console.log('showFloorPlanPopup function called');
-        const popup = document.getElementById('floorPlanPopup');
-        if (popup) {
-          popup.style.display = 'flex';
-          console.log('Popup should be visible now');
-        } else {
-          console.error('Popup element not found');
-        }
+    function showFloorPlanPopup() {
+      console.log('showFloorPlanPopup function called');
+      const popup = document.getElementById('floorPlanPopup');
+      if (popup) {
+        popup.style.display = 'flex';
+        console.log('Popup should be visible now');
+      } else {
+        console.error('Popup element not found');
       }
+    }
 
-      function closeFloorPlanPopup() {
-        const popup = document.getElementById('floorPlanPopup');
-        popup.style.display = 'none';
-      }
+    function closeFloorPlanPopup() {
+      const popup = document.getElementById('floorPlanPopup');
+      popup.style.display = 'none';
+    }
 
-      // Handle floor plan form submission
-      document.addEventListener('DOMContentLoaded', function() {
-        const floorPlanForm = document.getElementById('floorPlanForm');
-        
-        // Add click handlers to floor plan images
+    // Handle floor plan form submission
+    document.addEventListener('DOMContentLoaded', function () {
+      const floorPlanForm = document.getElementById('floorPlanForm');
+
+      // Add click handlers to floor plan images
+      const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
+      floorPlanImages.forEach(function (img) {
+        img.addEventListener('click', function () {
+          console.log('Floor plan image clicked');
+          showFloorPlanPopup();
+        });
+      });
+
+      floorPlanForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Collect form data
+        const formData = new FormData(this);
+        floorPlanFormData = {};
+
+        formData.forEach((value, key) => {
+          floorPlanFormData[key] = value;
+        });
+
+        // Log the form data
+        console.log('Floor Plan Form Data:', floorPlanFormData);
+
+        // Remove blur from all floor plan images
         const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
-        floorPlanImages.forEach(function(img) {
-          img.addEventListener('click', function() {
-            console.log('Floor plan image clicked');
-            showFloorPlanPopup();
-          });
+        floorPlanImages.forEach(function (img) {
+          img.classList.remove('floor-plan-image-blurred');
+          img.classList.add('floor-plan-image-unblurred');
+          img.style.cursor = 'default';
+          img.onclick = null; // Remove click handler
         });
-        
-        floorPlanForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          // Collect form data
-          const formData = new FormData(this);
-          floorPlanFormData = {};
-          
-          formData.forEach((value, key) => {
-            floorPlanFormData[key] = value;
-          });
-          
-          // Log the form data
-          console.log('Floor Plan Form Data:', floorPlanFormData);
-          
-          // Remove blur from all floor plan images
-          const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
-          floorPlanImages.forEach(function(img) {
-            img.classList.remove('floor-plan-image-blurred');
-            img.classList.add('floor-plan-image-unblurred');
-            img.style.cursor = 'default';
-            img.onclick = null; // Remove click handler
-          });
-          
-          // Close popup
+
+        // Close popup
+        closeFloorPlanPopup();
+
+        // Reset form
+        floorPlanForm.reset();
+
+        // Show success message
+        alert('Thank you! Floor plans are now unlocked.');
+      });
+
+      // Close popup when clicking outside
+      const popupOverlay = document.getElementById('floorPlanPopup');
+      popupOverlay.addEventListener('click', function (e) {
+        if (e.target === this) {
           closeFloorPlanPopup();
-          
-          // Reset form
-          floorPlanForm.reset();
-          
-          // Show success message
-          alert('Thank you! Floor plans are now unlocked.');
-        });
-        
-        // Close popup when clicking outside
-        const popupOverlay = document.getElementById('floorPlanPopup');
-        popupOverlay.addEventListener('click', function(e) {
-          if (e.target === this) {
-            closeFloorPlanPopup();
-          }
+        }
+      });
+    });
+
+    // Add click event to all clickable images
+    document.addEventListener('DOMContentLoaded', function () {
+      const clickableImages = document.querySelectorAll('.clickable-image');
+
+      clickableImages.forEach(function (img) {
+        img.addEventListener('click', function () {
+          const imageSrc = this.getAttribute('data-image-src');
+          const imageAlt = this.getAttribute('data-image-alt');
+
+          modalImg.src = imageSrc;
+          modalImg.alt = imageAlt;
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
       });
+    });
 
-      // Add click event to all clickable images
-      document.addEventListener('DOMContentLoaded', function() {
-        const clickableImages = document.querySelectorAll('.clickable-image');
-        
-        clickableImages.forEach(function(img) {
-          img.addEventListener('click', function() {
-            const imageSrc = this.getAttribute('data-image-src');
-            const imageAlt = this.getAttribute('data-image-alt');
-            
-            modalImg.src = imageSrc;
-            modalImg.alt = imageAlt;
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-          });
-        });
-      });
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    });
 
-      // Close modal when clicking the close button
-      closeBtn.addEventListener('click', function() {
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
-      });
+        document.body.style.overflow = 'auto';
+      }
+    });
 
-      // Close modal when clicking outside the image
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        }
-      });
+    // Close modal with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
+  <!-- Hamburger Menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Create menu overlay element
+      const menuOverlay = document.createElement('div');
+      menuOverlay.className = 'menu-overlay';
+      document.body.appendChild(menuOverlay);
 
-      // Close modal with Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        }
-      });
-    </script>
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const navList = document.querySelector('.ak-nav_list');
+      const navItems = document.querySelectorAll('.ak-nav_list_item a');
 
-    <!-- Hamburger Menu JavaScript -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Create menu overlay element
-        const menuOverlay = document.createElement('div');
-        menuOverlay.className = 'menu-overlay';
-        document.body.appendChild(menuOverlay);
+      // Add mobile CTA button to the menu
+      const ctaButton = document.querySelector('.ak-main-header-right .common-btn');
+      if (ctaButton) {
+        // Create a container for the mobile CTA button
+        const mobileCta = document.createElement('div');
+        mobileCta.className = 'mobile-cta-button';
 
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navList = document.querySelector('.ak-nav_list');
-        const navItems = document.querySelectorAll('.ak-nav_list_item a');
-        
-        // Add mobile CTA button to the menu
-        const ctaButton = document.querySelector('.ak-main-header-right .common-btn');
-        if (ctaButton) {
-          // Create a container for the mobile CTA button
-          const mobileCta = document.createElement('div');
-          mobileCta.className = 'mobile-cta-button';
-          
-          // Clone the CTA button and add it to the mobile menu
-          const ctaClone = ctaButton.cloneNode(true);
-          mobileCta.appendChild(ctaClone);
-          
-          // Append the mobile CTA to the nav list
-          navList.appendChild(mobileCta);
-          
-          // Add click event to the mobile CTA button
-          ctaClone.addEventListener('click', function() {
-            hamburgerMenu.classList.remove('active');
-            navList.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          });
-        }
+        // Clone the CTA button and add it to the mobile menu
+        const ctaClone = ctaButton.cloneNode(true);
+        mobileCta.appendChild(ctaClone);
 
-        // Toggle menu when hamburger is clicked
-        hamburgerMenu.addEventListener('click', function() {
-          hamburgerMenu.classList.toggle('active');
-          navList.classList.toggle('active');
-          menuOverlay.classList.toggle('active');
-          
-          // Prevent body scrolling when menu is open
-          if (navList.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-          } else {
-            document.body.style.overflow = 'auto';
-          }
-        });
+        // Append the mobile CTA to the nav list
+        navList.appendChild(mobileCta);
 
-        // Close menu when overlay is clicked
-        menuOverlay.addEventListener('click', function() {
+        // Add click event to the mobile CTA button
+        ctaClone.addEventListener('click', function () {
           hamburgerMenu.classList.remove('active');
           navList.classList.remove('active');
           menuOverlay.classList.remove('active');
           document.body.style.overflow = 'auto';
         });
+      }
 
-        // Close menu when nav item is clicked
-        navItems.forEach(function(item) {
-          item.addEventListener('click', function() {
-            hamburgerMenu.classList.remove('active');
-            navList.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          });
-        });
+      // Toggle menu when hamburger is clicked
+      hamburgerMenu.addEventListener('click', function () {
+        hamburgerMenu.classList.toggle('active');
+        navList.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
 
-        // Close menu when Escape key is pressed
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && navList.classList.contains('active')) {
-            hamburgerMenu.classList.remove('active');
-            navList.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-        
-        // Handle window resize to reset menu state on desktop
-        window.addEventListener('resize', function() {
-          if (window.innerWidth > 991 && navList.classList.contains('active')) {
-            hamburgerMenu.classList.remove('active');
-            navList.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
+        // Prevent body scrolling when menu is open
+        if (navList.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Close menu when overlay is clicked
+      menuOverlay.addEventListener('click', function () {
+        hamburgerMenu.classList.remove('active');
+        navList.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close menu when nav item is clicked
+      navItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          hamburgerMenu.classList.remove('active');
+          navList.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.style.overflow = 'auto';
         });
       });
-    </script>
-  </body>
+
+      // Close menu when Escape key is pressed
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navList.classList.contains('active')) {
+          hamburgerMenu.classList.remove('active');
+          navList.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Handle window resize to reset menu state on desktop
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 991 && navList.classList.contains('active')) {
+          hamburgerMenu.classList.remove('active');
+          navList.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>

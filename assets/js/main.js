@@ -153,7 +153,10 @@
     2. Mobile Menu  
   --------------------------------------------------------------*/
   function mainNav() {
-    $(".ak-nav").append('<span class="ak-munu_toggle"><span></span></span>');
+    // Append default toggle only if a custom hamburger is NOT present and toggle doesn't already exist
+    if ($('.hamburger-menu').length === 0 && $('.ak-munu_toggle').length === 0) {
+      $(".ak-nav").append('<span class="ak-munu_toggle"><span></span></span>');
+    }
     $(".menu-item-has-children").append(
       '<span class="ak-munu_dropdown_toggle"></span>'
     );
@@ -1218,53 +1221,97 @@
       // });
     });
   }
-})(jQuery);
 
-//Fetching UTM source
+  /*--------------------------------------------------------------
+    22. Testimonial Carousel
+  --------------------------------------------------------------*/
+  function initTestimonialCarousel() {
+    let currentIndex = 0;
+    const cards = document.querySelectorAll('.testimonial-card');
+    const totalCards = cards.length;
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('#leadForm'); // Replace with your actual form ID
+    function updateCarousel() {
+      cards.forEach((card, index) => {
+        card.classList.remove('active', 'fade-in');
+        if (index === currentIndex) {
+          card.classList.add('active');
+        }
+      });
+      
+      // Add fade-in effect to inactive cards after delay
+      setTimeout(() => {
+        cards.forEach((card, index) => {
+          if (index !== currentIndex) {
+            card.classList.add('fade-in');
+          }
+        });
+      }, 1000);
+    }
 
-  function getUTMSource() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('utm_source')?.toLowerCase() || '';
+    // Auto-play functionality
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateCarousel();
+    }, 5000);
+
+    // Initialize first card as active
+    updateCarousel();
   }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = form.querySelector('[name="name"]').value.trim();
-    const email = form.querySelector('[name="email"]').value.trim();
-    const phone = form.querySelector('[name="phone"]').value.trim();
-    const message = form.querySelector('[name="message"]').value.trim();
-    const utmSource = getUTMSource();
-
-    const data = {
-      name,
-      email,
-      phone,
-      message,
-      source: utmSource
-    };
-
-    fetch('https://shalimar-marbella.com/leads.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(response => {
-      console.log('Success:', response);
-      alert("Thank you! We'll get back to you shortly.");
-      form.reset();
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert("Something went wrong. Please try again.");
-    });
+  // Initialize testimonial carousel when DOM is ready
+  $(document).ready(function() {
+    if ($.exists('.testimonial-carousel')) {
+      initTestimonialCarousel();
+    }
   });
+
+})(jQuery);
+
+// UTM Source functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('#leadForm');
+  
+  if (form) {
+    function getUTMSource() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('utm_source')?.toLowerCase() || '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const phone = form.querySelector('[name="phone"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
+      const utmSource = getUTMSource();
+
+      const data = {
+        name,
+        email,
+        phone,
+        message,
+        source: utmSource
+      };
+
+      fetch('https://shalimar-marbella.com/leads.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(response => {
+        console.log('Success:', response);
+        alert("Thank you! We'll get back to you shortly.");
+        form.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Something went wrong. Please try again.");
+      });
+    });
+  }
 });
-</script>
+
