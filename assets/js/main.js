@@ -154,7 +154,8 @@
   --------------------------------------------------------------*/
   function mainNav() {
     // Append default toggle only if a custom hamburger is NOT present and toggle doesn't already exist
-    if ($('.hamburger-menu').length === 0 && $('.ak-munu_toggle').length === 0) {
+    const hasCustomHamburger = $('.hamburger-menu').length > 0;
+    if (!hasCustomHamburger && $('.ak-munu_toggle').length === 0) {
       $(".ak-nav").append('<span class="ak-munu_toggle"><span></span></span>');
     }
     $(".menu-item-has-children").append(
@@ -168,18 +169,21 @@
         .slideToggle();
     });
 
-    $(".ak-nav_list_item").on("click", function () {
-      $(this)
-        .toggleClass("ak-toggle_active")
-        .parent()
-        .siblings(".ak-nav_list")
-        .slideToggle();
+    // Only bind the default list-item behavior when using the default toggle
+    if (!hasCustomHamburger && $('.ak-munu_toggle').length > 0) {
+      $(".ak-nav_list_item").on("click", function () {
+        $(this)
+          .toggleClass("ak-toggle_active")
+          .parent()
+          .siblings(".ak-nav_list")
+          .slideToggle();
 
-      // Close mobile menu
-      $(".ak-munu_toggle").removeClass("ak-toggle_active");
-      $(".ak-nav").removeClass("ak-nav_active"); // If you're using this class for mobile menu
-      $(".ak-nav_list").slideUp(); // Close all nav lists
-    });
+        // Close mobile menu (default behavior)
+        $(".ak-munu_toggle").removeClass("ak-toggle_active");
+        $(".ak-nav").removeClass("ak-nav_active");
+        $(".ak-nav_list").slideUp();
+      });
+    }
 
     $(".ak-munu_dropdown_toggle").on("click", function () {
       $(this)
