@@ -19,10 +19,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="assets/img/favicon.svg" rel="icon" />
   <!-- Site Title -->
   <title>Sapphire Villa</title>
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <link href="assets/css/plugins/swiper.min.css" rel="stylesheet" />
   <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/discover-section.css" rel="stylesheet" />
   <script src="https://app.fraudclicks.in/tracker.js?key=KLRXkqmr2S7POfriF2sTLqMfZodRXlOU"></script>
+  <script src="assets/js/bootstrap.js"></script>
   <style>
     /* Responsive Title Font Sizes */
     @media (max-width: 991px) {
@@ -759,6 +762,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: #333;
     }
 
+
+     
+
+
+     .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .carousel-arrow {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #0001;
+            z-index: 2;
+        }
+        .carousel-slide {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #0002;
+            z-index: 1;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 2px 8px #000a;
+            z-index: 2;
+        }
+        .carousel-side {
+            width: 260px;
+            height: 260px;
+            opacity: 0.7;
+            filter: blur(1px) grayscale(0.2);
+            border-radius: 12px;
+            object-fit: cover;
+            transition: opacity 0.3s, filter 0.3s;
+        }
+        .carousel-side.left { margin-right: -80px; }
+        .carousel-side.right { margin-left: -80px; }
+        @media (max-width: 900px) {
+            .carousel-slide { width: 95vw; height: 50vw; min-width: 0; min-height: 0; }
+            .carousel-side { width: 30vw; height: 30vw; }
+        }
+
     /* Mobile Menu Styles */
     @media (max-width: 991px) {
       .hamburger-menu {
@@ -910,6 +982,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
 
+    .wellness-section {
+  background: #fff;
+}
+.wellness-section h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #2c348b;
+  margin-bottom: 2.5rem;
+}
+.wellness-item {
+  margin-bottom: 0.5rem;
+}
+.wellness-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+.wellness-icon img {
+  width: 64px;
+  height: 64px  ;
+  display: block;
+}
+.wellness-box {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  box-shadow: 0 2px 8px #0001;
+}
+@media (max-width: 991px) {
+  .wellness-section h2 {
+    font-size: 1.5rem;
+  }
+  .wellness-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+  }
+  .wellness-box {
+    font-size: 0.98rem;
+    padding: 0.7rem 1rem;
+    min-height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .wellness-section h2 {
+    font-size: 1.2rem;
+  }
+  .wellness-item {
+    margin-bottom: 0.3rem;
+  }
+  .wellness-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+  .wellness-box {
+    font-size: 0.92rem;
+    padding: 0.5rem 0.7rem;
+    min-height: 36px;
+  }
+  
+}
+
     /* End Responsive Header Styles */
   </style>
 </head>
@@ -1010,14 +1156,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Left Column - Hero Text -->
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
               <h1 class="hero-main-title"
-                style="font-size: 2.8rem; font-weight: bold; color: white; margin-bottom: 20px;">
+                style="font-size: 4.0rem; font-weight: bold; color: white; margin-bottom: 20px;">
                 Sapphire Villa
               </h1>
               <h2
                 style="font-size: 1.8rem; margin-bottom: 20px; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
-                Living in Refined Luxury
+                Experience the perfect balance of city energy and boutique tranquillity at Sapphire Villas.
               </h2>
-              <div style="margin-bottom: 25px">
+              <!-- <div style="margin-bottom: 25px">
                 <div style="
                       display: flex;
                       align-items: flex-start;
@@ -1105,7 +1251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <a class="common-btn d-lg-inline-block anim-pulse mt-3" href="#contact-form-redirect" style="
                     background-color: #354990;
                     border-color: #354990;
@@ -1363,7 +1509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="doctor-content">
         <div class="doctor-image">
-          <img alt="Between the Greens" src="assets/img/gallery/g1.webp" />
+          <img alt="Between the Greens" src="assets/img/specs/cp-fittings-and-accessories.webp" />
         </div>
         <div class="doctor-text">
           <h2 class="about-title">About Sapphire Villa</h2>
@@ -1391,395 +1537,313 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
-  <!-- End About -->
-  <!-- Specification Section -->
-  <!-- <div class="ak-whiteLite-bg py-5" id="specification">
-      <div class="container">
-        <div class="text-center mb-4">
-          <p class="ak-section-subtitle">Specification</p>
-          <h2 class="ak-section-title">
-            Delight In Every Facet Of Life's Grandeur
-          </h2>
-          <p class="specification-intro-text">
-            Shalimar Marbella is the pinnacle of timeless elegance, where every
-            corner, every finish, and every space echoes a sense of refined
-            sophistication.
-          </p>
+
+
+
+
+
+
+
+
+  <div class="carousel-container">
+        <div class="carousel-arrow" id="prevBtn">&#60;</div>
+        <img src="assets/img/specs/all-bedroom-flooring.webp" alt="Kitchen" class="carousel-side left" id="leftImg">
+        <div class="carousel-slide">
+            <img src="assets/img/specs/balcony.webp" alt="Living Room" class="carousel-img" id="mainImg">
+            <div class="carousel-caption" id="caption">Living Room</div>
         </div>
-
-        <div class="row g-4 justify-content-center">
-          <!-- Card 1: Structure -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/structure.webp"
-                alt="Structure"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Structure</h5>
-                <p class="spec-card-description">
-                  Structure Designed with highest seismic consideration for the
-                  zone as stipulated by the BIS Code and for better safety
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 2: Foundation -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/foundation.webp"
-                alt="Foundation"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Foundation</h5>
-                <p class="spec-card-description">
-                  Reinforced concrete footing & columns
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 3: All Bedrooms -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/all-bedroom-flooring.webp"
-                alt="All Bedrooms"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">All Bedrooms</h5>
-                <p class="spec-card-description">
-                  Flooring Wooden/tile in master; vitrified tiles in others.
-                  Walls Acrylic emulsion on POP. Ceiling Oil-bound distemper.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 4: Living/Dining Room -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/living-dining-room.webp"
-                alt="Living/Dining Room"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Living/Dining Room</h5>
-                <p class="spec-card-description">
-                  Flooring Premium vitrified tiles. Walls Acrylic emulsion on
-                  POP. Ceiling Oil-bound distemper.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 5: Toilet -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/toilet.webp"
-                alt="Toilet"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Toilet</h5>
-                <p class="spec-card-description">
-                  Flooring Antiskid ceramic tiles Counter Granite / tiles /
-                  marble Sanitary Premium fitting.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 6: Utility Room/Toilet -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/utility-room-toilet.webp"
-                alt="Utility Room/Toilet"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Utility Room/Toilet</h5>
-                <p class="spec-card-description">
-                  Flooring Standard tiles Walls & Ceiling OBD on POP Toilet CP
-                  fittings
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 7: Kitchen -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/kitchen.webp"
-                alt="Kitchen"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Kitchen</h5>
-                <p class="spec-card-description">
-                  Flooring Standard tiles Ceiling OBD on POP Toilet CP fittings
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 8: CP Fittings And Accessories -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/cp-fittings-and-accessories.webp"
-                alt="CP Fittings And Accessories"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">CP Fittings And Accessories</h5>
-                <p class="spec-card-description">
-                  Grohe /Jaquar / Roca or equivalent Toilet fittings/single
-                  lever fitting in all toilets. Provision for geyser
-                  installation. Rain shower in master toilet & Normal shower in
-                  all other toilets.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 9: Lift Lobby : Typical Floor -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/lift-lobby-typical-floor.webp"
-                alt="Lift Lobby : Typical Floor"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Lift Lobby : Typical Floor</h5>
-                <p class="spec-card-description">
-                  Premium flooring in tiles/granite/marble with matching
-                  skirting; lift wall up to 2100mm in tiles, rest painted with
-                  gypsum ceiling.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 10: Staircase Main -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/staircase-main.webp"
-                alt="Staircase Main"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Staircase Main</h5>
-                <p class="spec-card-description">
-                  Durable Kota/Indian stone/granite flooring with matching
-                  skirting, OBD wall and ceiling finish, and sturdy painted MS
-                  railing.
-                </p>
-              </div>
-            </div> 
-          </div>-->
-  <!-- Card 11: Balcony -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/balcony.webp"
-                alt="Balcony"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Balcony</h5>
-                <p class="spec-card-description">
-                  Durable tile flooring, exterior-grade painted walls and
-                  ceiling, with functional MS and wall-mounted handrails
-                  tailored to elevation design.
-                </p>
-              </div>
-            </div>
-          </div> -->
-  <!-- Card 12: Staircase Fire -->
-  <!-- <div class="col-lg-3 col-md-6">
-            <div class="spec-card">
-              <img
-                src="assets/img/specs/staircase-fire.webp"
-                alt="Staircase Fire"
-                class="spec-card-bg"
-              />
-              <div class="spec-card-overlay"></div>
-              <div class="spec-card-content">
-                <h5 class="spec-card-heading">Staircase Fire</h5>
-                <p class="spec-card-description">
-                  Premium Kota/Indian stone/granite flooring with matching
-                  skirting, OBD wall and ceiling finishes, and robust painted MS
-                  railing for safety.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-  <!-- Section CTA -->
-  <!-- <div class="text-center mt-5">
-          <a
-            href="#contact-form-redirect"
-            class="common-btn anim-pulse px-4 py-2"
-            style="
-              background-color: #354990;
-              border-color: #354990;
-              color: #fff !important;
-            "
-          >
-            <span>Download Brochure</span>
-          </a>
-        </div> -->
+        <img src="assets/img/specs/toilet.webp" alt="Bedroom" class="carousel-side right" id="rightImg">
+        <div class="carousel-arrow" id="nextBtn">&#62;</div>
+    </div>
 
 
-  <!-- Amenities At Marbella Section -->
-  <!-- <div class="ak-whiteLite-bg py-5" id="Amenities">
+
+
+
+
+
+
+<section class="discover-section">
     <div class="container">
-      <h2 class="ak-section-title text-center">Amenities At Between The Greens</h2>
-      <p class="text-center mb-5">
-        Discover a lifestyle where luxury meets nature. Enjoy a social clubhouse, party lawn, fragrance garden, and lush
-        green spaces. <br />
-        Stay active with an outdoor gym, cricket pitch, and sports court.
-        Relax at the pool, jacuzzi, floating bridge, or stroll through the therapeutic path.<br />
-        Kids, seniors, and pets have dedicated zones—making it a perfect home for all ages.<br />
-        This is more than a home—it’s a lifestyle built for every generation.
-      </p>
-      <div class="row g-4 justify-content-center text-center"> -->
-        <!-- New Amenities -->
-        <!-- <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Sports Club" class="feature-icon mb-3" src="assets/img/amenities/basketball-court.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Sports Club</h5>
-            <p class="feature-subtitle"></p>
+      <h2 class="mb-3 text-blue">Discover a life of refined luxury at Sapphire Villas</h2>
+      <p class="mb-lg-5 mb-4">An exclusive enclave in the tranquil neighbourhood of Sadarmangala, Whitefield, Bengaluru.
+        Crafted
+        for those who value elegance and ease, these villas offer contemporary architecture, spacious living, and
+        seamless access to the city.</p>
+
+      <div class="property-card shadow">
+        <img src="assets/img/bg-1.png" alt="Villa" class="property-img">
+
+        <div class="property-overlay">
+          <div class="prop-sec">
+            <h4>4 BHK + Home Theatre</h4>
+            <p class="mb-0">A limited collection of bespoke villas</p>
           </div>
-        </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Social Club" class="feature-icon mb-3" src="assets/img/amenities/shop.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Social Club</h5>
-            <p class="feature-subtitle"></p>
+          <div class="prop-sec">
+            <h4>3,400–5,000 sq. ft.</h4>
+            <p class="mb-0">of expansive layouts</p>
           </div>
-        </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Bonfire Court" class="feature-icon mb-3" src="assets/img/amenities/bonfire-court.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Bonfire Court</h5>
-            <p class="feature-subtitle"></p>
+          <div class="prop-sec">
+            <h4>7.5 acres</h4>
+            <p class="mb-0">of master-planned community living</p>
           </div>
-        </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Golf Mini-Putting" class="feature-icon mb-3" src="assets/img/amenities/golf-mini.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Golf Mini-Putting</h5>
-            <p class="feature-subtitle"></p>
+          <div class="prop-sec">
+            <h4>Excellent connectivity</h4>
+            <p class="mb-0">in a peaceful setting</p>
           </div>
-        </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Pet's Park" class="feature-icon mb-3" src="assets/img/amenities/pets-park.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Pet's Park</h5>
-            <p class="feature-subtitle"></p>
+
+          <div class="prop-sec border-0 pb-md-0">
+            <h4>70%</h4>
+            <p class="mb-0">dedicated to open space, infused with greenery</p>
           </div>
+
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Outdoor Gym" class="feature-icon mb-3" src="assets/img/amenities/dumbbell.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Outdoor Gym</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+        
+
+    </div>
+  </section>
+
+  <!-- Property Features Section -->
+<section class="property-features-section py-5">
+  <div class="container">
+    <h2 class="mb-5" style="color: #2c348b; font-weight: 700; font-size: 2.2rem;">The Property Features</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Feature 1 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-1.svg" alt="Bathrooms" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">4 EN SUITE</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">BATHROOMS</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Multi-purpose Play Court" class="feature-icon mb-3" src="assets/img/amenities/multipurpose.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Multi-purpose Play Court</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-2.svg" alt="Bedrooms" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">4</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">BEDROOMS</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Co-working Space" class="feature-icon mb-3" src="assets/img/amenities/co-working.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Co-working Space</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-3.svg" alt="Balcony" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">2</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">BALCONY</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Indoor Badminton Court" class="feature-icon mb-3" src="assets/img/amenities/badminton- court.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Indoor Badminton Court</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 4 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-4.svg" alt="Parking" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">2 CARS</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">PARKING CAPACITY</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Squash Court" class="feature-icon mb-3" src="assets/img/amenities/basketball-court.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Squash Court</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 5 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-5.svg" alt="Automation" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">FULLY</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">AUTOMATED</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Amphitheater &amp; Gym" class="feature-icon mb-3" src="assets/img/amenities/amphitheatre.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Amphitheater &amp; Gym</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 6 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-6.svg" alt="Gated Community" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">YES</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">GATED COMMUNITY</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Yoga &amp; Aerobics Room" class="feature-icon mb-3" src="assets/img/amenties/chakra.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Yoga &amp; Aerobics Room</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 7 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-7.svg" alt="Home Elevator" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">YES</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">HOME ELEVATOR</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Indoor Games" class="feature-icon mb-3" src="assets/img/amenities/indoor.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Indoor Games</h5>
-            <p class="feature-subtitle"></p>
-          </div>
+      </div>
+      <!-- Feature 8 -->
+      <div class="col-lg-3 col-md-4 col-6 d-flex">
+        <div class="feature-box text-center p-4 w-100 h-100 shadow-sm">
+          <img src="assets/img/icons/feature-8.svg" alt="Home Theatre" class="mb-3" style="width:48px;height:48px;">
+          <div class="feature-number" style="color: #c9a13b; font-size: 1.5rem; font-weight: 700;">YES</div>
+          <div class="feature-label" style="color: #2c348b; font-weight: 600; letter-spacing: 1px;">HOME THEATRE</div>
         </div>
-        <div class="col-lg-3 col-6 d-flex">
-          <div class="feature-card-two text-center p-4 w-100 h-100">
-            <img alt="Multi-function Area" class="feature-icon mb-3" src="assets/img/amenities/multifuntion-area.webp"
-              style="width: 50px; height: 50px" />
-            <h5 class="feature-title mb-2">Multi-function Area</h5>
-            <p class="feature-subtitle"></p>
-          </div>
-        </div>
-      </div> -->
-      <!-- Section CTA -->
-      <!-- <div class="text-center mt-5">
-        <a class="common-btn anim-pulse px-4 py-2" href="#contact-form-redirect">
-          <span>Download Brochure</span>
-        </a>
       </div>
     </div>
-  </div> -->
+  </div>
+</section>
+<!-- End Property Features Section -->
+
+  <!-- Wellness Section -->
+<section class="wellness-section py-5">
+  <div class="container">
+    <h2 class="mb-5" style="color: #2c348b; font-weight: 700; font-size: 2.2rem;">Luxury Designed for Life Not Just Living</h2>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6 d-flex flex-column gap-4">
+        <!-- Physical Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#8e44ad"><img src="assets/img/icons/wellness-1.svg" alt="Physical"/></span>
+          <div class="wellness-box" style="background:#8e44ad;"> Physical Wellness: Encourages movement and outdoor activity.</div>
+        </div>
+        <!-- Spiritual Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#1abc9c"><img src="assets/img/icons/wellness-3.svg" alt="Spiritual"/></span>
+          <div class="wellness-box" style="background:#1abc9c;"> Spiritual Wellness: Promotes introspection and connection with nature.</div>
+        </div>
+        <!-- Social Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#27ae60"><img src="assets/img/icons/wellness-5.svg" alt="Social"/></span>
+          <div class="wellness-box" style="background:#27ae60;"> Social Wellness:  Encourages interaction and community bonding.</div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex flex-column gap-4">
+        <!-- Mental Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#f39c12"><img src="assets/img/icons/wellness-2.svg" alt="Mental"/></span>
+          <div class="wellness-box" style="background:#f39c12;"> Mental Wellness: Reduces stress and enhances relaxation.</div>
+        </div>
+        <!-- Emotional Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#e74c3c"><img src="assets/img/icons/wellness-4.svg" alt="Emotional"/></span>
+          <div class="wellness-box" style="background:#e74c3c;"> Emotional Wellness: Enhances mood and provides a sense of connection with nature.</div>
+        </div>
+        <!-- Environmental Wellness -->
+        <div class="d-flex align-items-center wellness-item">
+          <span class="wellness-icon" style="background:#2962a8"><img src="assets/img/icons/wellness-6.svg" alt="Environmental"/></span>
+          <div class="wellness-box" style="background:#2962a8;"> Environmental Wellness: Supports biodiversity and sustainability.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-sec" style="padding: 40px; justify-self: center;">
+        <img src="assets/img/location-map.png" class="img-fluid w-100"  alt="Location">
+
+        <div class="legend-box">
+          <h3 class="mb-md-4 mb-3 text-blue">Legend </h3>
+          <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 gx-xl-4">
+            <div class="col order-1">
+              <ol class="list-unstyled mb-0">
+                <li>1. Pavilion with Seating</li>
+                <li>2. Temple</li>
+                <li>3. Afforestation Green Belt</li>
+                <li>4. Adults Pool</li>
+                <li>5. Kids Pool</li>
+                <li>6. Jacuzzi</li>
+                <li>7. Feature Wall with Spouts</li>
+                <li>8. Meditation Pavilion</li>
+                <li>9. Water Body with Buddha Statue</li>
+                <li>10. Zen Garden</li>
+                <li>11. Outdoor Work Station / Wifi Station</li>
+              </ol>
+            </div>
+            <div class="col order-lg-2 order-md-3 order-2">
+              <ol class="list-unstyled mb-0">
+                <li>12. Aroma Garden</li>
+                <li>13. Amphitheatre with Projection Wall</li>
+                <li>14. Swings Park</li>
+                <li>15. Lilly Pond</li>
+                <li>16. Terminalia Tree Court with Seats</li>
+                <li>17. Cricket Pitch</li>
+                <li>18. Pickle Ball Court</li>
+                <li>19. Volleyball Court</li>
+                <li>20. Pet Park</li>
+                <li>21. TOT-LOT On Lawn</li>
+              </ol>
+            </div>
+            <div class="col order-lg-3 order-md-2 order-3">
+              <ol class="list-unstyled mb-0">
+                <li>22. Sand Pit</li>
+                <li>23. Climbing Wall</li>
+                <li>24. Children Play Area</li>
+                <li>25. Participatory Gardening</li>
+                <li>26. Elders Chit Chat ZOne</li>
+                <li>27. Reflexology Pathway</li>
+                <li>28. Yoga Lawn</li>
+                <li>29. Floral Garden</li>
+                <li>30. Hopscotch</li>
+                <li>31. Skating Ring</li>
+                <li>32. Outdoor Gym</li>
+              </ol>
+            </div>
+            <div class="col order-4">
+              <ol class="list-unstyled mb-0">
+                <li>33. Outdoor Musical Garden</li>
+                <li>34. Multipurpose Ground</li>
+                <li>35. Informal Cafe</li>
+                <li>36. Pavilion Park-Theme Wellness</li>
+                <li>37. Sculpture Park-Theme Wellness</li>
+                <li>38. Fruit Orchard</li>
+                <li>39. Hammock Garden</li>
+                <li>40. Forest Trails / Nature Trail Walkway</li>
+                <li>41. Half Basket Ball Court</li>
+                <li>42. Jogging / Cycle Track</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floor Plan Carousel Section -->
+<!-- <section class="floorplan-carousel-section py-5 nearby-section">
+  <div class="container">
+    <h2 class="mb-5 text-center" style="color: #2c348b; font-weight: 700; font-size: 2.2rem;">Villa Floor Plans</h2>
+    <div id="floorplanCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12 text-center">
+              <h3 class="mb-4" style="color: #2c348b; font-weight: 600;">East Facing</h3>
+              <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                <img src="assets/img/floorplan/East-Ground.png" alt="East Facing Ground Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+                <img src="assets/img/floorplan/East-First.png" alt="East Facing First Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+                <img src="assets/img/floorplan/East-Second.png" alt="East Facing Second Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+              </div>
+              <div class="row justify-content-center mb-2">
+                <div class="col-md-4 col-12 mb-2"><b>BUILT-UP AREA:</b> 3753 SQ. FT.</div>
+                <div class="col-md-4 col-12 mb-2"><b>CARPET AREA:</b> 2502 SQ. FT.</div>
+                <div class="col-md-4 col-12 mb-2"><b>SUPER BUILT-UP AREA:</b> 4107 SQ. FT.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="carousel-item">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12 text-center">
+              <h3 class="mb-4" style="color: #2c348b; font-weight: 600;">West Facing</h3>
+              <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                <img src="assets/img/floorplan/West-Ground.png" alt="West Facing Ground Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+                <img src="assets/img/floorplan/West-First.png" alt="West Facing First Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+                <img src="assets/img/floorplan/West-Second.png" alt="West Facing Second Floor" class="img-fluid" style="max-width: 300px; border-radius: 12px; box-shadow: 0 2px 16px #0002;">
+              </div>
+              <div class="row justify-content-center mb-2">
+                <div class="col-md-4 col-12 mb-2"><b>BUILT-UP AREA:</b> 3382 SQ. FT.</div>
+                <div class="col-md-4 col-12 mb-2"><b>CARPET AREA:</b> 2459 SQ. FT.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#floorplanCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#floorplanCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section> -->
+<!-- End Floor Plan Carousel Section -->
+
   <!-- Project Details Section -->
   <section class="ak-whiteLite-bg py-5" id="Project-details">
     <div class="container">
@@ -2085,7 +2149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="report-section-title ak-section-title">Reports</h2>
         <div class="row justify-content-center"> -->
   <!-- Report Card 1: Construction Updates -->
-  <!-- <div class="col-lg-4 col-md-6 d-flex">
+   <!-- <div class="col-lg-4 col-md-6 d-flex">
             <div class="report-card w-100">
               <div class="report-card-title-area">
                 <span>Construction Updates</span>
@@ -2193,20 +2257,103 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- End Photo Gallery Section -->
   <!-- Location Section -->
-  <section class="location-section ak-whiteLite-bg py-5" id="location">
+
+
+  <section class="nearby-section sp-80" style="background-image: url('assets/img/bg-3.png'); background-size: cover; background-position: center; color: #fff; padding-bottom: 40px; padding-top: 40px;">
     <div class="container">
-      <div class="location-title-container">
-        <p class="location-subtitle ak-section-subtitle">Location</p>
-        <h2 class="location-main-title ak-section-title">
-          Everything You Need Is Near You
-        </h2>
+      <h2 class="text-white text-md-start text-center">Urban Access, Without Urban Chaos</h2>
+      <p class="mb-4 text-white">Located in Whitefield’s prestigious Sadarmangala, the Sapphire luxury villas in
+        Bengaluru offers the best of both worlds.</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.48350094152!2d77.7368559732104!3d13.004853014152154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11de3f66e9e3%3A0xa271db8d9529c6a3!2sSAPPHIRE%20-%20VILLAS!5e0!3m2!1sen!2sin!4v1754563999783!5m2!1sen!2sin"
+        width="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+  <!-- Info Boxes -->
+  <div class="info-box mt-5">
+    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-3">
+      <div class="col mb-lg-0 mb-3">
+        <h5 style="color: white;">TRANSPORT</h5>
+        <ul class="mb-0">
+          <li>Whitefield Metro Station - 3.5 km</li>
+          <li>Whitefield (Kadugodi) Metro - 3.7 km</li>
+          <li>Hope Farm Junction - 5 km</li>
+          <li>Kempegowda International Airport - 33 km</li>
+        </ul>
       </div>
-      <div class="map-container">
-        <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40379.67548461177!2d77.71593312310252!3d12.964608512206441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1754654506262!5m2!1sen!2sin"></iframe>
+     <div class="col mb-lg-0 mb-3">
+        <h5 style="color: white;">SHOPPING MALLS</h5>
+         <ul class="mb-0">
+          <li>Nexus Shantiniketan - 5 km</li>
+          <li>Nexus Whitefield - 7.6 km</li>
+          <li>Park Square Mall - 6.7 km</li>
+          <li>Orion Uptown Mall - 9.8 km</li>
+        </ul>
       </div>
+      <div class="col">
+        <h5 style="color: white;">TECH PARKS</h5>
+        <ul class="mb-0">
+          <li>ITPL Tech Park - 6.5 km</li>
+          <li>ITPB - 6.6 km </li>
+          <li>SCB Bridge - 6.3 km</li>
+          <li>Goyal & Co - 5.1 km</li>
+          <li>HM Tech Park - 5.6 km</li>
+        </ul>
+      </div>
+       <div class="col mb-md-0 mb-3">
+        <h5 style="color: white;">SUPERMARKET</h5>
+         <ul class="mb-0">
+          <li>Fresh City Supermarket - 750 m</li>
+          <li>Families Supermarket - 1.1 km</li>
+          <li>Grandcity Market - 1.6 km</li>
+          <li>New Royal Fresh Market - 1.4 km</li>
+          <li>A1 Fresh World - 1.9 km</li>
+        </ul>
+      </div>
+      </div>
+     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-3 mt-md-3">
+      <div class="col">
+        <h5 style="color: white;">EDUCATIONAL INSTITUTES</h5>
+        <ul class="mb-0">
+          <li>PNC Cognito School - 650 m</li>
+          <li>ORCHIDS The International School - 700 m</li>
+          <li>Mount Litera Zee School - 1.1 km</li>
+          <li>Ujjval World School - 4 km</li>
+          <li>The Deens Academy - 6.8 km</li>
+        </ul>
+      </div>
+      <div class="col">
+          <h5 style="color: white;">COLLEGES</h5>
+          <ul class="mb-0">
+          <li>MVJ Engineering - 5.8 km</li>
+          <li>Vaidhehi Institute of Medical College - 9 km</li>
+          <li>Gopalan Preuniversity College - 10 km</li>
+          <li>Silicon City College - 7.8 km</li>
+          <li>New Horizon pu College - 13.3 km</li>
+          <li>Don Bosco College - 7 km</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5 style="color: white;">HOSPITALS</h5>
+        <ul class="mb-0">
+          <li>Aaxis Hospital - 2.5 km</li>
+          <li>Narayana Multispecialty Hospital - 5.9 km</li>
+          <li>Medicover Hospital - 4.6 km</li>
+          <li>Manipal Hospital - 5.5 km</li>
+          <li>Svastha Hospital - 6.4 km</li>
+          <li>Motherhood Asia - 8.2 km</li>
+          <li>CLOUD 9 Hospital - 7 km</li>
+        </ul>
+      </div>
+     
+    </div>
+  </div>
     </div>
   </section>
+
+
+
+
   <!-- End Location Section -->
   <!-- Strat Contact -->
   <!-- <div class="ak-height-125 ak-height-lg-80"></div> -->
@@ -2740,6 +2887,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     });
+    
+        // Example images and captions
+        const images = [
+            { src: 'assets/img/specs/all-bedroom-flooring.webp', caption: 'Kitchen' },
+            { src: 'assets/img/specs/balcony.webp', caption: 'Living Room' },
+            { src: 'assets/img/specs/toilet.webp', caption: 'Bedroom' }
+        ];
+        let current = 1;
+        function updateCarousel() {
+            const left = (current - 1 + images.length) % images.length;
+            const right = (current + 1) % images.length;
+            document.getElementById('mainImg').src = images[current].src;
+            document.getElementById('mainImg').alt = images[current].caption;
+            document.getElementById('caption').textContent = images[current].caption;
+            document.getElementById('leftImg').src = images[left].src;
+            document.getElementById('leftImg').alt = images[left].caption;
+            document.getElementById('rightImg').src = images[right].src;
+            document.getElementById('rightImg').alt = images[right].caption;
+        }
+        document.getElementById('prevBtn').onclick = function() {
+            current = (current - 1 + images.length) % images.length;
+            updateCarousel();
+        };
+        document.getElementById('nextBtn').onclick = function() {
+            current = (current + 1) % images.length;
+            updateCarousel();
+        };
+        // Initial update
+        updateCarousel();
+    
   </script>
 </body>
 

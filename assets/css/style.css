@@ -7701,4 +7701,130 @@ body {
     top: 12px;
     left: 15px;
   }
+
+
+
+
+
+  /*--------------------------------------------------------------
+  31. Wellness Section
+----------------------------------------------------------------*/
+.wellness-section {
+  background: #fff;
+}
+.wellness-section h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #2c348b;
+  margin-bottom: 2.5rem;
+}
+.wellness-item {
+  margin-bottom: 0.5rem;
+}
+.wellness-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+.wellness-icon img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.wellness-box {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  box-shadow: 0 2px 8px #0001;
+}
+@media (max-width: 991px) {
+  .wellness-section h2 {
+    font-size: 1.5rem;
+  }
+  .wellness-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+  }
+  .wellness-box {
+    font-size: 0.98rem;
+    padding: 0.7rem 1rem;
+    min-height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .wellness-section h2 {
+    font-size: 1.2rem;
+  }
+  .wellness-item {
+    margin-bottom: 0.3rem;
+  }
+  .wellness-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+  .wellness-box {
+    font-size: 0.92rem;
+    padding: 0.5rem 0.7rem;
+    min-height: 36px;
+  }
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto
+}
+.map-sec {
+  box-shadow: 0px 0px 35px 0px #00000014;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.nearby-section {
+  background-image: url("/assets/img/bg-3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nearby-section iframe {
+  border-radius: y20px;
+  height: 400px;
+}
+.nerby-section h5 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.nearby-section h5 {
+  color: #fff !important;
+}
+.info-box h5 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: "Noto Sans", sans-serif !important;
+  font-size: 18px;
+  font-weight: 700;
+}
+.info-box ul {
+  padding-left: 1rem;
+}
+.info-box ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+}
 }

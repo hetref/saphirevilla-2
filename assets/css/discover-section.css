@@ -1,0 +1,89 @@
+/* Sapphire Villas Discover Section Styles */
+.discover-section {
+    padding: 60px 0 40px 0;
+    background: #f8f9fa;
+}
+.discover-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.discover-section h2 {
+    color: #1a237e;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: left;
+}
+.discover-section p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+.property-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0001, 0 1.5px 6px #0001;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 32px auto;
+    max-width: 700px;
+    padding-bottom: 16px;
+}
+.property-img {
+    width: 100%;
+    display: block;
+    border-radius: 18px 18px 0 0;
+    max-height: 340px;
+    object-fit: cover;
+}
+.property-overlay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px 0;
+    padding: 28px 32px 0 32px;
+}
+.prop-sec {
+    flex: 1 1 180px;
+    min-width: 180px;
+    margin-bottom: 10px;
+}
+.prop-sec h4 {
+    color: #1976d2;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.prop-sec p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.prop-sec.border-0 {
+    border: none !important;
+    padding-bottom: 0 !important;
+}
+.bottom-text {
+    padding: 18px 32px 0 32px;
+    color: #444;
+    font-size: 1rem;
+}
+.bottom-text p {
+    margin-bottom: 6px;
+}
+@media (max-width: 900px) {
+    .discover-section .container {
+        padding: 0 10px;
+    }
+    .property-card {
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+    .property-overlay {
+        flex-direction: column;
+        padding: 18px 10px 0 10px;
+    }
+    .bottom-text {
+        padding: 12px 10px 0 10px;
+    }
+}
