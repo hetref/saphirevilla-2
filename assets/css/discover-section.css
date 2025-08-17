@@ -727,4 +727,21 @@
         left: -25px;
         right: -25px;
     }
+    
+    /* Hide carousel controls on mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none !important;
+    }
+    
+    /* Adjust carousel indicators for mobile */
+    .carousel-indicators {
+        bottom: -30px;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
 }
