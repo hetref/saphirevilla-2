@@ -49,6 +49,7 @@
     stickyHeader();
     dynamicBackground();
     initSwiper();
+    initPremiumCarousel();
     modalVideo();
     scrollUp();
     strategicCardContent();
@@ -1262,10 +1263,189 @@
     updateCarousel();
   }
 
+  /*--------------------------------------------------------------
+    23. Premium Carousel
+  --------------------------------------------------------------*/
+  function initPremiumCarousel() {
+    if ($.exists('.premium-carousel')) {
+      console.log('Initializing premium carousel...');
+      
+      // Ensure images are loaded before initializing Swiper
+      const images = document.querySelectorAll('.premium-carousel .carousel-img');
+      let loadedImages = 0;
+      
+      images.forEach(img => {
+        if (img.complete) {
+          loadedImages++;
+        } else {
+          img.addEventListener('load', () => {
+            loadedImages++;
+            if (loadedImages === images.length) {
+              initializeSwiper();
+            }
+          });
+          img.addEventListener('error', () => {
+            console.error('Failed to load image:', img.src);
+            loadedImages++;
+            if (loadedImages === images.length) {
+              initializeSwiper();
+            }
+          });
+        }
+      });
+      
+      // If all images are already loaded, initialize immediately
+      if (loadedImages === images.length) {
+        initializeSwiper();
+      }
+      
+      function initializeSwiper() {
+        console.log('All images loaded, initializing Swiper...');
+        
+        const premiumCarousel = new Swiper('.premium-carousel', {
+          // Enable smooth dragging and touch controls
+          allowTouchMove: true,
+          grabCursor: true,
+          
+          // Smooth transitions with faster speed for continuous movement
+          speed: 600,
+          effect: 'slide',
+          
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 30
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 40
+            }
+          },
+          
+          // Navigation arrows
+          navigation: {
+            nextEl: '.premium-carousel-next',
+            prevEl: '.premium-carousel-prev',
+          },
+          
+          // Pagination
+          pagination: {
+            el: '.premium-carousel-pagination',
+            clickable: true,
+            dynamicBullets: true,
+          },
+          
+          // Auto-play with continuous movement
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            waitForTransition: false,
+          },
+          
+          // Perfect loop settings for seamless infinite movement
+          loop: true,
+          loopAdditionalSlides: 0,
+          loopedSlides: 0,
+          loopFillGroupWithBlank: false,
+          
+          // Smooth easing for continuous flow
+          easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          
+          // Callbacks for premium effects and seamless infinite loop
+          on: {
+            init: function() {
+              console.log('Swiper initialized successfully');
+              // Add premium loading animation
+              gsap.from('.premium-carousel .swiper-slide', {
+                duration: 0.8,
+                y: 50,
+                opacity: 0,
+                stagger: 0.1,
+                ease: 'power2.out'
+              });
+            },
+            slideChange: function() {
+              // Minimal slide change animation for seamless flow
+              gsap.from('.premium-carousel .swiper-slide-active', {
+                duration: 0.2,
+                scale: 0.99,
+                opacity: 0.95,
+                ease: 'power2.out'
+              });
+            },
+            slideChangeTransitionEnd: function() {
+              // Quick restoration for seamless loop
+              gsap.to('.premium-carousel .swiper-slide-active', {
+                duration: 0.2,
+                scale: 1,
+                opacity: 1,
+                ease: 'power2.out'
+              });
+            },
+            touchStart: function() {
+              // Minimal touch feedback
+              gsap.to('.premium-carousel .swiper-slide-active', {
+                duration: 0.1,
+                scale: 0.99,
+                ease: 'power2.out'
+              });
+            },
+            touchEnd: function() {
+              // Quick restoration after touch
+              gsap.to('.premium-carousel .swiper-slide-active', {
+                duration: 0.2,
+                scale: 1,
+                ease: 'power2.out'
+              });
+            },
+            loopFix: function() {
+              // Ensure seamless loop transition without effects
+              console.log('Seamless loop transition completed');
+            },
+            beforeLoopFix: function() {
+              // Prevent any effects during loop transition
+              gsap.killTweensOf('.premium-carousel .swiper-slide');
+            }
+          }
+        });
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') {
+            premiumCarousel.slidePrev();
+          } else if (e.key === 'ArrowRight') {
+            premiumCarousel.slideNext();
+          }
+        });
+        
+        // Add mouse wheel navigation (optional)
+        premiumCarousel.el.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          if (e.deltaY > 0) {
+            premiumCarousel.slideNext();
+          } else {
+            premiumCarousel.slidePrev();
+          }
+        });
+      }
+    } else {
+      console.log('Premium carousel element not found');
+    }
+  }
+
   // Initialize testimonial carousel when DOM is ready
   $(document).ready(function() {
     if ($.exists('.testimonial-carousel')) {
       initTestimonialCarousel();
+    }
+    if ($.exists('.premium-carousel')) {
+      initPremiumCarousel();
     }
   });
 
