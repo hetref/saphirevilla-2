@@ -5713,6 +5713,7 @@ kbd {
   display: flex;
   gap: 100px;
   background-color: #fff;
+  justify-content: center;
 }
 .contact-form-content .contact-form-img {
   max-width: 860px;

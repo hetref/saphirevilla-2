@@ -1,89 +1,730 @@
-/* Sapphire Villas Discover Section Styles */
+/* Sapphire Villas Discover Section - Image-Based Design */
 .discover-section {
-    padding: 60px 0 40px 0;
+    padding: 60px 0;
     background: #f8f9fa;
 }
+
 .discover-section .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
-.discover-section h2 {
+
+/* Discover Header */
+.discover-header {
+    margin-bottom: 40px;
+}
+
+.discover-title {
     color: #1a237e;
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 18px;
-    text-align: left;
+    text-align: center;
 }
-.discover-section p {
+
+.discover-subtitle {
     color: #333;
     font-size: 1.1rem;
-    margin-bottom: 32px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
-.property-card {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px #0001, 0 1.5px 6px #0001;
-    overflow: hidden;
+
+/* Property Showcase */
+.property-showcase {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.property-main-image-container {
     position: relative;
-    margin: 0 auto 32px auto;
-    max-width: 700px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     padding-bottom: 16px;
 }
-.property-img {
+
+.property-showcase-image {
     width: 100%;
     display: block;
     border-radius: 18px 18px 0 0;
-    max-height: 340px;
+    max-height: 600px;
     object-fit: cover;
 }
-.property-overlay {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 18px 0;
-    padding: 28px 32px 0 32px;
+
+/* Property Details Overlay (Right Side) */
+.property-details-overlay {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 320px;
+    z-index: 10;
 }
-.prop-sec {
-    flex: 1 1 180px;
-    min-width: 180px;
-    margin-bottom: 10px;
+
+.detail-item {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.prop-sec h4 {
+
+.detail-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-item h4 {
     color: #1976d2;
     font-size: 1.2rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-weight: 600;
+    line-height: 1.3;
 }
-.prop-sec p {
+
+.detail-item p {
     color: #555;
     font-size: 1rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* RERA Details Overlay (Bottom Left) */
+.rera-details-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 380px;
+    z-index: 10;
+}
+
+.rera-item {
+    margin-bottom: 10px;
+}
+
+.rera-item:last-child {
     margin-bottom: 0;
 }
-.prop-sec.border-0 {
-    border: none !important;
-    padding-bottom: 0 !important;
+
+.rera-label {
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.4;
 }
-.bottom-text {
-    padding: 18px 32px 0 32px;
-    color: #444;
+
+/* Property Features Section */
+.property-features-section {
+    background: #ffffff !important;
+}
+
+/* Villa Floor Plans Section */
+.villa-floor-plans-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+}
+
+/* Floor Plans Header */
+.floor-plans-header {
+    margin-bottom: 60px;
+}
+
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.section-title {
+    color: #1a237e;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    color: #546e7a;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Floor Plan Carousel */
+#floorplanCarousel {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    margin-bottom: 40px;
+    
+    position: relative;
+}
+
+/* Carousel Item Animations */
+.carousel-item {
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-item.active {
+    animation: slideInActive 0.8s ease-out;
+}
+
+.carousel-item:not(.active) {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+@keyframes slideInActive {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Floor Plan Title with Animation */
+.floor-plan-title {
+    color: #1a237e;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    animation: titleSlideIn 1s ease-out 0.3s both;
+}
+
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floor-plan-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    animation: underlineExpand 1s ease-out 0.8s forwards;
+}
+
+@keyframes underlineExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+/* Floor Plan Images with Staggered Animation */
+.floor-plan-images {
+    margin-bottom: 30px;
+}
+
+.floor-plan-img {
+    max-width: 320px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 3px solid transparent;
+    animation: imageFadeIn 0.8s ease-out both;
+}
+
+.floor-plan-img:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.floor-plan-img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.floor-plan-img:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.floor-plan-img:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    border-color: #667eea;
+}
+
+/* Floor Plan Specifications with Animation */
+.floor-plan-specs {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    animation: specsSlideUp 1s ease-out 1s both;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+@keyframes specsSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.spec-label {
+    color: #546e7a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.spec-value {
+    color: #1a237e;
+    font-weight: 700;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
-.bottom-text p {
-    margin-bottom: 6px;
+
+.floor-plan-specs:hover .spec-label {
+    color: #667eea;
 }
-@media (max-width: 900px) {
+
+.floor-plan-specs:hover .spec-value {
+    color: #1a237e;
+}
+
+/* Enhanced Carousel Controls with Animation */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #354990 100%);
+    border-radius: 50%;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0.9;
+    animation: controlButtonsFadeIn 1s ease-out 1.2s both;
+}
+
+@keyframes controlButtonsFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+    transform: translateX(-2px);
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: translateX(2px);
+}
+
+/* Carousel Indicators Animation */
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    margin: 0 6px;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: #667eea;
+    border-color: #667eea;
+    transform: scale(1.2);
+}
+
+.carousel-indicators [data-bs-target]:hover {
+    background-color: #667eea;
+    transform: scale(1.1);
+}
+
+/* Smooth Carousel Transitions */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+/* Enhanced Hover Effects for Images */
+.floor-plan-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.floor-plan-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.floor-plan-img:hover::before {
+    left: 100%;
+}
+
+/* Floor Plans CTA */
+.floor-plans-cta {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.floor-plans-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h4 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #1a237e;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    color: #1a237e;
+    text-decoration: none;
+}
+
+.cta-button svg {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
     .discover-section .container {
-        padding: 0 10px;
+        padding: 0 20px;
     }
-    .property-card {
-        max-width: 100%;
-        padding-bottom: 10px;
+    
+    .discover-title {
+        font-size: 1.8rem;
     }
-    .property-overlay {
+    
+    .discover-subtitle {
+        font-size: 1rem;
+    }
+    
+    .property-details-overlay {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px;
+        max-width: none;
+    }
+    
+    .rera-details-overlay {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 0 20px 20px 20px;
+        max-width: none;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .overview-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .floor-plan-tabs .nav-link {
+        min-width: auto;
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .discover-section {
+        padding: 40px 0;
+    }
+    
+    .discover-title {
+        font-size: 1.6rem;
+    }
+    
+    .discover-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .property-showcase-image {
+        max-height: 400px;
+    }
+    
+    .property-details-overlay {
+        padding: 20px;
+        margin: 16px;
+    }
+    
+    .detail-item h4 {
+        font-size: 1.1rem;
+    }
+    
+    .detail-item p {
+        font-size: 0.9rem;
+    }
+    
+    .rera-details-overlay {
+        padding: 18px;
+        margin: 0 16px 16px 16px;
+    }
+    
+    .rera-label {
+        font-size: 0.8rem;
+    }
+    
+    .villa-floor-plans-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .floor-plan-tabs .nav-pills {
         flex-direction: column;
-        padding: 18px 10px 0 10px;
+        gap: 15px;
     }
-    .bottom-text {
-        padding: 12px 10px 0 10px;
+    
+    .floor-plan-tabs .nav-link {
+        width: 100%;
+    }
+    
+    .overview-card {
+        padding: 24px;
+    }
+    
+    .plan-details {
+        padding: 20px;
+    }
+    
+    .floor-plans-cta {
+        padding: 32px 24px;
+    }
+    
+    .cta-content h4 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .discover-title {
+        font-size: 1.4rem;
+    }
+    
+    .discover-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .property-showcase-image {
+        max-height: 300px;
+    }
+    
+    .property-details-overlay {
+        padding: 18px;
+        margin: 12px;
+    }
+    
+    .rera-details-overlay {
+        padding: 16px;
+        margin: 0 12px 12px 12px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .overview-card {
+        padding: 20px;
+    }
+    
+    .overview-stats .stat-value {
+        font-size: 1.6rem;
+    }
+    
+    .overview-stats .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .plan-image-container {
+        height: 200px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+    .floor-plan-img {
+        animation-delay: 0.2s !important;
+    }
+    
+    .floor-plan-specs {
+        animation-delay: 0.6s !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        left: -25px;
+        right: -25px;
     }
 }
