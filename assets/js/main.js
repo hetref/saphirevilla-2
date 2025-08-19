@@ -1404,6 +1404,7 @@
                 ease: 'power2.out'
               });
             },
+
             loopFix: function() {
               // Ensure seamless loop transition without effects
               // console.log('Seamless loop transition completed');

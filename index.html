@@ -17,7 +17,7 @@
   <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
   <link href="assets/css/discover-section.css" rel="stylesheet" />
-  <script src="https://app.fraudclicks.in/tracker.js?key=KLRXkqmr2S7POfriF2sTLqMfZodRXlOU"></script>
+  <script src="https://app.fraudclicks.in/tracker.js?key=KLRXkqmr2S7POfriF2sTLqMfZodRXlOU" async></script>
   <script src="assets/js/bootstrap.js"></script>
 </head>
 
@@ -412,17 +412,17 @@
               <form action="javascript:void(0);" class="lead-form" data-fraudclicks-key
                 name="lead-form">
                 <div class="mb-3">
-                  <input class="form-control" name="name" placeholder="Full Name" required="" type="text" />
+                  <input class="form-control" name="name" placeholder="Full Name" required type="text" />
                 </div>
                 <div class="mb-3">
-                  <input class="form-control" name="phone" placeholder="Phone Number" required="" type="tel" />
+                  <input class="form-control" name="phone" placeholder="Phone Number" required type="tel" />
                 </div>
                 <div class="mb-3">
-                  <input class="form-control" name="email" placeholder="Email Address" required="" type="email" />
+                  <input class="form-control" name="email" placeholder="Email Address" required type="email" />
                 </div>
                 <!-- Select Dropdown for Preference with options as - "2BHK", "2BHK + Study", "3BHK", "3BHK + Servant Room", with value and name as like other inputs -->
                 <div class="mb-3">
-                  <select class="form-control" name="preference" required="">
+                  <select class="form-control" name="preference" required>
                     <option disabled="" selected="" value="">Loan Required</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -1053,16 +1053,16 @@
       <p class="text-muted mb-4">Please provide your details to view the floor plans</p>
       <form id="floorPlanForm" data-fraudclicks-key>
                   <div class="mb-3">
-            <input class="form-control" name="name" placeholder="Full Name" required="" type="text" />
+            <input class="form-control" name="name" placeholder="Full Name" required type="text" />
           </div>
                   <div class="mb-3">
-            <input class="form-control" name="phone" placeholder="Phone Number" required="" type="tel" />
+            <input class="form-control" name="phone" placeholder="Phone Number" required type="tel" />
           </div>
                   <div class="mb-3">
-            <input class="form-control" name="email" placeholder="Email Address" required="" type="email" />
+            <input class="form-control" name="email" placeholder="Email Address" required type="email" />
           </div>
         <div class="mb-3">
-          <select class="form-control" name="preference" required="">
+          <select class="form-control" name="preference" required>
             <option disabled="" selected="" value="">Loan Required</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
@@ -1237,16 +1237,16 @@
         <form action="javascript:void(0);" class="lead-form" data-fraudclicks-key
           name="lead-form">
           <div class="mb-3">
-            <input class="form-control" name="name" placeholder="Full Name" required="" type="text" />
+            <input class="form-control" name="name" placeholder="Full Name" required type="text" />
           </div>
           <div class="mb-3">
-            <input class="form-control" name="phone" placeholder="Phone Number" required="" type="tel" />
+            <input class="form-control" name="phone" placeholder="Phone Number" required type="tel" />
           </div>
           <div class="mb-3">
-            <input class="form-control" name="email" placeholder="Email Address" required="" type="email" />
+            <input class="form-control" name="email" placeholder="Email Address" required type="email" />
           </div>
           <div class="mb-3">
-            <select class="form-control" name="preference" required="">
+            <select class="form-control" name="preference" required>
               <option disabled="" selected="" value="">Loan Required</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -1349,7 +1349,7 @@
         showFloorPlanPopup();
       });
       
-      // Handle lead-form submissions
+      // Handle lead-form submissions (redirect to thank you page)
       $("form.lead-form").each(function () {
         const $currentForm = $(this);
         const $currentSubmitButton = $currentForm.find("button[type='submit'].lead-form-submit-btn");
@@ -1365,10 +1365,18 @@
           formData.forEach((value, key) => {
             formObject[key] = value;
           });
+          
           try {
+            // Simulate form submission delay
             await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // Reset form
             $currentForm[0].reset();
+            
+            // Show success message
             $currentSubmitButton.html('<span style="color: green;">Submitted ✓</span>');
+            
+            // Redirect to thank you page after 1 second
             setTimeout(() => {
               window.location.href = "thankyou.html";
             }, 1000);
@@ -1387,7 +1395,7 @@
         });
       });
       
-      // Handle floorPlanForm submission
+      // Handle floorPlanForm submission (unblur images)
       $("#floorPlanForm").on("submit", async function (e) {
         e.preventDefault();
         
@@ -1402,11 +1410,9 @@
           formObject[key] = value;
         });
         
-        // Simulate form submission (replace with your actual endpoint)
         try {
-          // You can replace this with your actual form submission logic
-          // For now, we'll simulate a successful submission
-          await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate 2 second delay
+          // Simulate form submission delay
+          await new Promise(resolve => setTimeout(resolve, 2000));
           
           // Remove blur from all floor plan images
           $('.floor-plan-img.blurred').each(function() {
