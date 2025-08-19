@@ -1406,7 +1406,7 @@
             },
             loopFix: function() {
               // Ensure seamless loop transition without effects
-              console.log('Seamless loop transition completed');
+              // console.log('Seamless loop transition completed');
             },
             beforeLoopFix: function() {
               // Prevent any effects during loop transition
