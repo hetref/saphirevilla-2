@@ -266,6 +266,61 @@
     animation: imageFadeIn 0.8s ease-out both;
 }
 
+/* Floor Plan Blur Effect */
+.floor-plan-img.blurred {
+    filter: blur(8px);
+    cursor: pointer;
+    position: relative;
+    transition: filter 0.5s ease-in-out;
+}
+
+.floor-plan-img.blurred::after {
+    content: 'Click to view';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.floor-plan-img.unblurred {
+    filter: blur(0);
+    cursor: default;
+    transition: filter 0.5s ease-in-out;
+}
+
+.floor-plan-img.unblurred::after {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Success Message Animation */
+.alert-success {
+    animation: slideInRight 0.5s ease-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 8px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .floor-plan-img:nth-child(1) {
     animation-delay: 0.4s;
 }

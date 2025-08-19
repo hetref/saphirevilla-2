@@ -763,9 +763,9 @@
               <div class="col-lg-12 text-center">
                 <h3 class="floor-plan-title mb-4">East Facing</h3>
                 <div class="floor-plan-images d-flex flex-wrap justify-content-center gap-4 mb-4">
-                  <img src="assets/img/floorplan/east1.webp" alt="East Facing Ground Floor" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/east2.webp" alt="East Facing First Floor" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/east3.webp" alt="East Facing Second Floor" class="floor-plan-img" />
+                  <img src="assets/img/floorplan/east1.webp" alt="East Facing Ground Floor" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/east2.webp" alt="East Facing First Floor" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/east3.webp" alt="East Facing Second Floor" class="floor-plan-img blurred" />
                 </div>
                 <div class="floor-plan-specs row justify-content-center mb-2">
                   <div class="col-md-4 col-12 mb-2"><span class="spec-label">BUILT-UP AREA:</span> <span class="spec-value">3753 SQ. FT.</span></div>
@@ -781,9 +781,9 @@
               <div class="col-lg-12 text-center">
                 <h3 class="floor-plan-title mb-4">West Facing</h3>
                 <div class="floor-plan-images d-flex flex-wrap justify-content-center gap-4 mb-4">
-                  <img src="assets/img/floorplan/west1.webp" alt="West Facing Ground Floor" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/west2.webp" alt="West Facing First Floor" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/west3.webp" alt="West Facing Second Floor" class="floor-plan-img" />
+                  <img src="assets/img/floorplan/west1.webp" alt="West Facing Ground Floor" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/west2.webp" alt="West Facing First Floor" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/west3.webp" alt="West Facing Second Floor" class="floor-plan-img blurred" />
                 </div>
                 <div class="floor-plan-specs row justify-content-center mb-2">
                   <div class="col-md-4 col-12 mb-2"><span class="spec-label">BUILT-UP AREA:</span> <span class="spec-value">3382 SQ. FT.</span></div>
@@ -803,9 +803,9 @@
                   <p class="text-muted mb-2">Plot Numbers: 83, 84, 85, 86, 87</p>
                 </div>
                 <div class="floor-plan-images d-flex flex-wrap justify-content-center gap-4 mb-4">
-                  <img src="assets/img/floorplan/east1.webp" alt="East Facing Ground Floor - Premium" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/east2.webp" alt="East Facing First Floor - Premium" class="floor-plan-img" />
-                  <img src="assets/img/floorplan/east3.webp" alt="East Facing Second Floor - Premium" class="floor-plan-img" />
+                  <img src="assets/img/floorplan/east1.webp" alt="East Facing Ground Floor - Premium" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/east2.webp" alt="East Facing First Floor - Premium" class="floor-plan-img blurred" />
+                  <img src="assets/img/floorplan/east3.webp" alt="East Facing Second Floor - Premium" class="floor-plan-img blurred" />
                 </div>
                 <div class="floor-plan-specs row justify-content-center mb-2">
                   <div class="col-md-4 col-12 mb-2"><span class="spec-label">BUILT-UP AREA:</span> <span class="spec-value">3112 SQ. FT.</span></div>
@@ -1344,6 +1344,11 @@
   <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
   <script>
     $(document).ready(function () {
+      // Add click handlers to blurred floor plan images
+      $(document).on('click', '.floor-plan-img.blurred', function() {
+        showFloorPlanPopup();
+      });
+      
       // Handle lead-form submissions
       $("form.lead-form").each(function () {
         const $currentForm = $(this);
@@ -1403,16 +1408,33 @@
           // For now, we'll simulate a successful submission
           await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate 2 second delay
           
+          // Remove blur from all floor plan images
+          $('.floor-plan-img.blurred').each(function() {
+            $(this).removeClass('blurred').addClass('unblurred');
+          });
+          
+          // Close the popup
+          closeFloorPlanPopup();
+          
+          // Show success message
+          const successMessage = $('<div class="alert alert-success" style="position: fixed; top: 20px; right: 20px; z-index: 10000; max-width: 300px;">Floor plans unlocked successfully! 🎉</div>');
+          $('body').append(successMessage);
+          
+          // Remove success message after 3 seconds
+          setTimeout(() => {
+            successMessage.fadeOut(() => successMessage.remove());
+          }, 3000);
+          
           // Reset form
           this.reset();
           
           // Show success message briefly
           $submitButton.html('<span style="color: green;">Submitted ✓</span>');
           
-          // Redirect to thank you page after a short delay
+          // Reset button after 2 seconds
           setTimeout(() => {
-            window.location.href = "thankyou.html";
-          }, 1000);
+            $submitButton.prop("disabled", false).html('<span>Register Now</span>');
+          }, 2000);
           
         } catch (error) {
           console.error("Error submitting form:", error);
