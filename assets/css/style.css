@@ -1869,6 +1869,8 @@ kbd {
   font-weight: 500;
   text-transform: capitalize;
   transition: all 0.2s ease;
+  color: var(--black-color);
+  text-decoration: none;
 }
 .ak-nav .ak-nav_list a:hover {
   color: var(--black-color);
@@ -1878,6 +1880,7 @@ kbd {
 .ak-nav_list_item {
   background-color: #e9e9f3;
 }
+
 
 .ak-sticky_header {
   position: fixed !important;
