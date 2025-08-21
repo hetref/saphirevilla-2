@@ -29,9 +29,10 @@
         <div class="ak-main_header_in">
           <div class="ak-main-header-left">
             <a class="ak-site_branding nav" href="index.html" style='display: flex; gap: 20px'>
-              <img alt="..." src="assets/img/logo.webp" style="max-height: 70px !important" />
-              <img alt="..." src="assets/img/42-estate-logo.webp" style="max-height: 70px !important" />
+              <img alt="..." src="assets/img/logo.webp" class="nav_logo" />
+              <img alt="..." src="assets/img/42-estate-logo.webp" class="nav_logo" />
             </a>
+            <span style="font-size: 12px; letter-spacing: 1px; text-align: center; height: 20px">Authorized Channel Partner</span>
           </div>
           <div class="ak-main-header-center">
             <div class="ak-nav ak-medium">
@@ -108,6 +109,7 @@
           height: 100%;
           align-items: center;
           z-index: 2;
+          background: rgba(0,0,0,0.2);
         ">
         <div class="container">
           <div class="row align-items-center">
@@ -121,7 +123,7 @@
                 style="font-size: 1.8rem; margin-bottom: 20px; color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">
                 Experience the perfect balance of city energy and boutique tranquillity at Sapphire Villas. In the Heart of Whitefield.
               </h2>
-              <h5 style="color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Starting From <span style="font-size: 1.5rem; font-weight: bold;">5 Crores</span>.</h5>
+              <h5 style="color: white; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">4BHK Luxury Villa Starts <span style="font-size: 1.5rem; font-weight: bold;">@ 5Cr</span>.</h5>
               <!-- <div style="margin-bottom: 25px">
                 <div style="
                       display: flex;
@@ -473,7 +475,7 @@
               <p>A limited collection of bespoke villas</p>
             </div>
             <div class="detail-item">
-              <h4>3,400-5,000 sq. ft.</h4>
+              <h4>3,300-4,800 sq. ft.</h4>
               <p>of expansive layouts</p>
             </div>
             <div class="detail-item">
@@ -1357,6 +1359,20 @@
         $currentForm.on("submit", async function (e) {
           e.preventDefault();
           
+          // Check if all required fields are filled
+          const checkFormData = new FormData(this);
+          let isFormValid = true;
+          
+          checkFormData.forEach((value, key) => {
+            if (!value || value.trim() === '') {
+              isFormValid = false;
+            }
+          });
+          
+          if (!isFormValid) {
+            return; // Do nothing if form is not filled
+          }
+          
           // Show submitting status
           $currentSubmitButton.prop("disabled", true).html('<span>Submitting...</span>');
           
@@ -1398,6 +1414,20 @@
       // Handle floorPlanForm submission (unblur images)
       $("#floorPlanForm").on("submit", async function (e) {
         e.preventDefault();
+        
+        // Check if all required fields are filled
+        const checkFormData = new FormData(this);
+        let isFormValid = true;
+        
+        checkFormData.forEach((value, key) => {
+          if (!value || value.trim() === '') {
+            isFormValid = false;
+          }
+        });
+        
+        if (!isFormValid) {
+          return; // Do nothing if form is not filled
+        }
         
         const $submitButton = $(this).find("button[type='submit']");
         
@@ -1521,53 +1551,8 @@
       popup.style.display = 'none';
     }
 
-    // Handle floor plan form submission
+    // Close popup when clicking outside
     document.addEventListener('DOMContentLoaded', function () {
-      const floorPlanForm = document.getElementById('floorPlanForm');
-
-      // Add click handlers to floor plan images
-      const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
-      floorPlanImages.forEach(function (img) {
-        img.addEventListener('click', function () {
-          console.log('Floor plan image clicked');
-          showFloorPlanPopup();
-        });
-      });
-
-      floorPlanForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Collect form data
-        const formData = new FormData(this);
-        floorPlanFormData = {};
-
-        formData.forEach((value, key) => {
-          floorPlanFormData[key] = value;
-        });
-
-        // Log the form data
-        console.log('Floor Plan Form Data:', floorPlanFormData);
-
-        // Remove blur from all floor plan images
-        const floorPlanImages = document.querySelectorAll('.floor-plan-image-blurred');
-        floorPlanImages.forEach(function (img) {
-          img.classList.remove('floor-plan-image-blurred');
-          img.classList.add('floor-plan-image-unblurred');
-          img.style.cursor = 'default';
-          img.onclick = null; // Remove click handler
-        });
-
-        // Close popup
-        closeFloorPlanPopup();
-
-        // Reset form
-        floorPlanForm.reset();
-
-        // Show success message
-        alert('Thank you! Floor plans are now unlocked.');
-      });
-
-      // Close popup when clicking outside
       const popupOverlay = document.getElementById('floorPlanPopup');
       popupOverlay.addEventListener('click', function (e) {
         if (e.target === this) {

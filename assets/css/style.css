@@ -2401,6 +2401,14 @@ kbd {
     padding: 8px;
   }
 }
+.nav_logo {
+  height: 80px;
+  width: 80px;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  object-fit: contain;
+}
 @media screen and (max-width: 575px) {
   .ak-site-branding {
     max-width: 100%;
@@ -2408,14 +2416,6 @@ kbd {
   .ak-site_branding img {
     max-height: 100%;
   }
-  /* .ak-site-branding.nav {
-    width: 200px !important;
-    height: 100px !important;
-  }
-  .ak-site-branding.nav img {
-    width: 200px !important;
-    height: 100px !important;
-  } */
   .ak-site_header.ak-style1 .ak-btn span {
     display: none;
   }
@@ -2423,6 +2423,12 @@ kbd {
     margin-right: 0;
     width: 20px;
     height: 20px;
+  }
+  .nav_logo {
+    border-radius: 10px;
+    padding: 8px;
+    height: 65px;
+    width: 80px;
   }
 }
 /*--------------------------------------------------------------
@@ -9195,9 +9201,9 @@ body {
 
 /* Small mobile devices */
 @media (max-width: 576px) {
-  .ak-site_branding img {
+  /* .ak-site_branding img {
     max-height: 50px !important;
-  }
+  } */
 
   .ak-main_header_in {
     padding: 8px 0;
