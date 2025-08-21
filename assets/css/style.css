@@ -1034,7 +1034,7 @@ kbd {
 .ak-scrollup {
   position: fixed;
   bottom: -60px;
-  right: 40px;
+  right: 100px;
   color: #fff;
   padding: 5px;
   height: 50px;
@@ -1060,8 +1060,8 @@ kbd {
 
 .ak-scrollup-whatsapp {
   position: fixed;
-  bottom: 80px;
-  left: 15px;
+  bottom: 34px;
+  right: 20px;
   color: #fff;
   padding: 5px;
   /* height: 50px;
@@ -1074,10 +1074,6 @@ kbd {
   z-index: 111111;
   border-radius: 50%;
 }
-/* .ak-scrollup-whatsapp:hover {
-  background-color: #fff;
-  color: #030917;
-} */
 
 .swiper-slide {
   backface-visibility: hidden;
@@ -1252,7 +1248,12 @@ kbd {
     right: 15px;
   }
   .ak-scrollup.ak-scrollup-show {
-    bottom: 80px;
+    bottom: 150px;
+  }
+  .ak-scrollup-whatsapp {
+    bottom: 70px;
+    right: 0;
+    padding: 5px;
   }
   .img-clip-text {
     font-size: 82px;
