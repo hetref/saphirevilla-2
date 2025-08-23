@@ -7432,37 +7432,43 @@ body {
   > input:nth-of-type(1):checked
   ~ .carousel__thumbnails
   li:nth-of-type(1) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 .carousel
   > input:nth-of-type(2):checked
   ~ .carousel__thumbnails
   li:nth-of-type(2) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 .carousel
   > input:nth-of-type(3):checked
   ~ .carousel__thumbnails
   li:nth-of-type(3) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 .carousel
   > input:nth-of-type(4):checked
   ~ .carousel__thumbnails
   li:nth-of-type(4) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 .carousel
   > input:nth-of-type(5):checked
   ~ .carousel__thumbnails
   li:nth-of-type(5) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 .carousel
   > input:nth-of-type(6):checked
   ~ .carousel__thumbnails
   li:nth-of-type(6) {
-  box-shadow: 0px 0px 0px 5px rgba(176, 141, 87, 0.5);
+  box-shadow: 0px 0px 0px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 4px;
 }
 
 .carousel__slides {
@@ -7520,7 +7526,7 @@ body {
 
 .carousel__slide figcaption {
   align-self: flex-end;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   flex: 0 0 auto;
   width: 25%;
   min-width: 200px;
@@ -7547,7 +7553,8 @@ body {
 
 .carousel__slide .credit {
   margin-top: auto;
-  color: rgba(176, 141, 87, 0.8);
+  /* color: rgba(176, 141, 87, 0.8); */
+  color: #354990;
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
@@ -7557,14 +7564,15 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   margin: 0 -10px;
   margin-top: 20px;
 }
 
 .carousel__thumbnails li {
   flex: 1 1 auto;
-  max-width: calc((100% / 6) - 20px);
+  /* max-width: calc((100% / 6) - 20px); */
   margin: 0 10px;
   transition: all 300ms ease-in-out;
 }
@@ -7618,14 +7626,15 @@ body {
     padding: 20px;
   }
 
-  .carousel__thumbnails li {
-    max-width: calc((100% / 3) - 20px);
+  .carousel__thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 14px;
   }
 }
 
 @media (max-width: 767px) {
-  .carousel__thumbnails li {
-    max-width: calc((100% / 2) - 20px);
+  .carousel__thumbnails {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
