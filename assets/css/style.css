@@ -2789,6 +2789,7 @@ kbd {
 ----------------------------------------------------------------*/
 .common-btn {
   background-color: var(--primary-color);
+  color: #fff;
   font-family: var(--body-font-family);
   font-size: 16px;
   font-weight: 500;
@@ -9296,3 +9297,78 @@ body {
   }
 }
 /* End Responsive Header Styles */
+
+
+/* See It Before You Own It Section */
+.see-it-before-own-it-section {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.see-it-before-own-it-section .visit-banner {
+  background: url(../img/bg/bg-1.png);
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #fff
+}
+
+.see-it-before-own-it-section .visit-overlay {
+  margin-left: 5rem;
+}
+
+.see-it-before-own-it-section h2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.see-it-before-own-it-section p {
+  font-size: 20px;
+  line-height: 28px
+}
+
+.see-it-before-own-it-section .common-btn {
+  color: #fff;
+}
+
+.see-it-before-own-it-section .common-btn:hover {
+  color: #fff !important;
+}
+
+@media screen and (max-width: 425px) {
+  .see-it-before-own-it-section {
+    padding: 20px 0;
+  }
+  
+  .see-it-before-own-it-section .visit-banner {
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .see-it-before-own-it-section .visit-overlay {
+    margin-left: 0;
+  }
+
+  .see-it-before-own-it-section h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .see-it-before-own-it-section p {
+    font-size: 16px;
+    line-height: 24px
+  }
+
+  .see-it-before-own-it-section .common-btn {
+    margin-top: 0px;
+  }
+}
