@@ -5788,7 +5788,7 @@ kbd {
 .contact-form-content {
   display: flex;
   gap: 100px;
-  background-color: #fff;
+  /* background-color: #fff; */
   justify-content: center;
 }
 .contact-form-content .contact-form-img {
@@ -7947,7 +7947,7 @@ body {
   }
 
   .nearby-section {
-    background-image: url("/assets/img/bg-3.webp");
+    background-image: url("/assets/img/bg/bg-2.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
