@@ -48,6 +48,7 @@
   border-radius: 18px 18px 0 0;
   max-height: 600px;
   object-fit: cover;
+  object-position: bottom;
 }
 
 /* Property Details Overlay (Right Side) */
