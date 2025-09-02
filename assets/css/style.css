@@ -9646,5 +9646,5 @@ body {
 
 #primary-carousel .splide__arrow:focus {
   outline: 3px solid #354990;
-  outline-offset: 2px;
+  /* outline-offset: 2px; */
 }
