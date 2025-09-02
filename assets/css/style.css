@@ -7045,7 +7045,7 @@ body {
 
 .doctor-text .about-title {
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 25px;
   font-size: 2rem; /* Adjust size as needed */
 }
@@ -8288,7 +8288,7 @@ body {
   /* Adjust based on .ak-section-title or make specific */
   font-weight: 600;
   color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .urban-access-main-title {
@@ -8364,6 +8364,10 @@ body {
 
   .gallery-item-wide {
     grid-column: span 2;
+  }
+  
+  .gallery-title-container {
+    padding: 0 20px;
   }
 }
 
@@ -9374,4 +9378,273 @@ body {
   .see-it-before-own-it-section .common-btn {
     margin-top: 0px;
   }
+}
+
+/* 🔄 Loading States & Performance */
+.carousel-loading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f5f5f5, #e0e0e0);
+}
+
+.carousel-loading::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid #354990;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 🖼️ Main Carousel Styling */
+#primary-carousel {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+}
+
+#primary-carousel .splide__slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#primary-carousel .carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+#primary-carousel .splide__slide:hover .carousel-img {
+  transform: scale(1.02);
+}
+
+/* 📝 Elegant Caption Styling */
+#primary-carousel .carousel-caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#primary-carousel .carousel-caption p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 🖼️ Thumbnail Carousel Excellence */
+#thumbnail-carousel {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+#thumbnail-carousel .splide__slide {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.95);
+  will-change: transform, opacity;
+}
+
+#thumbnail-carousel .splide__slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(53, 73, 144, 0.2), rgba(118, 75, 162, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+#thumbnail-carousel .splide__slide.is-active {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(53, 73, 144, 0.4);
+  border: 2px solid #354990;
+}
+
+#thumbnail-carousel .splide__slide.is-active::before {
+  opacity: 0;
+}
+
+#thumbnail-carousel .splide__slide:hover:not(.is-active) {
+  opacity: 0.9;
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#thumbnail-carousel .splide__slide:hover::before {
+  opacity: 1;
+}
+
+#thumbnail-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* 🎯 Navigation Arrows - Premium Design */
+#primary-carousel .splide__arrow {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+#primary-carousel .splide__arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(53, 73, 144, 0.3);
+}
+
+#primary-carousel .splide__arrow:active {
+  transform: scale(0.95);
+}
+
+#primary-carousel .splide__arrow svg {
+  fill: #354990;
+  transition: fill 0.3s ease;
+}
+
+#primary-carousel .splide__arrow:hover svg {
+  fill: #2c3e50;
+}
+
+/* 📱 Responsive Excellence */
+@media (max-width: 768px) {
+  .carousel-loading {
+    min-height: 50vh;
+  }
+  
+  #primary-carousel .carousel-caption {
+    /* bottom: 15px;
+    left: 15px; */
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  
+  #primary-carousel .carousel-caption p {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  
+  #primary-carousel .splide__arrow {
+    width: 45px;
+    height: 45px;
+  }
+
+  #thumbnail-carousel {
+    margin-top: 15px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-loading {
+    min-height: 40vh;
+  }
+  
+  #primary-carousel .carousel-caption {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+  }
+  
+  #primary-carousel .carousel-caption p {
+    font-size: 13px;
+  }
+  
+  #primary-carousel .splide__arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 🚀 Performance Optimizations */
+.splide__slide img[loading="lazy"] {
+  transition: opacity 0.3s ease;
+}
+
+.splide__slide img[loading="lazy"]:not([src]) {
+  opacity: 0;
+}
+
+/* 🎨 Smooth Fade Transitions */
+.splide--fade .splide__slide {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🔥 Advanced Visual Effects */
+#primary-carousel .splide__slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#primary-carousel .splide__slide:hover::after {
+  opacity: 1;
+}
+
+/* 🎯 Focus States for Accessibility */
+#thumbnail-carousel .splide__slide:focus-within {
+  outline: 3px solid #354990;
+  outline-offset: 2px;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#primary-carousel .splide__arrow:focus {
+  outline: 3px solid #354990;
+  outline-offset: 2px;
 }

@@ -14,11 +14,14 @@
   <title>Sapphire Villa</title>
   <script src="https://app.fraudclicks.in/tracker.js?key=KLRXkqmr2S7POfriF2sTLqMfZodRXlOU" async></script>
   <link href="assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="assets/css/plugins/swiper.min.css" rel="stylesheet" />
+
   <link href="assets/css/plugins/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
   <link href="assets/css/discover-section.css" rel="stylesheet" />
   <script src="assets/js/bootstrap.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -504,54 +507,31 @@
   </section>
 
   <section class="carousel-section">
-    <div class="premium-carousel-container">
-      <div class="swiper premium-carousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img1.webp" alt="Sapphire Villa Interior 1" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Bedroom</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img2.webp" alt="Sapphire Villa Interior 2" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Balcony</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img3.webp" alt="Sapphire Villa Interior 3" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Balcony Bar</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img4.webp" alt="Sapphire Villa Interior 4" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Home Theatre</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img5.webp" alt="Sapphire Villa Interior 5" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Kitchen</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/carousel/img6.webp" alt="Sapphire Villa Interior 6" class="carousel-img" />
-            <div class="carousel-caption">
-              <p>Living Room</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Premium Navigation Arrows -->
-        <div class="swiper-button-next premium-carousel-next"></div>
-        <div class="swiper-button-prev premium-carousel-prev"></div>
-        
-        <!-- Premium Pagination -->
-        <div class="swiper-pagination premium-carousel-pagination"></div>
+    <div class="premium-carousel-container container">
+      <div class="gallery-title-container">
+        <p class="gallery-subtitle ak-section-subtitle">Photo Gallery</p>
+        <h2 class="gallery-main-title ak-section-title">
+          Embrace And Enjoy The Richness Of Life To The Fullest
+        </h2>
       </div>
+      
+      <!-- Main Carousel -->
+      <section id="primary-carousel" class="splide" aria-label="Photo Gallery">
+        <div class="splide__track">
+          <ul class="splide__list" id="primary-carousel-list">
+            <!-- Slides will be dynamically generated -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Thumbnail Carousel -->
+      <section id="thumbnail-carousel" class="splide" aria-label="Thumbnail Gallery">
+        <div class="splide__track">
+          <ul class="splide__list" id="thumbnail-carousel-list">
+            <!-- Thumbnails will be dynamically generated -->
+          </ul>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -559,7 +539,6 @@
     <div class="container">
       <h2 class="mt-5" style="color: #2c348b; font-weight: 700; font-size: 2.2rem;">Master Plan</h2>
           <img src="assets/img/masterplan/location-map.webp" class="img-fluid w-100" alt="Sapphire Villa Location Map" width="1200" height="800" loading="lazy" />
-  
           <div class="legend-box">
             <h3 class="mb-md-4 mb-3 text-blue" style='font-weight: bold'>Legend </h3>
             <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 gx-xl-4">
@@ -656,7 +635,6 @@
               </div>
             </div>
           </div>
-         
           <div class="carousel-item">
             <div class="row justify-content-center align-items-center">
               <div class="col-lg-12 text-center">
@@ -672,7 +650,6 @@
               </div>
             </div>
           </div>
-          
           <!-- New East Facing Villa Slide (Different Specifications) -->
           <div class="carousel-item">
             <div class="row justify-content-center align-items-center">
@@ -954,7 +931,7 @@
       </form>
     </div>
   </div>
-  <section class="photo-gallery-section ak-whiteLite-bg py-5" id="gallery">
+  <!-- <section class="photo-gallery-section ak-whiteLite-bg py-5" id="gallery">
     <div class="container">
       <div class="gallery-title-container">
         <p class="gallery-subtitle ak-section-subtitle">Photo Gallery</p>
@@ -962,7 +939,7 @@
           Embrace And Enjoy The Richness Of Life To The Fullest
         </h2>
       </div>
-      <!-- Gallery Grid -->
+      Gallery Grid
       <div class="photo-gallery-grid">
         
         <div class="gallery-item">
@@ -1084,7 +1061,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End Photo Gallery Section -->
 
   <!-- Location Section -->
@@ -1454,36 +1431,353 @@
     });
   </script>
   <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/plugins/swiper.min.js"></script>
+
   <script src="assets/js/plugins/gsap.js"></script>
   <script src="assets/js/plugins/splittext.js"></script>
   <script src="assets/js/plugins/scrolltigger.js"></script>
   <script src="assets/js/plugins/scrolltoplugins.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/plugins/swiper.min.js"></script>
   <script>
-    new Swiper(".floor-plan-carousel", {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 20,
-      centeredSlides: true,
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        waitForTransition: false,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-        992: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-      },
+    // 🎯 SCALABLE GALLERY CONFIGURATION
+    /*
+    ┌─────────────────────────────────────────────────────────────────┐
+    │  🚀 SUPER EASY IMAGE MANAGEMENT                                 │
+    │                                                                 │
+    │  To add more images, simply add objects to this array:         │
+    │                                                                 │
+    │  GALLERY_IMAGES.push({                                          │
+    │    src: 'assets/img/your-folder/new-image.webp',              │
+    │    caption: 'Your Caption',                                     │
+    │    alt: 'Description for accessibility'                        │
+    │  });                                                            │
+    │                                                                 │
+    │  ✅ That's it! Both carousels update automatically             │
+    │  ✅ Supports unlimited images                                   │
+    │  ✅ Optimized performance with lazy loading                     │
+    │  ✅ Responsive & accessible                                     │
+    └─────────────────────────────────────────────────────────────────┘
+    */
+    
+    const GALLERY_IMAGES = [
+      // 🏠 Featured room images with descriptive captions
+      { src: 'assets/img/carousel/img1.webp', caption: 'Bedroom', alt: 'Sapphire Villa Bedroom' },
+      { src: 'assets/img/carousel/img2.webp', caption: 'Balcony', alt: 'Sapphire Villa Balcony' },
+      { src: 'assets/img/carousel/img3.webp', caption: 'Balcony Bar', alt: 'Sapphire Villa Balcony Bar' },
+      { src: 'assets/img/carousel/img4.webp', caption: 'Home Theatre', alt: 'Sapphire Villa Home Theatre' },
+      { src: 'assets/img/carousel/img5.webp', caption: 'Kitchen', alt: 'Sapphire Villa Kitchen' },
+      { src: 'assets/img/carousel/img6.webp', caption: 'Living Room', alt: 'Sapphire Villa Living Room' },
+      
+      // 🖼️ Additional gallery images - Auto-generated for scalability
+      ...Array.from({ length: 30 }, (_, i) => ({
+        src: `assets/img/slider/${i + 1}.webp`,
+        caption: `Gallery ${i + 1}`,
+        alt: `Sapphire Villa Gallery Image ${i + 1}`
+      }))
+      
+      // 💡 Pro Tip: Add more images here following the same pattern
+      // Example:
+      // { src: 'assets/img/new/amazing-view.webp', caption: 'Amazing View', alt: 'Spectacular villa view' }
+    ];
+
+    // 🚀 OPTIMIZED CAROUSEL SYSTEM
+    class ScalableGallery {
+      constructor(images) {
+        this.images = images;
+        this.primaryCarousel = null;
+        this.thumbnailCarousel = null;
+        this.init();
+      }
+
+      // Generate HTML efficiently using DocumentFragment for better performance
+      generateSlides() {
+        const primaryFragment = document.createDocumentFragment();
+        const thumbnailFragment = document.createDocumentFragment();
+
+        this.images.forEach((image, index) => {
+          // Create primary carousel slide
+          const primarySlide = document.createElement('li');
+          primarySlide.className = 'splide__slide';
+          primarySlide.innerHTML = `
+            <img src="${image.src}" 
+                 alt="${image.alt}" 
+                 class="carousel-img" 
+                 loading="${index === 0 ? 'eager' : 'lazy'}"
+                 decoding="async" />
+            <div class="carousel-caption">
+              <p>${image.caption}</p>
+            </div>
+          `;
+          
+          // Create thumbnail slide
+          const thumbnailSlide = document.createElement('li');
+          thumbnailSlide.className = 'splide__slide';
+          thumbnailSlide.innerHTML = `
+            <img src="${image.src}" 
+                 alt="${image.alt} thumbnail" 
+                 loading="${index < 10 ? 'eager' : 'lazy'}"
+                 decoding="async" />
+          `;
+
+          primaryFragment.appendChild(primarySlide);
+          thumbnailFragment.appendChild(thumbnailSlide);
+        });
+
+        // Append all slides at once for better performance
+        document.getElementById('primary-carousel-list').appendChild(primaryFragment);
+        document.getElementById('thumbnail-carousel-list').appendChild(thumbnailFragment);
+      }
+
+      // Initialize carousel with optimized settings
+      initializeCarousels() {
+        // Primary carousel configuration
+        this.primaryCarousel = new Splide('#primary-carousel', {
+          type: 'fade',
+          rewind: true,
+          pagination: false,
+          arrows: true,
+          cover: true,
+          height: '60vh',
+          lazyLoad: 'nearby',
+          preloadPages: 2,
+          breakpoints: {
+            768: { height: '50vh' },
+            480: { height: '40vh' }
+          }
+        });
+
+        // Thumbnail carousel configuration
+        this.thumbnailCarousel = new Splide('#thumbnail-carousel', {
+          fixedWidth: 100,
+          fixedHeight: 60,
+          gap: 10,
+          rewind: true,
+          pagination: false,
+          isNavigation: true,
+          focus: 'center',
+          trimSpace: false,
+          lazyLoad: 'nearby',
+          breakpoints: {
+            600: {
+              fixedWidth: 70,
+              fixedHeight: 42,
+              gap: 8,
+            }
+          }
+        });
+
+        // Sync and mount carousels
+        this.primaryCarousel.sync(this.thumbnailCarousel);
+        this.primaryCarousel.mount();
+        this.thumbnailCarousel.mount();
+      }
+
+      // Add performance optimizations
+      addOptimizations() {
+        // Preload first few images for faster initial load
+        this.images.slice(0, 3).forEach(image => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = image.src;
+          document.head.appendChild(link);
+        });
+
+        // Add intersection observer for better lazy loading on thumbnails
+        if ('IntersectionObserver' in window) {
+          const thumbnailObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target.querySelector('img');
+                if (img && img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  thumbnailObserver.unobserve(entry.target);
+                }
+              }
+            });
+          }, { rootMargin: '50px' });
+
+          // Observe thumbnail slides
+          setTimeout(() => {
+            document.querySelectorAll('#thumbnail-carousel .splide__slide').forEach(slide => {
+              thumbnailObserver.observe(slide);
+            });
+          }, 100);
+        }
+      }
+
+      // Initialize the complete system
+      init() {
+        this.generateSlides();
+        this.initializeCarousels();
+        this.addOptimizations();
+      }
+
+      // 📝 PUBLIC API: Methods to dynamically add/remove images
+      addImage(image, index = -1) {
+        if (index === -1) {
+          this.images.push(image);
+        } else {
+          this.images.splice(index, 0, image);
+        }
+        this.refresh();
+      }
+
+      removeImage(index) {
+        if (index >= 0 && index < this.images.length) {
+          this.images.splice(index, 1);
+          this.refresh();
+        }
+      }
+
+      refresh() {
+        // Destroy existing carousels
+        if (this.primaryCarousel) this.primaryCarousel.destroy();
+        if (this.thumbnailCarousel) this.thumbnailCarousel.destroy();
+        
+        // Clear existing slides
+        document.getElementById('primary-carousel-list').innerHTML = '';
+        document.getElementById('thumbnail-carousel-list').innerHTML = '';
+        
+        // Reinitialize
+        this.init();
+      }
+    }
+
+    // 🚀 INITIALIZE SYSTEM
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the scalable gallery system
+      window.sapphireGallery = new ScalableGallery(GALLERY_IMAGES);
+      
+      // Initialize other carousels (floor plans, etc.)
+      var floorPlanElements = document.querySelectorAll('.floor-plan-carousel');
+      if (floorPlanElements.length > 0) {
+        floorPlanElements.forEach(function(element) {
+          new Splide(element, {
+            type: 'loop',
+            perPage: 1,
+            gap: 20,
+            autoplay: true,
+            interval: 1000,
+            pauseOnHover: true,
+            lazyLoad: 'nearby',
+            breakpoints: {
+              768: { gap: 30 },
+              992: { gap: 30 },
+            },
+          }).mount();
+        });
+      }
+
+      // 📊 Performance monitoring (optional - remove in production)
+      if (typeof performance !== 'undefined') {
+        window.addEventListener('load', () => {
+          const loadTime = performance.now();
+          console.log(`🚀 Gallery loaded in ${loadTime.toFixed(2)}ms with ${GALLERY_IMAGES.length} images`);
+        });
+      }
     });
+
+    // 🎯 UTILITY FUNCTIONS FOR EASY MANAGEMENT
+    /*
+    ┌─────────────────────────────────────────────────────────────────┐
+    │  📚 DYNAMIC IMAGE MANAGEMENT API                                │
+    │                                                                 │
+    │  // Add a single image                                          │
+    │  addNewImage({                                                  │
+    │    src: 'assets/img/new/bedroom2.webp',                        │
+    │    caption: 'Master Bedroom',                                   │
+    │    alt: 'Luxurious master bedroom'                             │
+    │  });                                                            │
+    │                                                                 │
+    │  // Add multiple images at once                                 │
+    │  addMultipleImages([                                            │
+    │    { src: 'img1.webp', caption: 'View 1', alt: 'Description 1' }, │
+    │    { src: 'img2.webp', caption: 'View 2', alt: 'Description 2' }  │
+    │  ]);                                                            │
+    │                                                                 │
+    │  // Remove image by index                                       │
+    │  removeImageByIndex(5);                                         │
+    │                                                                 │
+    │  // Get total image count                                       │
+    │  console.log('Total images:', getTotalImages());                │
+    │                                                                 │
+    │  // Jump to specific image                                      │
+    │  goToSlide(10);                                                 │
+    └─────────────────────────────────────────────────────────────────┘
+    */
+
+    // ✨ Add a single image
+    function addNewImage(image) {
+      if (window.sapphireGallery && image.src && image.caption && image.alt) {
+        window.sapphireGallery.addImage(image);
+        console.log(`✅ Added image: ${image.caption}`);
+      } else {
+        console.error('❌ Invalid image object. Required: src, caption, alt');
+      }
+    }
+
+    // 🎯 Add multiple images at once
+    function addMultipleImages(images) {
+      if (Array.isArray(images)) {
+        images.forEach((image, index) => {
+          setTimeout(() => addNewImage(image), index * 50); // Stagger for smooth animation
+        });
+      }
+    }
+
+    // 🗑️ Remove image by index
+    function removeImageByIndex(index) {
+      if (window.sapphireGallery) {
+        window.sapphireGallery.removeImage(index);
+        console.log(`🗑️ Removed image at index: ${index}`);
+      }
+    }
+
+    // 📊 Get total image count
+    function getTotalImages() {
+      return window.sapphireGallery ? window.sapphireGallery.images.length : 0;
+    }
+
+    // 🎯 Navigate to specific slide
+    function goToSlide(index) {
+      if (window.sapphireGallery && window.sapphireGallery.primaryCarousel) {
+        window.sapphireGallery.primaryCarousel.go(index);
+        console.log(`🎯 Navigated to slide: ${index}`);
+      }
+    }
+
+    // 🔄 Refresh carousel (useful after bulk operations)
+    function refreshCarousel() {
+      if (window.sapphireGallery) {
+        window.sapphireGallery.refresh();
+        console.log('🔄 Carousel refreshed');
+      }
+    }
+
+    // 💾 Export current gallery configuration
+    function exportGalleryConfig() {
+      if (window.sapphireGallery) {
+        const config = JSON.stringify(window.sapphireGallery.images, null, 2);
+        console.log('📋 Gallery configuration:', config);
+        return config;
+      }
+    }
+
+    // 📦 Load gallery from configuration
+    function loadGalleryConfig(config) {
+      try {
+        const images = JSON.parse(config);
+        if (Array.isArray(images)) {
+          GALLERY_IMAGES.length = 0; // Clear existing
+          GALLERY_IMAGES.push(...images); // Add new images
+          refreshCarousel();
+          console.log(`📦 Loaded ${images.length} images from configuration`);
+        }
+      } catch (error) {
+        console.error('❌ Invalid configuration format:', error);
+      }
+    }
   </script>
   <!-- Image Modal -->
   <div class="image-modal" id="imageModal">
