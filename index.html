@@ -214,7 +214,7 @@
                     font-weight: bold;
                     border-radius: 0.25rem;
                   ">
-                <a href="tel:+918099046000" style="color: white;">Call Now :  9164276555 | 9353758383</a>
+                <a href="tel:+919164276555" style="color: white;">Call Now : +91 9164276555 | +91 9353758383</a>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@
                 font-weight: bold;
                 border-radius: 0.25rem;
               ">
-            <a href="tel:+918099046000" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
+            <a href="tel:+919164276555" style="color: white;">Call Now : +91 91642 76555 / +91 93537 58383</a>
           </div>
         </div>
       </div>
@@ -1253,7 +1253,7 @@
   </span>
   <!-- Mobile Sticky Bottom Navigation -->
   <div class="mobile-sticky-nav">
-    <a class="sticky-nav-item" href="tel:+919353758383">
+    <a class="sticky-nav-item" href="tel:+919164276555">
       Call Us
     </a>
     <div class="seperator-sticky-bottom-nav"></div>
@@ -1327,8 +1327,43 @@
           });
           
           try {
-            // Simulate form submission delay
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // Get current Indian timestamp
+            const indianTime = new Intl.DateTimeFormat('en-IN', {
+              timeZone: 'Asia/Kolkata',
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hour12: false
+            }).format(new Date());
+            
+            // Prepare webhook data
+            const webhookData = {
+              ...formObject,
+              source: "Sapphire Villas 1",
+              timestamp: indianTime,
+              submitted_at: new Date().toISOString()
+            };
+            
+            // Call the webhook
+            const webhookResponse = await fetch('https://n8n.aryanshinde.in/webhook/42-estates-leads', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(webhookData)
+            });
+            
+            if (webhookResponse.ok) {
+              console.log('✅ Webhook called successfully');
+            } else {
+              console.warn('⚠️ Webhook call failed, but continuing...');
+            }
+            
+            // Simulate additional processing delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Reset form
             $currentForm[0].reset();
@@ -1385,8 +1420,44 @@
         });
         
         try {
-          // Simulate form submission delay
-          await new Promise(resolve => setTimeout(resolve, 2000));
+          // Get current Indian timestamp
+          const indianTime = new Intl.DateTimeFormat('en-IN', {
+            timeZone: 'Asia/Kolkata',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+          }).format(new Date());
+          
+          // Prepare webhook data for floor plan form
+          const webhookData = {
+            ...formObject,
+            source: "Sapphire Villas 1",
+            timestamp: indianTime,
+            submitted_at: new Date().toISOString(),
+            form_type: "floor_plan_access"
+          };
+          
+          // Call the webhook
+          const webhookResponse = await fetch('https://n8n.aryanshinde.in/webhook/42-estates-leads', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(webhookData)
+          });
+          
+          if (webhookResponse.ok) {
+            console.log('✅ Floor plan webhook called successfully');
+          } else {
+            console.warn('⚠️ Floor plan webhook call failed, but continuing...');
+          }
+          
+          // Simulate processing delay
+          await new Promise(resolve => setTimeout(resolve, 1000));
           
           // Remove blur from all floor plan images
           $('.floor-plan-img.blurred').each(function() {
@@ -1503,9 +1574,6 @@
                  class="carousel-img" 
                  loading="${index === 0 ? 'eager' : 'lazy'}"
                  decoding="async" />
-            <div class="carousel-caption">
-              <p>${image.caption}</p>
-            </div>
           `;
           
           // Create thumbnail slide
@@ -1685,9 +1753,9 @@
     │                                                                 │
     │  // Add a single image                                          │
     │  addNewImage({                                                  │
-    │    src: 'assets/img/new/bedroom2.webp',                        │
+    │    src: 'assets/img/new/bedroom2.webp',                         │
     │    caption: 'Master Bedroom',                                   │
-    │    alt: 'Luxurious master bedroom'                             │
+    │    alt: 'Luxurious master bedroom'                              │
     │  });                                                            │
     │                                                                 │
     │  // Add multiple images at once                                 │
